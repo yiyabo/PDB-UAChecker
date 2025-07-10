@@ -1,0 +1,30 @@
+# 可扩展非天然氨基酸PDB搜索引擎 - 依赖包列表
+
+# 基础依赖 (第一阶段)
+numpy>=1.21.0
+pandas>=1.3.0
+
+# 性能优化依赖 (第二阶段)
+scikit-learn>=1.0.0
+scipy>=1.7.0
+psutil>=5.8.0
+
+# Web API和界面依赖 (第三阶段)
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pydantic>=1.8.0
+python-multipart>=0.0.5
+
+# 可视化依赖
+matplotlib>=3.4.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# 可选依赖 (高级功能)
+# rdkit-pypi>=2022.3.0  # 分子处理 (可选，推荐用conda安装)
+
+# 开发和测试依赖 (可选)
+# pytest>=6.0.0
+# pytest-cov>=2.12.0
+# black>=21.0.0
+# flake8>=3.9.0
