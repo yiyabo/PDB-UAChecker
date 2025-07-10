@@ -1,0 +1,20 @@
+############################################################################
+#
+# This SwisssideChain entry is copyright of the Swiss Institute of Bioinformatics. 
+# There are no restriction on its use by non-profit institutions as long as its 
+# content is in no way modified and this statement is not removed. 
+#
+# Usage by and for commercial entities requires a license agreement 
+# (see our legal disclaimer on http://www.swisssidechain.ch/license.html
+# or send email to license@genebio.com).
+#
+# For scientific questions, please contact David Gfeller (david.gfeller@isb-sib.ch)
+#
+############################################################################
+
+0BN	1	1	0	0	5819	5800	11.812	0.0000	99.3906	0.0000	63.3591	0.1326	90.8794	0.1345	
+0BN	1	2	0	0	5819	19	0.072	0.0000	0.6094	0.0000	64.2651	2.0855	2.8895	4.6830	
+0BN	2	1	0	0	16440	15948	32.419	0.0000	96.9122	0.0000	-178.6713	0.0825	77.1679	0.1255	
+0BN	2	2	0	0	16440	492	1.033	0.0000	3.0878	0.0000	-170.9874	0.4564	10.1183	0.7594	
+0BN	3	1	0	0	26886	24326	49.432	0.0000	90.4282	0.0000	-66.3362	0.0657	99.6254	0.1229	
+0BN	3	2	0	0	26886	2560	5.232	0.0000	9.5718	0.0000	-69.4854	0.1779	-8.4769	0.3120	
