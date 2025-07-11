@@ -191,304 +191,50 @@ class ECFPGenerator:
         return fingerprints
 ```
 
-#### Tanimoto相似性计算优化
-**数学原理**: Tanimoto系数 = |A ∩ B| / |A ∪ B|，其中A和B是两个指纹的位向量
+#### 🧮 Tanimoto相似性计算
+**数学原理**: Tanimoto系数 = |A ∩ B| / |A ∪ B|
 
-```python
-def calculate_tanimoto_similarity(self, fp1: np.ndarray, fp2: np.ndarray) -> float:
-    """
-    优化的Tanimoto相似性计算
-    
-    算法优化:
-    - 位运算: 使用NumPy的位运算函数
-    - 向量化: 避免Python循环提高性能
-    - 内存优化: 就地运算减少内存分配
-    """
-    if len(fp1) != len(fp2):
-        raise ValueError("指纹长度不匹配")
-    
-    # 位运算计算交集和并集
-    intersection = np.sum(fp1 & fp2, dtype=np.int32)
-    union = np.sum(fp1 | fp2, dtype=np.int32)
-    
-    return float(intersection / union) if union > 0 else 0.0
+**算法优势**:
+- ✅ 位运算优化：高效的指纹比较
+- ✅ 向量化计算：批量处理大规模数据
+- ✅ 内存优化：减少计算开销
 
-def batch_similarity_calculation(self, query_fp: np.ndarray, 
-                               database_fps: np.ndarray) -> np.ndarray:
-    """
-    批量相似性计算，用于大规模数据库搜索
-    
-    输入:
-        query_fp: 查询分子指纹 (1, n_bits)
-        database_fps: 数据库指纹矩阵 (n_molecules, n_bits)
-    
-    输出:
-        similarities: 相似性数组 (n_molecules,)
-    """
-    # 向量化计算所有分子的交集和并集
-    intersections = np.sum(query_fp & database_fps, axis=1)
-    unions = np.sum(query_fp | database_fps, axis=1)
-    
-    # 避免除零错误
-    similarities = np.divide(intersections, unions, 
-                           out=np.zeros_like(intersections, dtype=float), 
-                           where=unions!=0)
-    
-    return similarities
-```
+#### 🔬 多层次异构体分类
+**分类决策流程**:
+1. **分子式验证** → 排除非同分异构体
+2. **SMILES标准化** → 识别完全相同分子
+3. **多半径ECFP分析** → 结构相似性评估
+4. **立体化学分析** → 手性和几何异构识别
+5. **拓扑结构分析** → 骨架差异检测
 
-#### 多层次异构体分类算法
-**决策算法**: 基于多个判断维度的层次化分类系统
-
-```python
-class IsomerClassifier:
-    """同分异构体智能分类器"""
-    
-    def __init__(self):
-        self.thresholds = {
-            'identical': 0.98,      # 几乎完全相同
-            'stereoisomer': 0.85,   # 立体异构体
-            'structural': 0.60,     # 结构异构体
-            'different': 0.60       # 不同化合物
-        }
-    
-    def classify_isomer_relationship(self, smiles1: str, smiles2: str) -> Dict[str, Any]:
-        """
-        多层次异构体关系分析
-        
-        分类逻辑:
-        1. 分子式检查 → 排除非同分异构体
-        2. SMILES标准化比较 → 识别完全相同分子
-        3. 多半径ECFP分析 → 结构相似性评估
-        4. 立体化学分析 → 手性和几何异构识别
-        5. 拓扑结构分析 → 骨架差异检测
-        """
-        
-        # 1. 分子式验证
-        formula1 = self._get_molecular_formula(smiles1)
-        formula2 = self._get_molecular_formula(smiles2)
-        
-        if formula1 != formula2:
-            return {
-                'are_isomers': False,
-                'isomer_type': 'different_formula',
-                'confidence': 1.0,
-                'details': {'formula1': formula1, 'formula2': formula2}
-            }
-        
-        # 2. 标准化SMILES比较
-        canonical1 = Chem.CanonSmiles(smiles1)
-        canonical2 = Chem.CanonSmiles(smiles2)
-        
-        if canonical1 == canonical2:
-            return {
-                'are_isomers': True,
-                'isomer_type': 'identical',
-                'confidence': 1.0,
-                'structural_similarity': 1.0
-            }
-        
-        # 3. 多层ECFP相似性分析
-        fingerprints1 = self.ecfp_generator.generate_multi_radius_fingerprints(smiles1)
-        fingerprints2 = self.ecfp_generator.generate_multi_radius_fingerprints(smiles2)
-        
-        similarities = {}
-        for fp_type in fingerprints1:
-            sim = self.calculate_tanimoto_similarity(
-                fingerprints1[fp_type], 
-                fingerprints2[fp_type]
-            )
-            similarities[fp_type] = sim
-        
-        # 计算加权平均相似性
-        weighted_similarity = (
-            similarities['ECFP2'] * 0.2 +    # 局部结构
-            similarities['ECFP4'] * 0.5 +    # 主要结构
-            similarities['ECFP6'] * 0.3       # 扩展结构
-        )
-        
-        # 4. 立体化学分析
-        stereo_analysis = self._analyze_stereochemistry(smiles1, smiles2)
-        
-        # 5. 异构体类型判断
-        if weighted_similarity > self.thresholds['identical']:
-            isomer_type = 'identical'
-        elif weighted_similarity > self.thresholds['stereoisomer'] and stereo_analysis['different_stereo']:
-            isomer_type = 'stereoisomer'
-        elif weighted_similarity > self.thresholds['structural']:
-            isomer_type = 'structural'
-        else:
-            isomer_type = 'different'
-        
-        return {
-            'are_isomers': isomer_type in ['identical', 'stereoisomer', 'structural'],
-            'isomer_type': isomer_type,
-            'structural_similarity': weighted_similarity,
-            'ecfp_similarities': similarities,
-            'stereochemistry': stereo_analysis,
-            'confidence': self._calculate_confidence(weighted_similarity, isomer_type)
-        }
-    
-    def _analyze_stereochemistry(self, smiles1: str, smiles2: str) -> Dict[str, Any]:
-        """立体化学详细分析"""
-        mol1, mol2 = Chem.MolFromSmiles(smiles1), Chem.MolFromSmiles(smiles2)
-        
-        # 手性中心分析
-        chiral1 = Chem.FindMolChiralCenters(mol1, includeUnassigned=True)
-        chiral2 = Chem.FindMolChiralCenters(mol2, includeUnassigned=True)
-        
-        # 双键几何异构分析
-        double_bonds1 = self._find_stereo_double_bonds(mol1)
-        double_bonds2 = self._find_stereo_double_bonds(mol2)
-        
-        return {
-            'chiral_centers_1': len(chiral1),
-            'chiral_centers_2': len(chiral2),
-            'double_bonds_1': len(double_bonds1),
-            'double_bonds_2': len(double_bonds2),
-            'different_stereo': (
-                len(chiral1) != len(chiral2) or 
-                len(double_bonds1) != len(double_bonds2) or
-                chiral1 != chiral2 or 
-                double_bonds1 != double_bonds2
-            )
-        }
-```
-
-### 2. 多策略搜索引擎算法 (Multi-Strategy Search Engine)
+**异构体类型分类**:
+- **identical** (相似度 > 0.98): 完全相同
+- **stereoisomer** (相似度 > 0.85): 立体异构体
+- **structural** (相似度 > 0.60): 结构异构体
+- **different** (相似度 ≤ 0.60): 不同化合物
+### 2. 🔍 多策略搜索引擎
 
 #### 搜索策略架构
 **设计理念**: 模块化搜索策略，支持独立优化和组合使用
 
-```python
-class SearchStrategyManager:
-    """搜索策略管理器"""
-    
-    def __init__(self):
-        self.strategies = {
-            'residue_name': ResidueNameMatcher,      # 残基名匹配
-            'molecular_formula': MolecularFormulaSearcher,  # 分子式搜索
-            'atom_composition': AtomCompositionSearcher,    # 原子组成搜索
-            'molecular_weight': MolecularWeightSearcher,    # 分子量范围搜索
-            'fingerprint_similarity': FingerprintMatcher,  # 指纹相似性
-            'ecfp_similarity': ECFPSimilaritySearcher,     # ECFP相似性
-            'structural_similarity': StructuralSearcher,   # 结构相似性
-            'features': FeatureSearcher,                   # 特征匹配
-            'isomer_aware': IsomerAwareSearcher            # 同分异构体感知
-        }
-        
-        # 置信度权重配置
-        self.confidence_weights = {
-            'residue_name': 1.0,           # 最高置信度
-            'molecular_formula': 0.95,     # 精确匹配
-            'ecfp_similarity': 0.90,       # 结构相似性
-            'structural_similarity': 0.88,  # 综合结构分析
-            'isomer_aware': 0.92,          # 同分异构体专用
-            'atom_composition': 0.85,      # 组成匹配
-            'fingerprint_similarity': 0.80, # 基础指纹
-            'molecular_weight': 0.70,      # 分子量范围
-            'features': 0.75               # 特征匹配
-        }
-```
+| 策略 | 时间复杂度 | 置信度权重 | 适用场景 |
+|------|-----------|-----------|---------|
+| 残基名匹配 | O(1) | 1.0 | 已知残基代码 |
+| 分子式搜索 | O(1) | 0.95 | 已知化学式 |
+| ECFP相似性 | O(k×m) | 0.90 | 结构相似物 |
+| 原子组成匹配 | O(n) | 0.85 | 组成分析 |
+| 分子量范围 | O(log n) | 0.70 | 质量筛选 |
+| 特征搜索 | O(k) | 0.75 | 功能基团 |
 
-#### 残基名搜索优化算法
+#### 🎯 残基名搜索优化
 **核心技术**: 哈希索引 + 编辑距离模糊匹配
 
-```python
-class ResidueNameMatcher:
-    """残基名匹配器 - O(1)精确匹配 + 智能模糊匹配"""
-    
-    def __init__(self, index_manager: IndexManager):
-        self.index_manager = index_manager
-        self.exact_cache = {}              # 精确匹配缓存
-        self.fuzzy_cache = {}              # 模糊匹配缓存
-        self.edit_distance_threshold = 1   # 编辑距离阈值
-    
-    def exact_match(self, residue_name: str) -> Optional[str]:
-        """
-        O(1) 精确匹配算法
-        
-        技术特点:
-        - 哈希表索引: 平均O(1)查找时间
-        - LRU缓存: 减少重复查询开销
-        - 大小写不敏感: 自动标准化处理
-        """
-        if not residue_name:
-            return None
-        
-        # 标准化输入
-        normalized_name = residue_name.upper().strip()
-        
-        # 缓存检查
-        if normalized_name in self.exact_cache:
-            return self.exact_cache[normalized_name]
-        
-        # 哈希索引查找
-        result = self.index_manager.find_by_residue_name(normalized_name)
-        
-        # 更新缓存
-        self.exact_cache[normalized_name] = result
-        return result
-    
-    def fuzzy_match(self, residue_name: str, max_distance: int = 1) -> List[Tuple[str, float]]:
-        """
-        智能模糊匹配算法
-        
-        算法特点:
-        - Levenshtein编辑距离: 处理拼写错误
-        - 相似度评分: 基于编辑距离和字符串长度
-        - 结果排序: 按相似度降序排列
-        - 缓存优化: 避免重复计算
-        """
-        if not residue_name:
-            return []
-        
-        cache_key = f"{residue_name.upper()}_{max_distance}"
-        if cache_key in self.fuzzy_cache:
-            return self.fuzzy_cache[cache_key]
-        
-        candidates = []
-        all_residue_names = list(self.index_manager.residue_name_index.keys())
-        
-        for candidate in all_residue_names:
-            distance = self._levenshtein_distance(residue_name.upper(), candidate)
-            if distance <= max_distance:
-                # 相似度计算: 1 - (编辑距离 / 最大字符串长度)
-                max_len = max(len(residue_name), len(candidate))
-                similarity = 1.0 - (distance / max_len) if max_len > 0 else 0.0
-                candidates.append((candidate, similarity))
-        
-        # 按相似度排序
-        candidates.sort(key=lambda x: x[1], reverse=True)
-        
-        # 缓存结果
-        self.fuzzy_cache[cache_key] = candidates
-        return candidates
-    
-    def _levenshtein_distance(self, s1: str, s2: str) -> int:
-        """
-        优化的Levenshtein距离算法
-        
-        空间复杂度优化: O(min(m,n)) 而不是 O(m*n)
-        """
-        if len(s1) < len(s2):
-            s1, s2 = s2, s1
-        
-        if len(s2) == 0:
-            return len(s1)
-        
-        # 只需要保存前一行，节省空间
-        previous_row = list(range(len(s2) + 1))
-        
-        for i, c1 in enumerate(s1):
-            current_row = [i + 1]
-            for j, c2 in enumerate(s2):
-                insertions = previous_row[j + 1] + 1
-                deletions = current_row[j] + 1
-                substitutions = previous_row[j] + (c1 != c2)
-                current_row.append(min(insertions, deletions, substitutions))
-            previous_row = current_row
-        
+**技术特点**:
+- ✅ **O(1)精确匹配**: 哈希表索引实现毫秒级查找
+- ✅ **智能模糊匹配**: Levenshtein编辑距离处理拼写错误
+- ✅ **LRU缓存**: 减少重复查询开销
+- ✅ **大小写不敏感**: 自动标准化处理
+
 ## 🧪 支持的非天然氨基酸
 
 ### 当前数据库
