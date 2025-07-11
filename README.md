@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-Production%20Ready-brightgreen.svg)
 
-一个基于机器学习和化学信息学的高精度非天然氨基酸识别系统，专门用于PDB文件中的非天然氨基酸检测与分析。
+一个基于机器学习和生物信息学的高精度非天然氨基酸识别系统，专门用于PDB文件中的非天然氨基酸检测与分析。
 
 ## 🎯 项目概述
 
