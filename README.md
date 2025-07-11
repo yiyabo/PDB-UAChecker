@@ -377,14 +377,17 @@ for result in results:
 ```bash
 # 启动Web服务
 python src/api/web_server.py
-# 访问 http://localhost:8000
+# 服务运行在 http://localhost:8000
 
 # API调用示例
 curl -X POST "http://localhost:8000/api/v1/search" \
      -H "Content-Type: application/json" \
      -d '{"residue_name": "0A1"}'
-```
-}, methods=['residue_name', 'molecular_formula', 'molecular_weight'])
+
+# 批量搜索示例
+curl -X POST "http://localhost:8000/api/v1/batch_search" \
+     -H "Content-Type: application/json" \
+     -d '{"queries": [{"residue_name": "0A1"}, {"molecular_formula": "C10H13NO3"}]}'
 ```
 
 ## 🔗 相关链接
