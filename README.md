@@ -10,6 +10,7 @@
 ## 🎯 项目概述
 
 ### 核心功能
+
 - **高精度识别**：基于ECFP分子指纹的同分异构体识别
 - **多策略搜索**：支持残基名、分子式、结构相似性等多种搜索方式
 - **智能过滤**：自动排除标准氨基酸和核酸，减少99.7%假阳性
@@ -17,6 +18,7 @@
 - **Web API接口**：提供RESTful API和Web界面
 
 ### 性能指标
+
 - ✅ **假阳性减少99.7%**：从740个减少到0个
 - ✅ **识别精确度100%**：完美识别真正的非天然氨基酸
 - ✅ **同分异构体识别准确率95%+**：基于RDKit ECFP算法
@@ -68,6 +70,7 @@
 ### 核心组件详解
 
 #### 1. 搜索引擎层 (`src/search/`)
+
 **主要职责**：提供统一的搜索接口和多种搜索策略
 
 - **`ScalableSearchEngine`** - 主搜索引擎
@@ -90,6 +93,7 @@
   - `FeatureSearcher`: 化学特征搜索
 
 #### 2. 核心数据层 (`src/core/`)
+
 **主要职责**：数据模型定义和数据库管理
 
 - **`AminoAcidDatabase`** - 数据库管理器
@@ -108,6 +112,7 @@
   - `InvalidQueryError`: 查询验证异常
 
 #### 3. 化学分析层 (`src/chemistry/`)
+
 **主要职责**：化学信息学和分子分析
 
 - **`IsomerIdentifier`** - 同分异构体识别
@@ -117,6 +122,7 @@
   - Tanimoto相似性
 
 #### 4. 性能优化层 (`src/optimization/`)
+
 **主要职责**：大规模数据处理和性能优化
 
 - LSH近似搜索算法
@@ -129,6 +135,7 @@
 ### 1. 同分异构体识别算法 (ECFP-Based Isomer Detection)
 
 #### 技术栈与核心依赖
+
 - **RDKit 2022.3+**: 开源化学信息学库，提供分子解析和指纹生成
 - **ECFP算法**: Extended Connectivity Fingerprints，基于Morgan算法的改进
 - **Tanimoto相似性**: 分子指纹比较的标准Jaccard系数
@@ -136,6 +143,7 @@
 - **SQLite**: 指纹数据的持久化存储
 
 #### ECFP分子指纹生成算法
+
 **算法原理**: 基于分子图的局部环境编码，能够捕获原子的邻域拓扑信息
 
 ```python
@@ -192,15 +200,19 @@ class ECFPGenerator:
 ```
 
 #### 🧮 Tanimoto相似性计算
+
 **数学原理**: Tanimoto系数 = |A ∩ B| / |A ∪ B|
 
 **算法优势**:
+
 - ✅ 位运算优化：高效的指纹比较
 - ✅ 向量化计算：批量处理大规模数据
 - ✅ 内存优化：减少计算开销
 
 #### 🔬 多层次异构体分类
+
 **分类决策流程**:
+
 1. **分子式验证** → 排除非同分异构体
 2. **SMILES标准化** → 识别完全相同分子
 3. **多半径ECFP分析** → 结构相似性评估
@@ -208,13 +220,16 @@ class ECFPGenerator:
 5. **拓扑结构分析** → 骨架差异检测
 
 **异构体类型分类**:
+
 - **identical** (相似度 > 0.98): 完全相同
 - **stereoisomer** (相似度 > 0.85): 立体异构体
 - **structural** (相似度 > 0.60): 结构异构体
 - **different** (相似度 ≤ 0.60): 不同化合物
+
 ### 2. 🔍 多策略搜索引擎
 
 #### 搜索策略架构
+
 **设计理念**: 模块化搜索策略，支持独立优化和组合使用
 
 | 策略 | 时间复杂度 | 置信度权重 | 适用场景 |
@@ -227,9 +242,11 @@ class ECFPGenerator:
 | 特征搜索 | O(k) | 0.75 | 功能基团 |
 
 #### 🎯 残基名搜索优化
+
 **核心技术**: 哈希索引 + 编辑距离模糊匹配
 
 **技术特点**:
+
 - ✅ **O(1)精确匹配**: 哈希表索引实现毫秒级查找
 - ✅ **智能模糊匹配**: Levenshtein编辑距离处理拼写错误
 - ✅ **LRU缓存**: 减少重复查询开销
@@ -238,6 +255,7 @@ class ECFPGenerator:
 ## 🧪 支持的非天然氨基酸
 
 ### 当前数据库
+
 | ID | 名称 | 分子式 | 特征 |
 |----|------|--------|------|
 | 0A1 | 4-甲氧基苯丙氨酸 | C₁₀H₁₃NO₃ | 芳香环, 甲氧基 |
@@ -247,6 +265,7 @@ class ECFPGenerator:
 | 2AS | 天冬氨酸衍生物 | C₅H₉NO₄ | 双羧基 |
 
 ### 扩展能力
+
 - **当前支持**：5种氨基酸
 - **设计容量**：300-400种氨基酸
 - **扩展方式**：模块化插件架构
@@ -271,6 +290,7 @@ amino_acids_data_demo/
 ## 📊 性能指标
 
 ### 算法性能
+
 | 操作 | 时间复杂度 | 实际性能 |
 |------|-----------|---------|
 | 残基名搜索 | O(1) | <1ms |
@@ -279,6 +299,7 @@ amino_acids_data_demo/
 | 批量处理 | O(n×k) | 2.3s/100文件 |
 
 ### 准确性指标
+
 - ✅ **识别准确率**: 95%+
 - ✅ **假阳性率**: 0.3%
 - ✅ **同分异构体识别**: 95%+
@@ -290,35 +311,6 @@ amino_acids_data_demo/
 - 🔧 **[API参考](docs/API.md)** - 接口说明文档
 - 🚀 **[开发指南](docs/DEVELOPMENT.md)** - 扩展开发指南
 - 📄 **[许可证](LICENSE)** - MIT开源许可
-
-## 🙏 致谢
-
-感谢以下开源项目的支持：
-- [RDKit](https://www.rdkit.org/) - 化学信息学库
-- [FastAPI](https://fastapi.tiangolo.com/) - Web框架
-- [NumPy](https://numpy.org/) - 数值计算库
-
----
-
-**开发团队** | **技术支持** | **问题反馈**
-:---: | :---: | :---:
-[GitHub](https://github.com/your-repo) | [文档](docs/) | [Issues](https://github.com/your-repo/issues)
-## 📄 许可证
-
-MIT License - 详见 LICENSE 文件
-
-## 🤝 贡献与支持
-
-### 贡献方式
-- 🐛 **报告问题**: [GitHub Issues](https://github.com/your-repo/issues)
-- 💡 **功能建议**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- 🔧 **代码贡献**: Fork项目并提交Pull Request
-- 📖 **文档改进**: 帮助完善项目文档
-
-### 开发团队
-- **主要开发者**: [您的姓名]
-- **技术顾问**: Claude (Anthropic)
-- **算法优化**: RDKit社区
 
 ## 🚀 快速开始
 
@@ -400,28 +392,16 @@ curl -X POST "http://localhost:8000/api/v1/batch_search" \
 
 MIT License - 详见 LICENSE 文件
 
-## 🤝 贡献与支持
-
-### 贡献方式
-- 🐛 **报告问题**: [GitHub Issues](https://github.com/your-repo/issues)
-- 💡 **功能建议**: [GitHub Discussions](https://github.com/your-repo/discussions)
-- 🔧 **代码贡献**: Fork项目并提交Pull Request
-- 📖 **文档改进**: 帮助完善项目文档
-
 ### 开发团队
-- **主要开发者**: [您的姓名]
-- **技术顾问**: Claude (Anthropic)
+
+- **主要开发者**: [Xinxiang Wang]
+- **技术顾问**: [Dr.Chen]
 - **算法优化**: RDKit社区
 
 ## 🙏 致谢
 
 感谢以下开源项目的支持：
+
 - [RDKit](https://www.rdkit.org/) - 化学信息学库
 - [FastAPI](https://fastapi.tiangolo.com/) - Web框架
 - [NumPy](https://numpy.org/) - 数值计算库
-
----
-
-**开发团队** | **技术支持** | **问题反馈**
-:---: | :---: | :---:
-[GitHub](https://github.com/your-repo) | [文档](docs/) | [Issues](https://github.com/your-repo/issues)
