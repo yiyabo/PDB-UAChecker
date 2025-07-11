@@ -7,8 +7,26 @@
 import sys
 import time
 from typing import Dict, List, Any
-from scalable_search_engine import ScalableSearchEngine
-from isomer_identifier import IsomerIdentifier, detect_potential_isomers
+
+# 添加项目路径
+sys.path.append('.')
+sys.path.append('..')
+
+try:
+    from scalable_search_engine import ScalableSearchEngine
+    print("✅ 成功导入 ScalableSearchEngine")
+except ImportError as e:
+    print(f"❌ 导入 ScalableSearchEngine 失败: {e}")
+    sys.exit(1)
+
+try:
+    from isomer_identifier import IsomerIdentifier, detect_potential_isomers
+    print("✅ 成功导入 IsomerIdentifier")
+    ISOMER_AVAILABLE = True
+except ImportError as e:
+    print(f"⚠️ IsomerIdentifier 不可用: {e}")
+    print("将跳过同分异构体识别测试")
+    ISOMER_AVAILABLE = False
 
 def test_isomer_identification():
     """测试同分异构体识别功能"""
