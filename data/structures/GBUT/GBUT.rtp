@@ -1,0 +1,54 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ GBUT ] ; Guanidinobutryric
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	0.2000	7
+	HG1	HA	0.0900	8
+	HG2	HA	0.0900	9
+	ND	NC2	-0.7000	10
+	HD	HC	0.4400	11
+	CE	C	0.6400	12
+	NZ2	NC2	-0.8000	13
+	HZ22	HC	0.4600	14
+	HZ21	HC	0.4600	15
+	NZ1	NC2	-0.8000	16
+	HZ12	HC	0.4600	17
+	HZ11	HC	0.4600	18
+	C	C	0.5100	19
+	O	O	-0.5100	20
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB1
+	HB2	CB
+	CG	CB
+	CG	HG1
+	ND	HD
+	ND	CG
+	HG2	CG
+	CE	ND
+	NZ2	HZ22
+	NZ2	CE
+	NZ1	CE
+	HZ21	NZ2
+	NZ1	HZ12
+	HZ11	NZ1
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE	ND	NZ1	NZ2
+ [ cmap ]
+	-C	N	CA	C	+N

@@ -1,0 +1,67 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ NAO2 ] ; 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD1	CA	-0.1150	8
+	HD1	HP	0.1150	9
+	CD2	CA	-0.1150	10
+	HD2	HP	0.1150	11
+	CE1	CA	-0.1150	12
+	HE1	HP	0.1150	13
+	CE2	CA	0.0000	14
+	CZ	CA	0.0000	15
+	CH2	CA	-0.1150	16
+	HH2	HP	0.1150	17
+	CH1	CA	-0.1150	18
+	HH1	HP	0.1150	19
+	CJ2	CA	0.1100	20
+	OJ2	OH1	-0.5400	21
+	HJ2	H	0.4300	22
+	CJ1	CA	-0.1150	23
+	HJ1	HP	0.1150	24
+	C	C	0.5100	25
+	O	O	-0.5100	26
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CD1	CG
+	CD2	CG
+	CE1	CD1
+	HD1	CD1
+	CE2	CD2
+	HD2	CD2
+	CZ	CE1
+	HE1	CE1
+	CZ	CE2
+	CH2	CE2
+	CH1	CZ
+	CJ2	CJ1
+	CH1	CJ1
+	HJ1	CJ1
+	OJ2	CJ2
+	CH2	CJ2
+	HJ2	OJ2
+	HH1	CH1
+	HH2	CH2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

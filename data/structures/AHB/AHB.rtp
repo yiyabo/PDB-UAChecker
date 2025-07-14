@@ -1,0 +1,45 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ AHB ] ; beta-hydroxyasparagine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT1	0.1400	4
+	HB	HA	0.0900	5
+	OB	OH1	-0.6600	6
+	HOB	H	0.4300	7
+	CG	CC	0.5500	8
+	OD1	O	-0.5500	9
+	ND2	NH2	-0.6200	10
+	HD21	H	0.3200	11
+	HD22	H	0.3000	12
+	C	C	0.5100	13
+	O	O	-0.5100	14
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	OB	CB
+	CG	CB
+	HB	CB
+	OD1	CG
+	ND2	CG
+	ND2	HD21
+	ND2	HD22
+	OB	HOB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+        CG      ND2     CB      OD1
+        CG      CB      ND2     OD1
+        ND2     CG      HD21    HD22
+        ND2     CG      HD22    HD21
+ [ cmap ]
+	-C	N	CA	C	+N

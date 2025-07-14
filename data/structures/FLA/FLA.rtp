@@ -1,0 +1,31 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ FLA ] ; Trifluoro-alanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT0	1.0200	4
+	FG1	F3	-0.3400	5
+	FG2	F3	-0.3400	6
+	FG3	F3	-0.3400	7
+	C	C	0.5100	8
+	O	O	-0.5100	9
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	FG1	CB
+	FG2	CB
+	FG3	CB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

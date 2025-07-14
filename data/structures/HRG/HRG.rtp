@@ -1,0 +1,66 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ HRG ] ; homoarginine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG2	HA	0.0900	8
+	HG1	HA	0.0900	9
+	CD	CT2	-0.1800	10
+	HD1	HA	0.0900	11
+	HD2	HA	0.0900	12
+	CE	CT2	0.2000	13
+	HE2	HA	0.0900	14
+	HE1	HA	0.0900	15
+	NZ	NC2	-0.7000	16
+	HZ	HC	0.4400	17
+	CH	C	0.6400	18
+	NJ1	NC2	-0.8000	19
+	HJ11	HC	0.4600	20
+	HJ12	HC	0.4600	21
+	NJ2	NC2	-0.8000	22
+	HJ21	HC	0.4600	23
+	HJ22	HC	0.4600	24
+	C	C	0.5100	25
+	O	O	-0.5100	26
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	NJ1	HJ11
+	NJ1	HJ12
+	CH	NJ1
+	CD	HD1
+	NZ	HZ
+	NZ	CH
+	NJ2	CH
+	CE	NZ
+	CE	HE2
+	CB	HB1
+	NJ2	HJ21
+	HJ22	NJ2
+	CE	CD
+	HD2	CD
+	CG	CD
+	CG	HG2
+	HE1	CE
+	CG	CB
+	HB2	CB
+	HG1	CG
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CH	NJ1	NJ2	NZ
+ [ cmap ]
+	-C	N	CA	C	+N

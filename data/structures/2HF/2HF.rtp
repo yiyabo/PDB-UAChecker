@@ -1,0 +1,52 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ 2HF ] ; 2-fluoro-l-histidine (NE2-ND1)
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.0500	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CPH1	0.1900	7
+	ND1	NR3	-0.5100	8
+	HD1	H	0.4400	9
+	CD2	CPH1	0.1900	10
+	HD2	HR1	0.1300	11
+	CE1	CPH2	0.6700	12
+	NE2	NR3	-0.5100	13
+	HE2	H	0.4400	14
+	F1	F1	-0.1700	15
+	C	C	0.5100	16
+	O	O	-0.5100	17
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	ND1	CG
+	CE1	ND1
+	CD2	CG
+	NE2	CD2
+	NE2	CE1
+	CG	CB
+	HB1	CB
+	HB2	CB
+	HD2	CD2
+	F1	CE1
+	ND1	HD1
+	NE2	HE2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+        ND1     CG      CE1     HD1
+        ND1     CE1     CG      HD1
+        NE2     CD2     CE1     HE2
+        NE2     CE1     CD2     HE2
+ [ cmap ]
+	-C	N	CA	C	+N

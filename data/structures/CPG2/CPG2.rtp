@@ -1,0 +1,46 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ CPG2 ] ; 2-Chlorophenylglycine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CA	0.0000	4
+	CG1	CA	-0.1150	5
+	HG1	HP	0.1150	6
+	CG2	CA	0.1700	7
+	CLG	CLAL	-0.1700	8
+	CD1	CA	-0.1150	9
+	HD1	HP	0.1150	10
+	CD2	CA	-0.1150	11
+	HD2	HP	0.1150	12
+	CE	CA	-0.1150	13
+	HE	HP	0.1150	14
+	C	C	0.5100	15
+	O	O	-0.5100	16
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG1	CB
+	CG2	CB
+	CD1	CG1
+	HG1	CG1
+	CD2	CG2
+	CLG	CG2
+	CE	CD1
+	HD1	CD1
+	CE	CD2
+	HE	CE
+	CD2	HD2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

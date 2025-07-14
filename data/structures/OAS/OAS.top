@@ -1,0 +1,59 @@
+! When using this topology, make sure you've included the required parameters
+! (see http://swisssidechain.ch/MD/charmm.html)
+
+RESI OAS         0.00  !  o-acetylserine 
+GROUP
+ATOM	N	NH1	-0.4700
+ATOM	HN	H	0.3100
+ATOM	CA	CT1	0.0700
+ATOM	HA	HB	0.0900
+GROUP
+ATOM	CB	CT2	0.1000
+ATOM	HB1	HA	0.0900
+ATOM	HB2	HA	0.0900
+ATOM	OG	OCC	-0.43
+ATOM	CD	CC	0.66
+ATOM	OD	O	-0.5700
+ATOM	CE	CT3	-0.21
+ATOM	HE3	HA	0.0900
+ATOM	HE1	HA	0.0900
+ATOM	HE2	HA	0.0900
+GROUP
+ATOM	C	C	0.5100
+ATOM	O	O	-0.5100
+BOND CB CA  N  HN  N  CA C  CA  C  +N  CA HA
+DOUBLE O  C
+BOND	OG	CD
+BOND	CE	CD
+BOND	OD	CD
+BOND	HE3	CE
+BOND	HE1	CE
+BOND	HE2	CE
+BOND	OG	CB
+BOND	HB1	CB
+BOND	HB2	CB
+IMPR N -C CA HN  C CA +N O
+IMPR CD OG OD CE
+CMAP -C  N  CA  C   N  CA  C  +N
+IC -C   CA   *N   HN    1.3551 126.4900  180.0000 115.4200  0.9996
+IC -C   N    CA   C     1.3551 126.4900  180.0000 114.4400  1.5390
+IC N    CA   C    +N    1.4592 114.4400  180.0000 116.8400  1.3558
+IC +N   CA   *C   O     1.3558 116.8400  180.0000 122.5200  1.2297
+IC CA   C    +N   +CA   1.5390 116.8400  180.0000 126.7700  1.4613
+IC N    C    *CA  CB    1.4592 114.4400  123.2300 111.0900  1.5461
+IC N    C    *CA  HA    1.4592 114.4400 -120.4500 106.3900  1.0840
+IC N    CA    CB   OG    1.47   109.47  -59.94  109.56  1.45  
+IC N    CA    CB   HB1   1.47   109.47 -179.97  109.46  1.09  
+IC N    CA    CB   HB2   1.47   109.47   60.11  109.44  1.09  
+IC CA   CB    OG   CD    1.53   109.56  179.99  120.09  1.34  
+IC CB   OG    CD   CE    1.45   120.09 -179.99  120.12  1.51  
+IC CB   OG    CD   OD    1.45   120.09   -0.02  119.97  1.21  
+IC OG   CD    CE   HE1   1.34   120.12 -179.94  109.64  1.09  
+IC OG   CD    CE   HE2   1.34   120.12  -59.91  109.49  1.09  
+IC OG   CD    CE   HE3   1.34   120.12   59.91  109.47  1.09  
+IC CB   N    *CA   C     0.00     0.00  120.00    0.00  0.00  
+IC OG   CA   *CB   HB1   0.00     0.00  120.00    0.00  0.00  
+IC OG   CA   *CB   HB2   0.00     0.00 -120.00    0.00  0.00  
+IC OD   OG   *CD   CE    0.00     0.00  180.00    0.00  0.00  
+IC HE3  CD   *CE   HE1   0.00     0.00  120.00    0.00  0.00  
+IC HE3  CD   *CE   HE2   0.00     0.00 -120.00    0.00  0.00  

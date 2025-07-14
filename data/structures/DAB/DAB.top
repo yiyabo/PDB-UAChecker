@@ -1,0 +1,60 @@
+! When using this topology, make sure you've included the required parameters
+! (see http://swisssidechain.ch/MD/charmm.html)
+
+RESI DAB         1.00  !  Diaminobutyric acid 
+GROUP
+ATOM	N	NH1	-0.4700
+ATOM	HN	H	0.3100
+ATOM	CA	CT1	0.0700
+ATOM	HA	HB	0.0900
+GROUP
+ATOM	CB	CT2	-0.1800
+ATOM	HB1	HA	0.0900
+ATOM	HB2	HA	0.0900
+GROUP
+ATOM	CG	CT2	0.2100
+ATOM	HG1	HA	0.0500
+ATOM	HG2	HA	0.0500
+ATOM	ND	NH3	-0.30
+ATOM	HD1	HC	0.3300
+ATOM	HD2	HC	0.3300
+ATOM	HD3	HC	0.3300
+GROUP
+ATOM	C	C	0.5100
+ATOM	O	O	-0.5100
+BOND CB CA  N  HN  N  CA C  CA  C  +N  CA HA
+DOUBLE O  C
+BOND	CG	CB
+BOND	ND	CG
+BOND	CB	HB1
+BOND	CB	HB2
+BOND	CG	HG1
+BOND	CG	HG2
+BOND	ND	HD1
+BOND	ND	HD2
+BOND	ND	HD3
+IMPR N -C CA HN  C CA +N O
+CMAP -C  N  CA  C   N  CA  C  +N
+IC -C   CA   *N   HN    1.3551 126.4900  180.0000 115.4200  0.9996
+IC -C   N    CA   C     1.3551 126.4900  180.0000 114.4400  1.5390
+IC N    CA   C    +N    1.4592 114.4400  180.0000 116.8400  1.3558
+IC +N   CA   *C   O     1.3558 116.8400  180.0000 122.5200  1.2297
+IC CA   C    +N   +CA   1.5390 116.8400  180.0000 126.7700  1.4613
+IC N    C    *CA  CB    1.4592 114.4400  123.2300 111.0900  1.5461
+IC N    C    *CA  HA    1.4592 114.4400 -120.4500 106.3900  1.0840
+IC N    CA    CB   CG    1.46   109.44 -178.10  113.43  1.55  
+IC N    CA    CB   HB1   1.46   109.44  -57.55  108.49  1.09  
+IC N    CA    CB   HB2   1.46   109.44   60.65  108.80  1.09  
+IC CA   CB    CG   ND    1.55   113.43  176.77  114.87  1.47  
+IC CA   CB    CG   HG1   1.55   113.43   56.00  108.11  1.09  
+IC CA   CB    CG   HG2   1.55   113.43  -61.55  108.53  1.09  
+IC CB   CG    ND   HD1   1.55   114.87  179.99  109.49  1.01  
+IC CB   CG    ND   HD2   1.55   114.87   60.04  109.49  1.01  
+IC CB   CG    ND   HD3   1.55   114.87  -60.00  109.48  1.01  
+IC CB   N    *CA   C     0.00     0.00  120.00    0.00  0.00  
+IC CG   CA   *CB   HB1   0.00     0.00  120.00    0.00  0.00  
+IC CG   CA   *CB   HB2   0.00     0.00 -120.00    0.00  0.00  
+IC ND   CB   *CG   HG1   0.00     0.00  120.00    0.00  0.00  
+IC ND   CB   *CG   HG2   0.00     0.00 -120.00    0.00  0.00  
+IC HD1  CG   *ND   HD2   0.00     0.00  120.00    0.00  0.00  
+IC HD1  CG   *ND   HD3   0.00     0.00 -120.00    0.00  0.00  

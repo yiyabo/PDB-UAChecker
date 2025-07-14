@@ -1,0 +1,49 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ BIU ] ; 5-bromo-l-isoleucine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT1	-0.0900	4
+	HB	HA	0.0900	5
+	CG2	CT3	-0.2700	6
+	HG21	HA	0.0900	7
+	HG22	HA	0.0900	8
+	HG23	HA	0.0900	9
+	CG1	CT2	-0.1800	10
+	HG12	HA	0.0900	11
+	HG11	HA	0.0900	12
+	CD	CT2	0.0500	13
+	HD1	HA	0.0900	14
+	HD2	HA	0.0900	15
+	BR	BR	-0.2300	16
+	C	C	0.5100	17
+	O	O	-0.5100	18
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CD	BR
+	CG2	CB
+	CG1	CB
+	HB	CB
+	CG1	CD
+	HD1	CD
+	HD2	CD
+	HG12	CG1
+	HG11	CG1
+	HG21	CG2
+	HG22	CG2
+	HG23	CG2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

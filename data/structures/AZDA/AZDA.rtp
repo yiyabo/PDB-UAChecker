@@ -1,0 +1,35 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ AZDA ] ; azido-alanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	0.0700	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	NG	N=C	-0.5600	7
+	ND	=N=	0.6800	8
+	NE	NAZT	-0.3700	9
+	C	C	0.5100	10
+	O	O	-0.5100	11
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB2
+	ND	NE
+	NG	ND
+	CB	HB1
+	NG	CB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

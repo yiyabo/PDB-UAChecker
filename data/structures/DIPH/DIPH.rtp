@@ -1,0 +1,73 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ DIPH ] ; di-phenylalanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT1	-0.0900	4
+	HB	HA	0.0900	5
+	CG3	CA	0.0000	6
+	CG1	CA	0.0000	7
+	CD3	CA	-0.1150	8
+	HD3	HP	0.1150	9
+	CD4	CA	-0.1150	10
+	HD4	HP	0.1150	11
+	CD1	CA	-0.1150	12
+	HD1	HP	0.1150	13
+	CD2	CA	-0.1150	14
+	HD2	HP	0.1150	15
+	CE3	CA	-0.1150	16
+	HE3	HP	0.1150	17
+	CE4	CA	-0.1150	18
+	HE4	HP	0.1150	19
+	CE1	CA	-0.1150	20
+	HE1	HP	0.1150	21
+	CE2	CA	-0.1150	22
+	HE2	HP	0.1150	23
+	CZ3	CA	-0.1150	24
+	HZ3	HP	0.1150	25
+	CZ1	CA	-0.1150	26
+	HZ1	HP	0.1150	27
+	C	C	0.5100	28
+	O	O	-0.5100	29
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	HB	CB
+	CB	CG3
+	CD3	CG3
+	HD3	CD3
+	CE3	CD3
+	HE3	CE3
+	CE3	CZ3
+	HZ3	CZ3
+	CE4	CZ3
+	HE4	CE4
+	CD4	CE4
+	HD4	CD4
+	CG3	CD4
+	CB	CG1
+	CD1	CG1
+	HD1	CD1
+	CE1	CD1
+	HE1	CE1
+	CZ1	CE1
+	HZ1	CZ1
+	CZ1	CE2
+	HE2	CE2
+	CD2	CE2
+	HD2	CD2
+	CG1	CD2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

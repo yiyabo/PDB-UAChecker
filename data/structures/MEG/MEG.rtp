@@ -1,0 +1,48 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ MEG ] ; (3s)-3-methyl-l-glutamic acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT1	-0.0900	4
+	HB	HA	0.0900	5
+	CG1	CT2	-0.2800	6
+	HG12	HA	0.0900	7
+	HG11	HA	0.0900	8
+	CD	CC	0.6200	9
+	OE1	OC	-0.7600	10
+	OE2	OC	-0.7600	11
+	CG2	CT3	-0.2700	12
+	HG22	HA	0.0900	13
+	HG21	HA	0.0900	14
+	HG23	HA	0.0900	15
+	C	C	0.5100	16
+	O	O	-0.5100	17
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	OE1	CD
+	OE2	CD
+	CB	HB
+	CG1	HG12
+	CG1	CB
+	CG2	CB
+	CG1	CD
+	HG11	CG1
+	CG2	HG22
+	CG2	HG21
+	HG23	CG2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+        CD      CG1      OE2     OE1
+ [ cmap ]
+	-C	N	CA	C	+N

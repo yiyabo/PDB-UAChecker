@@ -1,0 +1,62 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ ARO ] ; c-gamma-hydroxy arginine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT1	0.1400	7
+	HG	HA	0.0900	8
+	OH	OH1	-0.6600	9
+	HH	H	0.4300	10
+	CD	CT2	0.2000	11
+	HD1	HA	0.0900	12
+	HD2	HA	0.0900	13
+	NE	NC2	-0.7000	14
+	HE	HC	0.4400	15
+	CZ	C	0.6400	16
+	NH1	NC2	-0.8000	17
+	HH11	HC	0.4600	18
+	HH12	HC	0.4600	19
+	NH2	NC2	-0.8000	20
+	HH21	HC	0.4600	21
+	HH22	HC	0.4600	22
+	C	C	0.5100	23
+	O	O	-0.5100	24
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB1
+	CD	HD1
+	NH1	HH11
+	CB	HB2
+	CG	CB
+	OH	HH
+	NH1	HH12
+	CZ	NH1
+	CD	HD2
+	CG	CD
+	NE	CD
+	OH	CG
+	HG	CG
+	NE	CZ
+	NH2	CZ
+	HE	NE
+	NH2	HH21
+	HH22	NH2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CZ      NH1     NH2     NE
+ [ cmap ]
+	-C	N	CA	C	+N

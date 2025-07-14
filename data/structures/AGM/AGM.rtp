@@ -1,0 +1,66 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ AGM ] ; 5-methyl-arginine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG1	HA	0.0900	8
+	HG2	HA	0.0900	9
+	CD	CT1	0.2900	10
+	HD	HA	0.0900	11
+	NE1	NC2	-0.7000	12
+	HE1	HC	0.4400	13
+	CE2	CT3	-0.2700	14
+	HE21	HA	0.0900	15
+	HE22	HA	0.0900	16
+	HE23	HA	0.0900	17
+	CZ	C	0.6400	18
+	NH2	NC2	-0.8000	19
+	HH22	HC	0.4600	20
+	HH21	HC	0.4600	21
+	NH1	NC2	-0.8000	22
+	HH12	HC	0.4600	23
+	HH11	HC	0.4600	24
+	C	C	0.5100	25
+	O	O	-0.5100	26
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	NH2	HH22
+	NH1	HH12
+	HH21	NH2
+	CZ	NH2
+	CZ	NH1
+	HH11	NH1
+	NE1	CZ
+	HE1	NE1
+	CD	NE1
+	CE2	HE21
+	CD	HD
+	CE2	CD
+	CG	CD
+	HE22	CE2
+	HE23	CE2
+	CB	HB2
+	CB	HB1
+	CG	CB
+	HG1	CG
+	HG2	CG
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CZ      NH1     NH2     NE1
+ [ cmap ]
+	-C	N	CA	C	+N

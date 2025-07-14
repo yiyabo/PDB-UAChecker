@@ -1,0 +1,44 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ CCS ] ; carboxymethylated cysteine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1400	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	SG	S	-0.0900	7
+	CD	CT2	-0.2300	8
+	HD2	HA	0.0900	9
+	HD1	HA	0.0900	10
+	CE	CC	0.6200	11
+	OZ1	OC	-0.7600	12
+	OZ2	OC	-0.7600	13
+	C	C	0.5100	14
+	O	O	-0.5100	15
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	OZ1	CE
+	OZ2	CE
+	CD	HD2
+	CB	HB2
+	CD	HD1
+	CE	CD
+	SG	CD
+	CB	HB1
+	SG	CB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE	CD	OZ1	OZ2
+ [ cmap ]
+	-C	N	CA	C	+N

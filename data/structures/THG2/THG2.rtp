@@ -1,0 +1,43 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ THG2 ] ; 2-thienylglycine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	C5A	0.0400	4
+	SG1	STHI	-0.0800	5
+	CG2	C5B	-0.1500	6
+	HG2	HP	0.1500	7
+	CD1	C5A	-0.1100	8
+	HD1	HP	0.1500	9
+	CD2	C5B	-0.1500	10
+	HD2	HP	0.1500	11
+	C	C	0.5100	12
+	O	O	-0.5100	13
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	SG1
+	CG2	CB
+	SG1	CD1
+	CD2	CG2
+	CD2	CD1
+	CD1	HD1
+	CG2	HG2
+	CD2	HD2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CG2	CB	CD2	HG2
+	CD2	CG2	CD1	HD2
+	CD1	SG1	CD2	HD1
+ [ cmap ]
+	-C	N	CA	C	+N

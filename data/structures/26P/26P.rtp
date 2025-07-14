@@ -1,0 +1,53 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ 26P ] ; 2-amino-6-oxopimelic acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG2	HA	0.0900	8
+	HG1	HA	0.0900	9
+	CD	CT2	-0.1200	10
+	HD2	HA	0.0900	11
+	HD1	HA	0.0900	12
+	CE	CC	0.3600	13
+	OE	O	-0.5700	14
+	CZ	CC	0.6700	15
+	OZ1	OC	-0.7600	16
+	OZ2	OC	-0.7600	17
+	C	C	0.5100	18
+	O	O	-0.5100	19
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	OZ1	CZ
+	OZ2	CZ
+	CD	HD2
+	CB	HB2
+	CG	HG2
+	CE	CZ
+	CD	CE
+	OE	CE
+	CG	CD
+	HD1	CD
+	CB	CG
+	HG1	CG
+	HB1	CB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE	OE	CZ	CD
+	CZ	OZ1	OZ2	CE
+ [ cmap ]
+	-C	N	CA	C	+N

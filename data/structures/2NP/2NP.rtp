@@ -1,0 +1,58 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ 2NP ] ; l-2-amino-6-methylene-pimelic acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG1	HA	0.0900	8
+	HG2	HA	0.0900	9
+	CD	CT2	-0.1800	10
+	HD2	HA	0.0900	11
+	HD1	HA	0.0900	12
+	CE	C=C	-0.3800	13
+	CZ1	CC	0.9000	14
+	CZ2	CE2	-0.3000	15
+	HZ22	HE2	0.1500	16
+	HZ21	HE2	0.1500	17
+	OJ1	OC	-0.7600	18
+	OJ2	OC	-0.7600	19
+	C	C	0.5100	20
+	O	O	-0.5100	21
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	OJ1	CZ1
+	OJ2	CZ1
+	CB	HB2
+	CB	HB1
+	CD	HD2
+	CG	CB
+	CD	HD1
+	CG	CD
+	CE	CD
+	HG1	CG
+	HG2	CG
+	CZ1	CE
+	CZ2	CE
+	CZ2	HZ22
+	HZ21	CZ2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE	CD	CZ1	CZ2
+	CZ1	CE	OJ1	OJ2
+	CZ2	CE	HZ21	HZ22
+ [ cmap ]
+	-C	N	CA	C	+N

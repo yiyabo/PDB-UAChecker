@@ -1,0 +1,52 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ WFP ] ; 3,5-Difluoro-phenylalanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD1	CA	-0.1150	8
+	HD1	HP	0.1150	9
+	CD2	CA	-0.1150	10
+	HD2	HP	0.1150	11
+	CE1	CA	0.1900	12
+	FE1	F1	-0.1900	13
+	CE2	CA	0.1900	14
+	FE2	F1	-0.1900	15
+	CZ	CA	-0.1150	16
+	HZ	HP	0.1150	17
+	C	C	0.5100	18
+	O	O	-0.5100	19
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CE1	CD1
+	CG	CD1
+	HD1	CD1
+	CE2	CD2
+	CG	CD2
+	HD2	CD2
+	CZ	CE1
+	FE1	CE1
+	CZ	CE2
+	FE2	CE2
+	CZ	HZ
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

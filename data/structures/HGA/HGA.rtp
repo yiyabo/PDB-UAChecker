@@ -1,0 +1,49 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ HGA ] ; glutamine hydroxamate 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	-0.1200	7
+	HG2	HA	0.0900	8
+	HG1	HA	0.0900	9
+	CD	CC	0.5700	10
+	OE1	O	-0.5700	11
+	NE2	NH1	-0.4000	12
+	HE	H	0.3700	13
+	OZ	OH1	-0.4300	14
+	HZ	H	0.4000	15
+	C	C	0.5100	16
+	O	O	-0.5100	17
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CG	CD
+	OE1	CD
+	NE2	CD
+	HG2	CG
+	HG1	CG
+	NE2	HE
+	OZ	HZ
+	OZ	NE2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CD	CG	OE1	NE2
+	NE2	CD	HE	OZ
+ [ cmap ]
+	-C	N	CA	C	+N

@@ -1,0 +1,52 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ TFG2 ] ; 2-(Trifluoromethyl)-phenylglycine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CA	0.0000	4
+	CG1	CA	-0.1400	5
+	CH1	CT0	1.1600	6
+	FH1	F3	-0.3400	7
+	FH2	F3	-0.3400	8
+	FH3	F3	-0.3400	9
+	CG2	CA	-0.1150	10
+	HG2	HP	0.1150	11
+	CD1	CA	-0.1150	12
+	HD1	HP	0.1150	13
+	CD2	CA	-0.1150	14
+	HD2	HP	0.1150	15
+	CE	CA	-0.1150	16
+	HE	HP	0.1150	17
+	C	C	0.5100	18
+	O	O	-0.5100	19
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG1	CB
+	CG2	CB
+	CE	CD1
+	CG1	CD1
+	HD1	CD1
+	CE	CD2
+	CG2	CD2
+	HD2	CD2
+	HE	CE
+	CG1	CH1
+	FH1	CH1
+	FH2	CH1
+	FH3	CH1
+	HG2	CG2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

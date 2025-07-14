@@ -1,0 +1,63 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ QU35 ] ; 3-(5-Quinolyl)-alanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD1	CA	-0.1150	8
+	HD1	HP	0.1150	9
+	CD2	CA	-0.1150	10
+	HD2	HP	0.1150	11
+	CE1	CA	-0.1150	12
+	HE1	HP	0.1150	13
+	CE2	CA	0.3100	14
+	NH2	NPYD	-0.6200	15
+	CJ2	CA	0.1600	16
+	HJ2	HP	0.1500	17
+	CZ	CA	0.0000	18
+	CH1	CA	-0.1150	19
+	HH1	HP	0.1150	20
+	CJ1	CA	-0.1150	21
+	HJ1	HP	0.1150	22
+	C	C	0.5100	23
+	O	O	-0.5100	24
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	CE1	CD1
+	CG	CD1
+	CE2	CD2
+	CG	CD2
+	CZ	CE1
+	CZ	CE2
+	NH2	CE2
+	CJ1	CH1
+	CZ	CH1
+	CJ2	CJ1
+	NH2	CJ2
+	CB	HB1
+	CB	HB2
+	CD1	HD1
+	CD2	HD2
+	CE1	HE1
+	CJ1	HJ1
+	CJ2	HJ2
+	CH1	HH1
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

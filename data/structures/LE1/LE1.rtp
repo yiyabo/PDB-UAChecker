@@ -1,0 +1,45 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ LE1 ] ; Penicillamine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT0	0.0700	4
+	SG3	S	-0.2300	5
+	HG3	HS	0.1600	6
+	CG2	CT3	-0.2700	7
+	HG23	HA	0.0900	8
+	HG21	HA	0.0900	9
+	HG22	HA	0.0900	10
+	CG1	CT3	-0.2700	11
+	HG11	HA	0.0900	12
+	HG12	HA	0.0900	13
+	HG13	HA	0.0900	14
+	C	C	0.5100	15
+	O	O	-0.5100	16
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	CG2
+	HG23	CG2
+	HG21	CG2
+	HG22	CG2
+	CB	CG1
+	HG11	CG1
+	HG12	CG1
+	HG13	CG1
+	SG3	CB
+	SG3	HG3
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

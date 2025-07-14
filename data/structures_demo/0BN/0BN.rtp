@@ -1,0 +1,67 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ 0BN ] ; 4-carbamimidoyl-l-phenylalanine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD1	CA	-0.1150	8
+	HD1	HP	0.1150	9
+	CD2	CA	-0.1150	10
+	HD2	HP	0.1150	11
+	CE1	CA	-0.1150	12
+	HE1	HP	0.1150	13
+	CE2	CA	-0.1150	14
+	HE2	HP	0.1150	15
+	CZ	CA	-0.0300	16
+	CH	C	0.7300	17
+	NJ1	NCN	-0.7500	18
+	HJ11	HNCN	0.4500	19
+	HJ12	HNCN	0.4500	20
+	NJ2	NCN	-0.7500	21
+	HJ22	HNCN	0.4500	22
+	HJ21	HNCN	0.4500	23
+	C	C	0.5100	24
+	O	O	-0.5100	25
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB1
+	CB	HB2
+	CD1	HD1
+	CG	CB
+	CG	CD1
+	CE1	CD1
+	CD2	CG
+	CE1	HE1
+	CZ	CE1
+	HD2	CD2
+	CE2	CD2
+	NJ1	HJ11
+	CE2	CZ
+	CH	CZ
+	HE2	CE2
+	CH	NJ1
+	HJ12	NJ1
+	NJ2	CH
+	HJ22	NJ2
+	HJ21	NJ2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CH	NJ1	NJ2	CZ	
+	NJ1	HJ11	HJ12	CH
+	NJ2	HJ21	HJ22	CH	
+ [ cmap ]
+	-C	N	CA	C	+N

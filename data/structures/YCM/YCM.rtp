@@ -1,0 +1,49 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ YCM ] ; cysteine-s-acetamide 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1400	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	SG	S	-0.0900	7
+	CD	CT2	-0.1300	8
+	HD2	HA	0.0900	9
+	HD1	HA	0.0900	10
+	CE	CC	0.5500	11
+	OZ1	O	-0.5500	12
+	NZ2	NH2	-0.6200	13
+	HZ21	H	0.3200	14
+	HZ22	H	0.3000	15
+	C	C	0.5100	16
+	O	O	-0.5100	17
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	HB1	CB
+	HB2	CB
+	SG	CB
+	HD2	CD
+	HD1	CD
+	SG	CD
+	CE	CD
+	OZ1	CE
+	NZ2	CE
+	NZ2	HZ21
+	NZ2	HZ22
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE	CD	NZ2	OZ1
+	NZ2	CE	HZ21	HZ22
+ [ cmap ]
+	-C	N	CA	C	+N

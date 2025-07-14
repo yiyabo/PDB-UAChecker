@@ -1,0 +1,37 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ DPP ] ; 2,3-Diaminopropanoic acid
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	0.2100	4
+	HB1	HA	0.0500	5
+	HB2	HA	0.0500	6
+	NG	NH3	-0.3000	7
+	HG2	HC	0.3300	8
+	HG3	HC	0.3300	9
+	HG1	HC	0.3300	10
+	C	C	0.5100	11
+	O	O	-0.5100	12
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	NG	HG2
+	CB	HB1
+	CB	NG
+	HG3	NG
+	HG1	NG
+	HB2	CB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

@@ -1,0 +1,56 @@
+! When using this topology, make sure you've included the required parameters
+! (see http://swisssidechain.ch/MD/charmm.html)
+
+RESI 4CY         -0.00  !  nitrilo-l-methionine 
+GROUP
+ATOM	N	NH1	-0.4700
+ATOM	HN	H	0.3100
+ATOM	CA	CT1	0.0700
+ATOM	HA	HB	0.0900
+GROUP
+ATOM	CB	CT2	-0.1800
+ATOM	HB1	HA	0.0900
+ATOM	HB2	HA	0.0900
+GROUP
+ATOM	CG	CT2	0.0500
+ATOM	HG1	HA	0.0900
+ATOM	HG2	HA	0.0900
+ATOM	SD	S	-0.27
+ATOM	CE	CN	0.59
+ATOM	NZ	NC	-0.55
+GROUP
+ATOM	C	C	0.5100
+ATOM	O	O	-0.5100
+BOND CB CA  N  HN  N  CA C  CA  C  +N  CA HA
+DOUBLE O  C
+BOND	CG	CB
+BOND	HB1	CB
+BOND	HB2	CB
+BOND	NZ	CE
+BOND	SD	CE
+BOND	HG1	CG
+BOND	HG2	CG
+BOND	SD	CG
+IMPR N -C CA HN  C CA +N O
+CMAP -C  N  CA  C   N  CA  C  +N
+IC -C   CA   *N   HN    1.3551 126.4900  180.0000 115.4200  0.9996
+IC -C   N    CA   C     1.3551 126.4900  180.0000 114.4400  1.5390
+IC N    CA   C    +N    1.4592 114.4400  180.0000 116.8400  1.3558
+IC +N   CA   *C   O     1.3558 116.8400  180.0000 122.5200  1.2297
+IC CA   C    +N   +CA   1.5390 116.8400  180.0000 126.7700  1.4613
+IC N    C    *CA  CB    1.4592 114.4400  123.2300 111.0900  1.5461
+IC N    C    *CA  HA    1.4592 114.4400 -120.4500 106.3900  1.0840
+IC C    CA    CB   CG    1.51   109.50  174.99  109.48  1.53  
+IC C    CA    CB   HB1   1.51   109.50  -64.94  109.45  1.09  
+IC C    CA    CB   HB2   1.51   109.50   55.01  109.44  1.09  
+IC CA   CB    CG   SD    1.53   109.48  179.97  109.44  1.81  
+IC CA   CB    CG   HG1   1.53   109.48  -59.98  109.44  1.09  
+IC CA   CB    CG   HG2   1.53   109.48   60.04  109.41  1.09  
+IC CB   CG    SD   CE    1.53   109.44  179.96   99.96  1.81  
+IC CG   SD    CE   NZ    1.81    99.96  104.20  179.91  1.14  
+IC CB   C    *CA   N     0.00     0.00  120.00    0.00  0.00  
+IC CB   C    *CA   HA    0.00     0.00 -120.00    0.00  0.00  
+IC CG   CA   *CB   HB1   0.00     0.00  120.00    0.00  0.00  
+IC CG   CA   *CB   HB2   0.00     0.00 -120.00    0.00  0.00  
+IC SD   CB   *CG   HG1   0.00     0.00  120.00    0.00  0.00  
+IC HG1  CB   *CG   HG2   0.00     0.00 -120.00    0.00  0.00  

@@ -1,0 +1,65 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ APM ] ; m-amidinophenyl-3-alanine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD1	CA	-0.1150	8
+	HD1	HP	0.1150	9
+	CD2	CA	-0.1150	10
+	HD2	HP	0.1150	11
+	CZ	CA	-0.1150	12
+	HZ	HP	0.1150	13
+	CE2	CA	-0.1150	14
+	HE2	HP	0.1150	15
+	CE1	CA	-0.0300	16
+	CH	C	0.7300	17
+	NJ1	NCN	-0.7500	18
+	HJ12	HNCN	0.4500	19
+	HJ11	HNCN	0.4500	20
+	NJ2	NCN	-0.7500	21
+	HJ21	HNCN	0.4500	22
+	HJ22	HNCN	0.4500	23
+	C	C	0.5100	24
+	O	O	-0.5100	25
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	NJ1	HJ12
+	NJ1	HJ11
+	CH	NJ1
+	CD1	HD1
+	NJ2	HJ21
+	CB	HB2
+	NJ2	CH
+	CE1	CH
+	HJ22	NJ2
+	CE1	CD1
+	CG	CD1
+	CZ	CE1
+	HB1	CB
+	CG	CB
+	CD2	CG
+	HZ	CZ
+	CE2	CZ
+	CE2	CD2
+	HD2	CD2
+	HE2	CE2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CH	CE1	NJ1	NJ2
+ [ cmap ]
+	-C	N	CA	C	+N

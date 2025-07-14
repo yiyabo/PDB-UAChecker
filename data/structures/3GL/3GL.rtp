@@ -1,0 +1,44 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ 3GL ] ; 4-hydroxy-glutamic-acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	CG	CT1	0.0400	7
+	HG	HA	0.0900	8
+	OH	OH1	-0.6600	9
+	HH	H	0.4300	10
+	CD	CC	0.6200	11
+	OE1	OC	-0.7600	12
+	OE2	OC	-0.7600	13
+	C	C	0.5100	14
+	O	O	-0.5100	15
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	OE1	CD
+	OE2	CD
+	OH	HH
+	CB	HB2
+	CG	OH
+	CG	CB
+	HB1	CB
+	CD	CG
+	HG	CG
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CD	CG	OE1	OE2
+ [ cmap ]
+	-C	N	CA	C	+N

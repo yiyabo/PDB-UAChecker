@@ -1,0 +1,49 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ THA3 ] ; 3-(3-thienyl)-alanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	C5B	0.0000	7
+	CD1	C5A	-0.1100	8
+	HD1	HP	0.1500	9
+	CD2	C5B	-0.1500	10
+	HD2	HP	0.1500	11
+	SE1	STHI	-0.0800	12
+	CE2	C5A	-0.1100	13
+	HE2	HP	0.1500	14
+	C	C	0.5100	15
+	O	O	-0.5100	16
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CG	CD1
+	SE1	CD1
+	CE2	CD2
+	CG	CD2
+	SE1	CE2
+	CD2	HD2
+	CE2	HE2
+	CD1	HD1
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CD1	CG	SE1	HD1
+	CD2	CG	CE2	HD2
+	CE2	CD2	SE1	HE2
+ [ cmap ]
+	-C	N	CA	C	+N

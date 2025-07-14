@@ -1,0 +1,43 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ FVAL ] ; 3-Fluoro-valine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT0	0.3400	4
+	FG3	F1	-0.3400	5
+	CG1	CT3	-0.2700	6
+	HG11	HA	0.0900	7
+	HG12	HA	0.0900	8
+	HG13	HA	0.0900	9
+	CG2	CT3	-0.2700	10
+	HG21	HA	0.0900	11
+	HG22	HA	0.0900	12
+	HG23	HA	0.0900	13
+	C	C	0.5100	14
+	O	O	-0.5100	15
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG1	CB
+	CG2	CB
+	FG3	CB
+	HG11	CG1
+	HG12	CG1
+	HG13	CG1
+	HG21	CG2
+	HG22	CG2
+	HG23	CG2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

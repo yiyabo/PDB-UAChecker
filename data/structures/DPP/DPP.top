@@ -1,0 +1,48 @@
+! When using this topology, make sure you've included the required parameters
+! (see http://swisssidechain.ch/MD/charmm.html)
+
+RESI DPP         1.00  !  2,3-Diaminopropanoic acid
+GROUP
+ATOM	N	NH1	-0.4700
+ATOM	HN	H	0.3100
+ATOM	CA	CT1	0.0700
+ATOM	HA	HB	0.0900
+GROUP
+ATOM	CB	CT2	0.2100
+ATOM	HB1	HA	0.0500
+ATOM	HB2	HA	0.0500
+ATOM	NG	NH3	-0.30
+ATOM	HG2	HC	0.3300
+ATOM	HG3	HC	0.3300
+ATOM	HG1	HC	0.330
+GROUP
+ATOM	C	C	0.5100
+ATOM	O	O	-0.5100
+BOND CB CA  N  HN  N  CA C  CA  C  +N  CA HA
+DOUBLE O  C
+BOND	NG	HG2
+BOND	CB	HB1
+BOND	CB	NG
+BOND	HG3	NG
+BOND	HG1	NG
+BOND	HB2	CB
+IMPR N -C CA HN  C CA +N O
+CMAP -C  N  CA  C   N  CA  C  +N
+IC -C   CA   *N   HN    1.3551 126.4900  180.0000 115.4200  0.9996
+IC -C   N    CA   C     1.3551 126.4900  180.0000 114.4400  1.5390
+IC N    CA   C    +N    1.4592 114.4400  180.0000 116.8400  1.3558
+IC +N   CA   *C   O     1.3558 116.8400  180.0000 122.5200  1.2297
+IC CA   C    +N   +CA   1.5390 116.8400  180.0000 126.7700  1.4613
+IC N    C    *CA  CB    1.4592 114.4400  123.2300 111.0900  1.5461
+IC N    C    *CA  HA    1.4592 114.4400 -120.4500 106.3900  1.0840
+IC N    CA    CB   NG    1.46   115.76  177.46  110.84  1.47  
+IC N    CA    CB   HB1   1.46   115.76  -62.36  109.11  1.09  
+IC N    CA    CB   HB2   1.46   115.76   57.04  109.21  1.09  
+IC CA   CB    NG   HG1   1.55   110.84 -179.99  109.49  1.01  
+IC CA   CB    NG   HG2   1.55   110.84   60.04  109.45  1.01  
+IC CA   CB    NG   HG3   1.55   110.84  -59.99  109.57  1.01  
+IC C    N    *CA   CB    0.00     0.00  120.00    0.00  0.00  
+IC NG   CA   *CB   HB1   0.00     0.00  120.00    0.00  0.00  
+IC HB1  CA   *CB   HB2   0.00     0.00 -120.00    0.00  0.00  
+IC HG2  CB   *NG   HG3   0.00     0.00  120.00    0.00  0.00  
+IC HG2  CB   *NG   HG1   0.00     0.00 -120.00    0.00  0.00  

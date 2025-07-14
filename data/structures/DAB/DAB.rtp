@@ -1,0 +1,43 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ DAB ] ; Diaminobutyric acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	0.2100	7
+	HG1	HA	0.0500	8
+	HG2	HA	0.0500	9
+	ND	NH3	-0.3000	10
+	HD1	HC	0.3300	11
+	HD2	HC	0.3300	12
+	HD3	HC	0.3300	13
+	C	C	0.5100	14
+	O	O	-0.5100	15
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	ND	CG
+	CB	HB1
+	CB	HB2
+	CG	HG1
+	CG	HG2
+	ND	HD1
+	ND	HD2
+	ND	HD3
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

@@ -1,0 +1,34 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ LVG ] ; vinylglycine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CE1	-0.1500	4
+	HB	HE1	0.1500	5
+	CG	CE2	-0.3000	6
+	HG1	HE2	0.1500	7
+	HG2	HE2	0.1500	8
+	C	C	0.5100	9
+	O	O	-0.5100	10
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB	CB
+	HG1	CG
+	HG2	CG
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CB	CA	CG	HB
+ [ cmap ]
+	-C	N	CA	C	+N

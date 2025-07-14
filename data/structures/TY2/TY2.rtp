@@ -1,0 +1,59 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ TY2 ] ; 3-Amino-L-tyrosine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD2	CA	-0.1150	8
+	HD2	HP	0.1150	9
+	CD1	CA	-0.1150	10
+	HD1	HP	0.1150	11
+	CE2	CA	-0.1150	12
+	HE2	HP	0.1150	13
+	CE1	CA	0.1000	14
+	NE1	NH2	-0.9000	15
+	HE11	H	0.4000	16
+	HE12	H	0.4000	17
+	CZ	CA	0.1100	18
+	OZ	OH1	-0.5400	19
+	HZ	H	0.4300	20
+	C	C	0.5100	21
+	O	O	-0.5100	22
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CE2	CD2
+	CG	CD2
+	HD2	CD2
+	CE1	CD1
+	CG	CD1
+	HD1	CD1
+	CZ	CE2
+	HE2	CE2
+	CZ	CE1
+	NE1	CE1
+	OZ	CZ
+	OZ	HZ
+	NE1	HE11
+	NE1	HE12
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	NE1	HE11	HE12	CE1
+ [ cmap ]
+	-C	N	CA	C	+N

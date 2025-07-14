@@ -1,0 +1,51 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ HLU ] ; 2s,3s)-2-amino-3-hydroxy-4-methylpentanoic acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT1	0.1400	4
+	HB	HA	0.0900	5
+	OH	OH1	-0.6600	6
+	HH	H	0.4300	7
+	CG	CT1	-0.0900	8
+	HG	HA	0.0900	9
+	CD1	CT3	-0.2700	10
+	HD11	HA	0.0900	11
+	HD12	HA	0.0900	12
+	HD13	HA	0.0900	13
+	CD2	CT3	-0.2700	14
+	HD21	HA	0.0900	15
+	HD22	HA	0.0900	16
+	HD23	HA	0.0900	17
+	C	C	0.5100	18
+	O	O	-0.5100	19
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	OH	CB
+	CD1	CG
+	CD2	CG
+	CB	HB
+	CG	HG
+	CD1	HD11
+	CD1	HD12
+	CD1	HD13
+	OH	HH
+	CD2	HD21
+	CD2	HD22
+	CD2	HD23
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

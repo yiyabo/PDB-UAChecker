@@ -1,0 +1,58 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ HPE ] ; Homophenylalanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG2	HA	0.0900	8
+	HG1	HA	0.0900	9
+	CD	CA	0.0000	10
+	CE2	CA	-0.1150	11
+	HE2	HP	0.1150	12
+	CE1	CA	-0.1150	13
+	HE1	HP	0.1150	14
+	CZ2	CA	-0.1150	15
+	HZ2	HP	0.1150	16
+	CZ1	CA	-0.1150	17
+	HZ1	HP	0.1150	18
+	CH	CA	-0.1150	19
+	HH	HP	0.1150	20
+	C	C	0.5100	21
+	O	O	-0.5100	22
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB1
+	CE2	HE2
+	CZ2	HZ2
+	HB2	CB
+	CG	CB
+	CZ2	CE2
+	CD	CE2
+	CH	CZ2
+	CG	HG2
+	CD	CG
+	HG1	CG
+	CE1	CD
+	HH	CH
+	CZ1	CH
+	CZ1	CE1
+	HE1	CE1
+	HZ1	CZ1
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

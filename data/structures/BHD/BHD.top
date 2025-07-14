@@ -1,0 +1,48 @@
+! When using this topology, make sure you've included the required parameters
+! (see http://swisssidechain.ch/MD/charmm.html)
+
+RESI BHD         -1.00  !  beta-hydroxyaspartic acid 
+GROUP
+ATOM	N	NH1	-0.4700
+ATOM	HN	H	0.3100
+ATOM	CA	CT1	0.0700
+ATOM	HA	HB	0.0900
+GROUP
+ATOM	CB	CT1	0.04
+ATOM	HB	HA	0.09
+ATOM	CG	CC	0.62
+ATOM	OB	OH1	-0.66
+ATOM	HOB	H	0.43
+ATOM	OD1	OC	-0.76
+ATOM	OD2	OC	-0.76
+GROUP
+ATOM	C	C	0.5100
+ATOM	O	O	-0.5100
+BOND CB CA  N  HN  N  CA C  CA  C  +N  CA HA
+DOUBLE O  C
+BOND	OD1	CG
+BOND	OD2	CG
+BOND	CB	HB
+BOND	CG	CB
+BOND	OB	CB
+BOND	HOB	OB
+IMPR N -C CA HN  C CA +N O
+IMPR CG CB OD1 OD2
+CMAP -C  N  CA  C   N  CA  C  +N
+IC -C   CA   *N   HN    1.3551 126.4900  180.0000 115.4200  0.9996
+IC -C   N    CA   C     1.3551 126.4900  180.0000 114.4400  1.5390
+IC N    CA   C    +N    1.4592 114.4400  180.0000 116.8400  1.3558
+IC +N   CA   *C   O     1.3558 116.8400  180.0000 122.5200  1.2297
+IC CA   C    +N   +CA   1.5390 116.8400  180.0000 126.7700  1.4613
+IC N    C    *CA  CB    1.4592 114.4400  123.2300 111.0900  1.5461
+IC N    C    *CA  HA    1.4592 114.4400 -120.4500 106.3900  1.0840
+IC N    CA    CB   OB    1.47   109.52   60.06  109.48  1.43  
+IC N    CA    CB   CG    1.47   109.52  -59.91  109.50  1.51  
+IC N    CA    CB   HB    1.47   109.52 -179.94  109.49  1.09  
+IC CA   CB    OB   HOB   1.53   109.48  179.98  109.46  0.96  
+IC CA   CB    CG   OD1   1.53   109.50  119.95  120.07  1.21  
+IC CA   CB    CG   OD2   1.53   109.50  -60.06  119.98  1.34  
+IC CB   N    *CA   C     0.00     0.00  120.00    0.00  0.00  
+IC CG   CA   *CB   OB    0.00     0.00  120.00    0.00  0.00  
+IC CG   CA   *CB   HB    0.00     0.00 -120.00    0.00  0.00  
+IC OD1  CB   *CG   OD2   0.00     0.00  180.00    0.00  0.00  

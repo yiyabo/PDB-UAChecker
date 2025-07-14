@@ -1,0 +1,55 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ AHP ] ; 2-Aminoheptanoic acid
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG1	HA	0.0900	8
+	HG2	HA	0.0900	9
+	CD	CT2	-0.1800	10
+	HD1	HA	0.0900	11
+	HD2	HA	0.0900	12
+	CE	CT2	-0.1800	13
+	HE1	HA	0.0900	14
+	HE2	HA	0.0900	15
+	CZ	CT3	-0.2700	16
+	HZ1	HA	0.0900	17
+	HZ2	HA	0.0900	18
+	HZ3	HA	0.0900	19
+	C	C	0.5100	20
+	O	O	-0.5100	21
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CE	CD
+	CG	CD
+	HD1	CD
+	HD2	CD
+	CZ	CE
+	HE1	CE
+	HE2	CE
+	HG1	CG
+	HG2	CG
+	HZ1	CZ
+	HZ2	CZ
+	HZ3	CZ
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

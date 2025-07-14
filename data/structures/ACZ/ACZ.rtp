@@ -1,0 +1,72 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ ACZ ] ; cis-amiclenomycin 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CT2	-0.1800	7
+	HG1	HA	0.0900	8
+	HG2	HA	0.0900	9
+	CD	CT1	0.1900	10
+	HD	HA	0.0900	11
+	CE1	CE1	-0.2900	12
+	HE11	HE1	0.1500	13
+	CE2	CE1	-0.2900	14
+	HE22	HE1	0.1500	15
+	CZ1	CE1	-0.2900	16
+	HZ11	HE1	0.1500	17
+	CZ2	CE1	-0.2900	18
+	HZ22	HE1	0.1500	19
+	CH	CT1	0.6900	20
+	HH	HA	0.0900	21
+	NJ	NH3	-0.8500	22
+	HJ1	HC	0.4500	23
+	HJ2	HC	0.4500	24
+	HJ3	HC	0.4500	25
+	C	C	0.5100	26
+	O	O	-0.5100	27
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	CE1	CD
+	CE2	CD
+	CG	CD
+	HD	CD
+	CZ1	CE1
+	HE11	CE1
+	CZ2	CE2
+	HE22	CE2
+	HG1	CG
+	HG2	CG
+	CZ1	CH
+	CZ2	CH
+	HH	CH
+	NJ	CH
+	HZ11	CZ1
+	HZ22	CZ2
+	NJ	HJ1
+	NJ	HJ2
+	NJ	HJ3
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE1	CD	CZ1	HE11
+	CE2     CD      CZ2     HE22
+	CZ1     CH      CE1     HZ11
+	CZ2     CH      CE2     HZ22
+ [ cmap ]
+	-C	N	CA	C	+N

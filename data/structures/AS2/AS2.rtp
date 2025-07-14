@@ -1,0 +1,36 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ AS2 ] ; (2r)-2-amino-4-oxobutanoic acid 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	C	0.5100	7
+	HG	HCO	0.0600	8
+	OG	O	-0.5700	9
+	C	C	0.5100	10
+	O	O	-0.5100	11
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG	CB
+	HB1	CB
+	HB2	CB
+	HG	CG
+	OG	CG
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CG	CB	OG	HG
+ [ cmap ]
+	-C	N	CA	C	+N

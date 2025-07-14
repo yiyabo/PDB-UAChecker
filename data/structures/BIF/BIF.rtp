@@ -1,0 +1,73 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ BIF ] ; biphenylalanine
+ [ atoms ]
+        N       NH1     -0.4700   0
+        HN      H       0.3100    1
+        CA      CT1     0.0700    2
+        HA      HB      0.0900    3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CA	0.0000	7
+	CD1	CA	-0.1150	8
+	HD1	HP	0.1150	9
+	CD2	CA	-0.1150	10
+	HD2	HP	0.1150	11
+	CE1	CA	-0.1150	12
+	HE1	HP	0.1150	13
+	CE2	CA	-0.1150	14
+	HE2	HP	0.1150	15
+	CZ	CA	0.0000	16
+	C12	CA	0.0000	17
+	C11	CA	-0.1150	18
+	H11	HP	0.1150	19
+	C13	CA	-0.1150	20
+	H13	HP	0.1150	21
+	C10	CA	-0.1150	22
+	H10	HP	0.1150	23
+	C8	CA	-0.1150	24
+	H8	HP	0.1150	25
+	C9	CA	-0.1150	26
+	H9	HP	0.1150	27
+	C	C	0.5100	28
+	O	O	-0.5100	29
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	C11	C10
+	C9	C10
+	C12	C11
+	C13	C12
+	CZ	C12
+	C8	C13
+	C9	C8
+	CG	CB
+	CE1	CD1
+	CG	CD1
+	CE2	CD2
+	CG	CD2
+	CZ	CE1
+	CZ	CE2
+	CB	HB1
+	CB	HB2
+	CE1	HE1
+	CD1	HD1
+	CD2	HD2
+	CE2	HE2
+	C10	H10
+	C11	H11
+	C13	H13
+	C8	H8
+	C9	H9
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

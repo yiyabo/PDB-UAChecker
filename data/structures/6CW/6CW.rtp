@@ -1,0 +1,61 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ 6CW ] ; 6-chloro-l-tryptophan 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	CG	CY	-0.0300	7
+	CD1	CA	0.0350	8
+	HD1	HP	0.1150	9
+	CD2	CPT	-0.0200	10
+	NE1	NY	-0.6100	11
+	HE1	H	0.3800	12
+	CE2	CPT	0.1300	13
+	CE3	CA	-0.1150	14
+	HE3	HP	0.1150	15
+	CZ3	CA	-0.1150	16
+	HZ3	HP	0.1150	17
+	CZ2	CA	-0.1150	18
+	HZ2	HP	0.1150	19
+	CH2	CA	0.1700	20
+	CLL	CLAL	-0.1700	21
+	C	C	0.5100	22
+	O	O	-0.5100	23
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	HB1	CB
+	HB2	CB
+	CG	CB
+	HD1	CD1
+	CG	CD1
+	NE1	CD1
+	CG	CD2
+	CE3	CD2
+	CE2	CD2
+	CZ2	CE2
+	NE1	CE2
+	HE3	CE3
+	CZ3	CE3
+	CZ2	CH2
+	CLL	CH2
+	CZ3	CH2
+	HZ2	CZ2
+	HZ3	CZ3
+	NE1	HE1
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

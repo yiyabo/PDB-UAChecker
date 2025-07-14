@@ -1,0 +1,55 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ DILE ] ; Diethylalanine
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT1	-0.0900	4
+	HB	HA	0.0900	5
+	CG1	CT2	-0.1800	6
+	HG11	HA	0.0900	7
+	HG12	HA	0.0900	8
+	CG2	CT2	-0.1800	9
+	HG21	HA	0.0900	10
+	HG22	HA	0.0900	11
+	CD1	CT3	-0.2700	12
+	HD11	HA	0.0900	13
+	HD12	HA	0.0900	14
+	HD13	HA	0.0900	15
+	CD2	CT3	-0.2700	16
+	HD21	HA	0.0900	17
+	HD22	HA	0.0900	18
+	HD23	HA	0.0900	19
+	C	C	0.5100	20
+	O	O	-0.5100	21
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CG1	CB
+	CG2	CB
+	HB	CB
+	CG1	CD1
+	HD11	CD1
+	HD12	CD1
+	HD13	CD1
+	CG2	CD2
+	HD21	CD2
+	HD22	CD2
+	HD23	CD2
+	HG11	CG1
+	HG12	CG1
+	HG21	CG2
+	HG22	CG2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

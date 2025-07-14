@@ -1,0 +1,53 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ MEQ ] ; n5-methylglutamine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1800	4
+	HB2	HA	0.0900	5
+	HB1	HA	0.0900	6
+	CG	CT2	-0.1200	7
+	HG1	HA	0.0900	8
+	HG2	HA	0.0900	9
+	CD	CC	0.5700	10
+	OE1	O	-0.5700	11
+	NE2	NH1	-0.7300	12
+	HE2	H	0.3700	13
+	CZ	CT3	0.0300	14
+	HZ1	HA	0.0900	15
+	HZ2	HA	0.0900	16
+	HZ3	HA	0.0900	17
+	C	C	0.5100	18
+	O	O	-0.5100	19
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	HB2	CB
+	HB1	CB
+	CG	CB
+	CG	CD
+	OE1	CD
+	NE2	CD
+	NE2	CZ
+	HZ1	CZ
+	HZ2	CZ
+	HZ3	CZ
+	HG1	CG
+	HG2	CG
+	NE2	HE2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CD	CG	NE2	OE1
+	NE2	CD	CZ	HE2
+ [ cmap ]
+	-C	N	CA	C	+N

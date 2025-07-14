@@ -1,0 +1,39 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ SEP2 ] ; phosphoserine (charge: -2)
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	0.1000	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	OG	OCC	-0.5500	7
+	P	PO4	1.3600	8
+	O1P	OC	-1.0300	9
+	O2P	OC	-1.0300	10
+	O3P	OC	-1.0300	11
+	C	C	0.5100	12
+	O	O	-0.5100	13
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB2
+	P	O1P
+	OG	CB
+	HB1	CB
+	P	OG
+	O2P	P
+	O3P	P
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+ [ cmap ]
+	-C	N	CA	C	+N

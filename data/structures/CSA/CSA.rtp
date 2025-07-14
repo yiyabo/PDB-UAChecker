@@ -1,0 +1,50 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ CSA ] ; s-acetonylcysteine 
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	-0.1400	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	SG	S	-0.0900	7
+	CD	CT2	-0.1300	8
+	HD2	HA	0.0900	9
+	HD1	HA	0.0900	10
+	CE	CC	0.5500	11
+	OE	O	-0.5500	12
+	CZ	CT3	-0.2700	13
+	HZ1	HA	0.0900	14
+	HZ2	HA	0.0900	15
+	HZ3	HA	0.0900	16
+	C	C	0.5100	17
+	O	O	-0.5100	18
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CE	CZ
+	HZ1	CZ
+	HZ2	CZ
+	HZ3	CZ
+	CD	CE
+	OE	CE
+	SG	CD
+	HD2	CD
+	HD1	CD
+	SG	CB
+	HB1	CB
+	HB2	CB
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CE	CD	OE	CZ
+ [ cmap ]
+	-C	N	CA	C	+N

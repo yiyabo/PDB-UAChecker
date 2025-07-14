@@ -1,0 +1,48 @@
+; When using this new tolopolgy, make sure you have included the required parameters 
+; (see http://swisssidechain.ch/MD/gromacs.html)
+
+[ GDPR ] ; 2-Amino-3-guanidinopropionic acid
+ [ atoms ]
+	N	NH1	-0.4700	0
+	HN	H	0.3100	1
+	CA	CT1	0.0700	2
+	HA	HB	0.0900	3
+	CB	CT2	0.2000	4
+	HB1	HA	0.0900	5
+	HB2	HA	0.0900	6
+	NG	NC2	-0.7000	7
+	HG	HC	0.4400	8
+	CD	C	0.6400	9
+	NE1	NC2	-0.8000	10
+	HE11	HC	0.4600	11
+	HE12	HC	0.4600	12
+	NE2	NC2	-0.8000	13
+	HE22	HC	0.4600	14
+	HE21	HC	0.4600	15
+	C	C	0.5100	16
+	O	O	-0.5100	17
+ [ bonds ]
+	N	HN
+	N	CA
+	C	CA
+	C	+N
+	CA	HA
+	CB	CA
+	O	C
+	CB	HB1
+	NE1	HE11
+	HB2	CB
+	NG	CB
+	HE12	NE1
+	CD	NE1
+	CD	NG
+	HG	NG
+	NE2	CD
+	HE22	NE2
+	HE21	NE2
+ [ impropers ]
+	N	-C	CA	HN
+	C	CA	+N	O
+	CD	NE1	NE2	NG
+ [ cmap ]
+	-C	N	CA	C	+N

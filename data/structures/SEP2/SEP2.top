@@ -1,0 +1,51 @@
+! When using this topology, make sure you've included the required parameters
+! (see http://swisssidechain.ch/MD/charmm.html)
+
+RESI SEP2         -2.00  !  phosphoserine (charge: -2)
+GROUP
+ATOM	N	NH1	-0.4700
+ATOM	HN	H	0.3100
+ATOM	CA	CT1	0.0700
+ATOM	HA	HB	0.0900
+GROUP
+ATOM	CB	CT2	0.10
+ATOM	HB1	HA	0.09
+ATOM	HB2	HA	0.09
+ATOM	OG	OCC	-0.55
+ATOM	P	PO4	1.36
+ATOM	O1P	OC	-1.03
+ATOM	O2P	OC	-1.03
+ATOM	O3P	OC	-1.03
+GROUP
+ATOM	C	C	0.5100
+ATOM	O	O	-0.5100
+BOND CB CA  N  HN  N  CA C  CA  C  +N  CA HA
+DOUBLE O  C
+BOND	HB1	CB
+BOND	HB2	CB
+BOND	OG	CB
+BOND	P	O1P
+BOND	P	O2P
+BOND	P	O3P
+BOND	P	OG
+IMPR N -C CA HN  C CA +N O
+CMAP -C  N  CA  C   N  CA  C  +N
+IC -C   CA   *N   HN    1.3551 126.4900  180.0000 115.4200  0.9996
+IC -C   N    CA   C     1.3551 126.4900  180.0000 114.4400  1.5390
+IC N    CA   C    +N    1.4592 114.4400  180.0000 116.8400  1.3558
+IC +N   CA   *C   O     1.3558 116.8400  180.0000 122.5200  1.2297
+IC CA   C    +N   +CA   1.5390 116.8400  180.0000 126.7700  1.4613
+IC N    C    *CA  CB    1.4592 114.4400  123.2300 111.0900  1.5461
+IC N    C    *CA  HA    1.4592 114.4400 -120.4500 106.3900  1.0840
+IC N    CA    CB   OG    1.47   109.42  -60.12  109.55  1.43  
+IC N    CA    CB   HB1   1.47   109.42   60.02  109.60  1.09  
+IC N    CA    CB   HB2   1.47   109.42  179.98  109.39  1.09  
+IC CA   CB    OG   P     1.53   109.55 -179.95  106.86  1.61  
+IC CB   OG    P    O1P   1.43   106.86   60.06  109.47  1.48  
+IC CB   OG    P    O2P   1.43   106.86 -179.90  109.53  1.61  
+IC CB   OG    P    O3P   1.43   106.86  -59.93  109.48  1.61  
+IC CB   N    *CA   C     0.00     0.00  120.00    0.00  0.00  
+IC OG   CA   *CB   HB1   0.00     0.00  120.00    0.00  0.00  
+IC HB1  CA   *CB   HB2   0.00     0.00 -120.00    0.00  0.00  
+IC O1P  OG   *P    O2P   0.00     0.00  120.00    0.00  0.00  
+IC O1P  OG   *P    O3P   0.00     0.00 -120.00    0.00  0.00  
