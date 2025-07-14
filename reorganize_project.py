@@ -228,12 +228,12 @@ python -m pytest tests/
 
 def main():
     """主函数"""
-    
+
     print("🔄 项目重组工具")
     print("=" * 30)
-    
+
     reorganize_project()
-    
+
     print(f"\n💡 下一步:")
     print("1. 测试新的统一接口: python analyze_pdb.py your_file.pdb")
     print("2. 查看项目文档: cat README.md")
@@ -241,4 +241,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-'''

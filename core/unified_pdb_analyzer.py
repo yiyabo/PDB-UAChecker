@@ -39,7 +39,10 @@ class UnifiedSearchEngine:
     """统一搜索引擎 - 整合所有搜索功能"""
     
     def __init__(self):
-        self.db_path = 'amino_acids.db'
+        # 获取数据库的正确路径
+        import os
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self.db_path = os.path.join(current_dir, 'amino_acids.db')
         self._load_database()
     
     def _load_database(self):
