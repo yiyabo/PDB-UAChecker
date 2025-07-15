@@ -260,24 +260,51 @@ class PDBParser:
         except:
             return None
     
-    def _calculate_atom_composition(self, atoms: List[Dict]) -> Dict:
-        """计算原子组成"""
+    def _calculate_atom_composition(self, atoms: List[Dict], include_hydrogen: bool = None) -> Dict:
+        """
+        计算原子组成（智能氢原子处理）
+
+        Args:
+            atoms: 原子列表
+            include_hydrogen: 是否包含氢原子。None表示自动检测
+
+        注意：采用分层处理策略：
+        - 如果数据库包含氢原子，则PDB解析也包含
+        - 如果数据库不包含氢原子，则PDB解析也不包含
+        - 这样确保数据一致性，同时保持化学完整性
+        """
         composition = {}
         for atom in atoms:
             element = atom['element']
             if element:
+                # 智能氢原子处理
+                if element == 'H' and include_hydrogen is False:
+                    continue  # 跳过氢原子
                 composition[element] = composition.get(element, 0) + 1
         return composition
+
+    def _calculate_complete_atom_composition(self, atoms: List[Dict]) -> Dict:
+        """计算完整的原子组成（包含氢原子）"""
+        return self._calculate_atom_composition(atoms, include_hydrogen=True)
+
+    def _calculate_heavy_atom_composition(self, atoms: List[Dict]) -> Dict:
+        """计算重原子组成（不包含氢原子）"""
+        return self._calculate_atom_composition(atoms, include_hydrogen=False)
     
     def _calculate_molecular_formula(self, atom_composition: Dict) -> str:
-        """计算分子式"""
+        """
+        计算分子式（保持原子组成的氢原子处理策略）
+
+        注意：分子式的氢原子包含情况取决于传入的原子组成。
+        如果原子组成包含氢原子，分子式也会包含；反之亦然。
+        """
         if not atom_composition:
             return ""
-        
-        # 按标准顺序排列元素
+
+        # 按标准顺序排列元素（包含H，因为分子式应该是完整的）
         element_order = ['C', 'H', 'N', 'O', 'S', 'P', 'F', 'Cl', 'Br', 'I', 'Se']
         formula_parts = []
-        
+
         for element in element_order:
             if element in atom_composition:
                 count = atom_composition[element]
@@ -285,7 +312,7 @@ class PDBParser:
                     formula_parts.append(element)
                 else:
                     formula_parts.append(f"{element}{count}")
-        
+
         # 添加其他元素
         for element, count in sorted(atom_composition.items()):
             if element not in element_order:
@@ -293,8 +320,37 @@ class PDBParser:
                     formula_parts.append(element)
                 else:
                     formula_parts.append(f"{element}{count}")
-        
+
         return ''.join(formula_parts)
+
+    def _generate_complete_molecular_formula_from_smiles(self, smiles: str) -> str:
+        """从SMILES生成完整的分子式（包含氢原子）"""
+        try:
+            from rdkit import Chem
+
+            mol = Chem.MolFromSmiles(smiles)
+            if not mol:
+                return ""
+
+            # 计算完整的原子组成（包含隐式氢原子）
+            atom_counts = {}
+            for atom in mol.GetAtoms():
+                symbol = atom.GetSymbol()
+                atom_counts[symbol] = atom_counts.get(symbol, 0) + 1
+
+            # 添加隐式氢原子
+            total_h = sum(atom.GetTotalNumHs() for atom in mol.GetAtoms())
+            if total_h > 0:
+                atom_counts['H'] = atom_counts.get('H', 0) + total_h
+
+            return self._calculate_molecular_formula(atom_counts)
+
+        except ImportError:
+            print("⚠️ RDKit不可用，无法从SMILES生成完整分子式")
+            return ""
+        except Exception as e:
+            print(f"从SMILES生成分子式失败: {e}")
+            return ""
 
 class PDBAnalyzer:
     """统一PDB分析器 - 主入口"""
