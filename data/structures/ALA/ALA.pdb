@@ -1,0 +1,27 @@
+ATOM      1  N   ALA A   1      47.509  41.115 -84.796  1.00  0.00           N
+ATOM      2  CA  ALA A   1      48.185  42.409 -84.796  1.00  0.00           C
+ATOM      3  O   ALA A   1      50.216  41.118 -84.807  1.00  0.00           O
+ATOM      4  CB  ALA A   1      47.677  43.201 -83.579  1.00  0.00           C
+ATOM      5  C   ALA A   1      49.713  42.208 -84.797  1.00  0.00           C
+ATOM      6  OXT ALA A   1      50.561  43.360 -84.784  1.00  0.00           O
+ATOM      7  H3  ALA A   1      48.055  40.183 -84.796  1.00  0.00           H
+ATOM      8  HA  ALA A   1      47.917  42.948 -85.724  1.00  0.00           H
+ATOM      9  HB1 ALA A   1      46.581  43.351 -83.615  1.00  0.00           H
+ATOM     10  HB2 ALA A   1      47.901  42.687 -82.624  1.00  0.00           H
+ATOM     11  HB3 ALA A   1      48.133  44.206 -83.522  1.00  0.00           H
+ATOM     12  H1  ALA A   1      46.926  41.101 -83.971  1.00  0.00           H
+ATOM     13  H2  ALA A   1      46.893  41.100 -85.597  1.00  0.00           H
+CONECT   12    1
+CONECT    9    4
+CONECT   13    1
+CONECT   10    4
+CONECT   11    4
+CONECT    5    2    3    6
+CONECT    2    1    4    5    8
+CONECT    4    2   10    9   11
+CONECT    7    1
+CONECT    8    2
+CONECT    1    2    7   12   13
+CONECT    3    5
+CONECT    6    5
+END

@@ -1,0 +1,53 @@
+HETATM    1  N   4PH A   1      22.188 -19.590  47.752  1.00  0.00           N
+HETATM    2  CA  4PH A   1      21.533 -19.230  49.007  1.00  0.00           C
+HETATM    3  C   4PH A   1      20.197 -19.919  49.136  1.00  0.00           C
+HETATM    4  O   4PH A   1      19.765 -20.678  48.265  1.00  0.00           O
+HETATM    5  CB  4PH A   1      21.290 -17.694  49.085  1.00  0.00           C
+HETATM    6  CG  4PH A   1      22.535 -16.798  49.058  1.00  0.00           C
+HETATM    7  CD1 4PH A   1      23.257 -16.547  50.229  1.00  0.00           C
+HETATM    8  CD2 4PH A   1      22.958 -16.234  47.851  1.00  0.00           C
+HETATM    9  CE1 4PH A   1      24.393 -15.744  50.189  1.00  0.00           C
+HETATM   10  CE2 4PH A   1      24.094 -15.432  47.813  1.00  0.00           C
+HETATM   11  CZ  4PH A   1      24.811 -15.187  48.983  1.00  0.00           C
+HETATM   12  OXT 4PH A   1      19.557 -19.738  50.145  1.00  0.00           O
+HETATM   13  CH  4PH A   1      26.069 -14.299  48.941  1.00  0.00           C
+HETATM   14  HN1 4PH A   1      23.078 -19.117  47.688  1.00  0.00           H
+HETATM   15  HN2 4PH A   1      22.335 -20.589  47.724  1.00  0.00           H
+HETATM   16  HN3 4PH A   1      21.604 -19.314  46.976  1.00  0.00           H
+HETATM   17  HA  4PH A   1      22.168 -19.558  49.851  1.00  0.00           H
+HETATM   18  HB1 4PH A   1      20.727 -17.453  50.008  1.00  0.00           H
+HETATM   19  HB2 4PH A   1      20.597 -17.390  48.273  1.00  0.00           H
+HETATM   20  HD1 4PH A   1      22.944 -16.980  51.169  1.00  0.00           H
+HETATM   21  HD2 4PH A   1      22.412 -16.429  46.938  1.00  0.00           H
+HETATM   22  HH1 4PH A   1      26.363 -14.036  49.957  1.00  0.00           H
+HETATM   23  HH2 4PH A   1      25.855 -13.392  48.377  1.00  0.00           H
+HETATM   24  HH3 4PH A   1      26.881 -14.843  48.458  1.00  0.00           H
+HETATM   25  HE1 4PH A   1      24.951 -15.553  51.094  1.00  0.00           H
+HETATM   26  HE2 4PH A   1      24.420 -15.000  46.878  1.00  0.00           H
+CONECT    3    2    4   12
+CONECT    2    3    5   17    1
+CONECT    5    2    6   18   19
+CONECT    7    6    9   20
+CONECT    8    6   10   21
+CONECT    9    7   11   25
+CONECT   10    8   11   26
+CONECT    6    5    7    8
+CONECT   13   11   22   23   24
+CONECT   11    9   10   13
+CONECT   17    2
+CONECT   18    5
+CONECT   19    5
+CONECT   20    7
+CONECT   21    8
+CONECT   25    9
+CONECT   26   10
+CONECT   22   13
+CONECT   23   13
+CONECT   24   13
+CONECT   14    1
+CONECT   15    1
+CONECT   16    1
+CONECT    1    2   14   15   16
+CONECT    4    3
+CONECT   12    3
+END

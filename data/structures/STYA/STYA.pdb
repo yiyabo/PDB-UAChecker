@@ -1,0 +1,55 @@
+ATOM      1  N   STYA    1       2.401   6.416   2.137  1.00  0.00           N
+ATOM      2  CA  STYA    1       3.556   5.906   1.408  1.00  0.00           C
+ATOM      3  O   STYA    1       4.394   7.997   0.848  1.00  0.00           O
+ATOM      4  CB  STYA    1       3.202   5.511  -0.056  1.00  0.00           C
+ATOM      5  C   STYA    1       4.472   7.008   1.555  1.00  0.00           C
+ATOM      6  OXT STYA    1       5.184   7.070   2.541  1.00  0.00           O
+ATOM      7  CG  STYA    1       2.183   4.470  -0.106  1.00  0.00           C
+ATOM      8  CD  STYA    1       2.459   3.153  -0.046  1.00  0.00           C
+ATOM      9  CE  STYA    1       1.537   2.093  -0.029  1.00  0.00           C
+ATOM     10  CZ1 STYA    1       2.022   0.757  -0.013  1.00  0.00           C
+ATOM     11  CH1 STYA    1       1.146  -0.346  -0.000  1.00  0.00           C
+ATOM     12  CJ  STYA    1      -0.242  -0.139   0.001  1.00  0.00           C
+ATOM     13  CH2 STYA    1      -0.752   1.169  -0.000  1.00  0.00           C
+ATOM     14  CZ2 STYA    1       0.126   2.268  -0.012  1.00  0.00           C
+ATOM     15  HA  STYA    1       3.955   5.035   1.928  1.00  0.00           H
+ATOM     16  HB1 STYA    1       2.830   6.393  -0.579  1.00  0.00           H
+ATOM     17  HB2 STYA    1       4.101   5.153  -0.557  1.00  0.00           H
+ATOM     18  HG  STYA    1       1.149   4.771  -0.196  1.00  0.00           H
+ATOM     19  HD  STYA    1       3.504   2.882  -0.007  1.00  0.00           H
+ATOM     20  HZ1 STYA    1       3.088   0.584  -0.011  1.00  0.00           H
+ATOM     21  HH1 STYA    1       1.543  -1.350   0.009  1.00  0.00           H
+ATOM     22  HJ  STYA    1      -0.916  -0.983   0.003  1.00  0.00           H
+ATOM     23  HH2 STYA    1      -1.819   1.331   0.008  1.00  0.00           H
+ATOM     24  HZ2 STYA    1      -0.281   3.268  -0.008  1.00  0.00           H
+ATOM     25  H1  STYA    1       1.660   5.729   2.117  1.00  0.00           H
+ATOM     26  H2  STYA    1       2.080   7.270   1.704  1.00  0.00           H
+ATOM     27  H3  STYA    1       2.663   6.601   3.095  1.00  0.00           H
+CONECT    5    2    3    6
+CONECT    2   15    1    4    5
+CONECT    4   17   16    2    7
+CONECT    8   19    7    9
+CONECT    9    8   10   14
+CONECT   10   20    9   11
+CONECT   14   24    9   13
+CONECT    7   18    4    8
+CONECT   11   21   10   12
+CONECT   13   23   12   14
+CONECT   12   22   11   13
+CONECT   25    1
+CONECT   26    1
+CONECT   27    1
+CONECT   15    2
+CONECT   16    4
+CONECT   17    4
+CONECT   19    8
+CONECT   20   10
+CONECT   24   14
+CONECT   18    7
+CONECT   21   11
+CONECT   23   13
+CONECT   22   12
+CONECT    1   25   26   27    2
+CONECT    3    5
+CONECT    6    5
+END

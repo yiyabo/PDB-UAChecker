@@ -1,0 +1,43 @@
+ATOM      1  N   CHP A   1      -3.004   0.716   0.384  1.00 10.00           N
+ATOM      2  CA  CHP A   1      -2.274   0.415  -0.855  1.00 10.00           C
+ATOM      3  C   CHP A   1      -2.554  -1.005  -1.271  1.00 10.00           C
+ATOM      4  O   CHP A   1      -2.793  -1.843  -0.434  1.00 10.00           O
+ATOM      5  OXT CHP A   1      -2.539  -1.340  -2.570  1.00 10.00           O
+ATOM      6  CB  CHP A   1      -0.795   0.589  -0.623  1.00 10.00           C
+ATOM      7  CG1 CHP A   1      -0.155  -0.168   0.338  1.00 10.00           C
+ATOM      8  CD1 CHP A   1       1.203  -0.014   0.550  1.00 10.00           C
+ATOM      9 CLD  CHP A   1       2.008  -0.970   1.754  1.00 10.00          Cl
+ATOM     10  CE  CHP A   1       1.919   0.909  -0.198  1.00 10.00           C
+ATOM     11  OE  CHP A   1       3.253   1.066   0.011  1.00 10.00           O
+ATOM     12  CD2 CHP A   1       1.271   1.671  -1.159  1.00 10.00           C
+ATOM     13  CG2 CHP A   1      -0.083   1.510  -1.370  1.00 10.00           C
+ATOM     14  H3  CHP A   1      -2.670   0.067   1.081  1.00 10.00           H
+ATOM     15  H2  CHP A   1      -2.707   1.634   0.680  1.00 10.00           H
+ATOM     16  HA  CHP A   1      -2.601   1.095  -1.643  1.00 10.00           H
+ATOM     17  HG1 CHP A   1      -0.712  -0.886   0.921  1.00 10.00           H
+ATOM     18  HE  CHP A   1       3.352   1.748   0.687  1.00 10.00           H
+ATOM     19  HD2 CHP A   1       1.828   2.390  -1.743  1.00 10.00           H
+ATOM     20  HG2 CHP A   1      -0.587   2.103  -2.118  1.00 10.00           H
+ATOM     21  H1  CHP A   1      -4.004   0.661   0.260  1.00  0.00           H
+CONECT    3    2    4    5
+CONECT    6    2    7   13
+CONECT    7    6    8   17
+CONECT    8   10    7    9
+CONECT   10    8   11   12
+CONECT   12   10   13   19
+CONECT   13    6   12   20
+CONECT    2    1    3    6   16
+CONECT    9    8
+CONECT   14    1
+CONECT   21    1
+CONECT   15    1
+CONECT   19   12
+CONECT   20   13
+CONECT   16    2
+CONECT   17    7
+CONECT   18   11
+CONECT    1   21    2   14   15
+CONECT    4    3
+CONECT   11   10   18
+CONECT    5    3
+END

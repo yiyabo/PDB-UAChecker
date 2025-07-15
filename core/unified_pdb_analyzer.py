@@ -99,43 +99,43 @@ class UnifiedSearchEngine:
         return results
     
     def search_by_molecular_formula(self, formula: str) -> List[MatchResult]:
-        """基于分子式搜索"""
+        """基于分子式搜索 - 优化版：降低置信度，作为筛选条件"""
         results = []
-        
+
         for amino_id, aa_data in self.amino_acids.items():
             if aa_data['molecular_formula'] == formula:
                 result = MatchResult(
                     amino_acid_id=amino_id,
                     amino_acid_name=aa_data['name'],
-                    confidence_score=0.95,
-                    match_method="molecular_formula_exact",
+                    confidence_score=0.60,  # 降低置信度：作为筛选条件而非最终判断
+                    match_method="molecular_formula_screening",  # 更新方法名
                     molecular_formula=aa_data['molecular_formula'],
                     smiles=aa_data['smiles'],
                     residue_info=None
                 )
                 results.append(result)
-        
+
         return results
     
     def search_by_atom_composition(self, atom_comp: Dict) -> List[MatchResult]:
-        """基于原子组成搜索"""
+        """基于原子组成搜索 - 优化版：降低置信度，作为辅助验证条件"""
         results = []
-        
+
         for amino_id, aa_data in self.amino_acids.items():
             db_atom_comp = aa_data['atom_composition']
-            
+
             if db_atom_comp == atom_comp:
                 result = MatchResult(
                     amino_acid_id=amino_id,
                     amino_acid_name=aa_data['name'],
-                    confidence_score=0.90,
-                    match_method="atom_composition_exact",
+                    confidence_score=0.65,  # 降低置信度：作为辅助验证条件
+                    match_method="atom_composition_verification",  # 更新方法名
                     molecular_formula=aa_data['molecular_formula'],
                     smiles=aa_data['smiles'],
                     residue_info=None
                 )
                 results.append(result)
-        
+
         return results
     
     def search_by_fingerprint_similarity(self, target_smiles: str, 

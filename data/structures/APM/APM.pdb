@@ -1,0 +1,59 @@
+ATOM      1  N   APM A   1      -1.579  -1.086   1.579  1.00 10.00           N
+ATOM      2  CA  APM A   1      -1.956  -0.915   0.171  1.00 10.00           C
+ATOM      3  C   APM A   1      -3.195  -1.723  -0.120  1.00 10.00           C
+ATOM      4  O   APM A   1      -3.411  -2.740   0.494  1.00 10.00           O
+ATOM      5  CB  APM A   1      -0.814  -1.393  -0.726  1.00 10.00           C
+ATOM      6  CG  APM A   1       0.424  -0.586  -0.435  1.00 10.00           C
+ATOM      7  CD1 APM A   1       0.671   0.574  -1.140  1.00 10.00           C
+ATOM      8  CD2 APM A   1       1.314  -1.011   0.535  1.00 10.00           C
+ATOM      9  CE1 APM A   1       1.815   1.323  -0.867  1.00 10.00           C
+ATOM     10  CE2 APM A   1       2.453  -0.275   0.807  1.00 10.00           C
+ATOM     11  CZ  APM A   1       2.709   0.889   0.112  1.00 10.00           C
+ATOM     12  CH  APM A   1       2.082   2.572  -1.616  1.00 10.00           C
+ATOM     13  NJ1 APM A   1       1.247   2.975  -2.529  1.00 10.00           N
+ATOM     14  NJ2 APM A   1       3.216   3.308  -1.346  1.00 10.00           N
+ATOM     15  OXT APM A   1      -4.060  -1.310  -1.060  1.00 10.00           O
+ATOM     16  H3  APM A   1      -0.695  -0.616   1.701  1.00 10.00           H
+ATOM     17  H2  APM A   1      -1.406  -2.071   1.714  1.00 10.00           H
+ATOM     18  HA  APM A   1      -2.155   0.139  -0.026  1.00 10.00           H
+ATOM     19  HB1 APM A   1      -0.615  -2.447  -0.529  1.00 10.00           H
+ATOM     20  HB2 APM A   1      -1.094  -1.266  -1.771  1.00 10.00           H
+ATOM     21  HD1 APM A   1      -0.024   0.905  -1.898  1.00 10.00           H
+ATOM     22  HD2 APM A   1       1.119  -1.921   1.081  1.00 10.00           H
+ATOM     23  HE2 APM A   1       3.144  -0.613   1.565  1.00 10.00           H
+ATOM     24  HZ  APM A   1       3.598   1.463   0.325  1.00 10.00           H
+ATOM     25 HJ12 APM A   1       1.422   3.794  -3.020  1.00 10.00           H
+ATOM     26 HJ21 APM A   1       3.390   4.126  -1.837  1.00 10.00           H
+ATOM     27 HJ22 APM A   1       3.838   3.008  -0.666  1.00 10.00           H
+ATOM     28  H1  APM A   1      -2.287  -0.734   2.208  1.00  0.00           H
+ATOM     29 HJ11 APM A   1       0.416   2.436  -2.726  1.00  0.00           H
+CONECT    3    2    4   15
+CONECT    2    1    3    5   18
+CONECT    5    2    6   19   20
+CONECT    7    6    9   21
+CONECT    8   10    6   22
+CONECT    9    7   11   12
+CONECT   10    8   11   23
+CONECT   12    9   13   14
+CONECT    6    5    7    8
+CONECT   11   10    9   24
+CONECT   16    1
+CONECT   28    1
+CONECT   17    1
+CONECT   18    2
+CONECT   19    5
+CONECT   20    5
+CONECT   21    7
+CONECT   22    8
+CONECT   23   10
+CONECT   25   13
+CONECT   29   13
+CONECT   26   14
+CONECT   27   14
+CONECT   24   11
+CONECT    1   28    2   16   17
+CONECT   13   29   12   25
+CONECT   14   12   26   27
+CONECT    4    3
+CONECT   15    3
+END

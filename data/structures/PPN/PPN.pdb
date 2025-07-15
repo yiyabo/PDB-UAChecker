@@ -1,0 +1,26 @@
+ATOM      1  N   PPN A   1      22.188 -19.590  47.752  1.00  0.00      PPN  N
+ATOM      2  CA  PPN A   1      21.533 -19.230  49.007  1.00  0.00      PPN  C
+ATOM      3  C   PPN A   1      20.197 -19.919  49.136  1.00  0.00      PPN  C
+ATOM      4  O   PPN A   1      19.765 -20.678  48.265  1.00  0.00      PPN  O
+ATOM      5  CB  PPN A   1      21.290 -17.694  49.085  1.00  0.00      PPN  C
+ATOM      6  CG  PPN A   1      22.535 -16.798  49.058  1.00  0.00      PPN  C
+ATOM      7  CD1 PPN A   1      23.250 -16.568  50.237  1.00  0.00      PPN  C
+ATOM      8  CD2 PPN A   1      22.957 -16.201  47.866  1.00  0.00      PPN  C
+ATOM      9  CE1 PPN A   1      24.372 -15.745  50.226  1.00  0.00      PPN  C
+ATOM     10  CE2 PPN A   1      24.080 -15.379  47.857  1.00  0.00      PPN  C
+ATOM     11  CZ  PPN A   1      24.786 -15.151  49.035  1.00  0.00      PPN  C
+ATOM     12  NH  PPN A   1      25.895 -14.353  49.083  1.00  0.00      PPN  N
+ATOM     13  OJ1 PPN A   1      26.454 -14.190  50.094  1.00  0.00      PPN  O
+ATOM     14  OJ2 PPN A   1      26.318 -13.854  48.118  1.00  0.00      PPN  O
+ATOM     15  OXT PPN A   1      19.557 -19.738  50.145  1.00  0.00      PPN  O
+ATOM     16  HN1 PPN A   1      23.078 -19.117  47.688  1.00  0.00      PPN  H
+ATOM     17  HN2 PPN A   1      22.335 -20.589  47.724  1.00  0.00      PPN  H
+ATOM     18  HN3 PPN A   1      21.604 -19.314  46.976  1.00  0.00      PPN  H
+ATOM     19  HA  PPN A   1      22.168 -19.558  49.851  1.00  0.00      PPN  H
+ATOM     20  HB1 PPN A   1      20.727 -17.453  50.008  1.00  0.00      PPN  H
+ATOM     21  HB2 PPN A   1      20.597 -17.390  48.273  1.00  0.00      PPN  H
+ATOM     22  HD1 PPN A   1      22.931 -17.030  51.159  1.00  0.00      PPN  H
+ATOM     23  HD2 PPN A   1      22.411 -16.367  46.947  1.00  0.00      PPN  H
+ATOM     24  HE1 PPN A   1      24.921 -15.567  51.139  1.00  0.00      PPN  H
+ATOM     25  HE2 PPN A   1      24.403 -14.917  46.936  1.00  0.00      PPN  H
+END

@@ -1,0 +1,31 @@
+ATOM      1  N   ASP A   1      -0.610  -1.825  -0.630  1.00  0.00           N
+ATOM      2  CA  ASP A   1      -0.051  -0.476  -0.630  1.00  0.00           C
+ATOM      3  O   ASP A   1       2.088  -1.584  -0.630  1.00  0.00           O
+ATOM      4  CB  ASP A   1      -0.586   0.337   0.582  1.00  0.00           C
+ATOM      5  CG  ASP A   1      -0.124   1.801   0.652  1.00  0.00           C
+ATOM      6  OD1 ASP A   1      -0.007   2.453  -0.406  1.00  0.00           O
+ATOM      7  OD2 ASP A   1       0.165   2.283   1.767  1.00  0.00           O
+ATOM      8  C   ASP A   1       1.489  -0.542  -0.630  1.00  0.00           C
+ATOM      9  OXT ASP A   1       2.231   0.680  -0.630  1.00  0.00           O
+ATOM     10  H3  ASP A   1       0.017  -2.704  -0.630  1.00  0.00           H
+ATOM     11  HA  ASP A   1      -0.366   0.030  -1.563  1.00  0.00           H
+ATOM     12  HB1 ASP A   1      -0.291  -0.154   1.527  1.00  0.00           H
+ATOM     13  HB2 ASP A   1      -1.688   0.354   0.586  1.00  0.00           H
+ATOM     14  H1  ASP A   1      -1.189  -1.891   0.195  1.00  0.00           H
+ATOM     15  H2  ASP A   1      -1.222  -1.895  -1.431  1.00  0.00           H
+CONECT   14    1
+CONECT   15    1
+CONECT   12    4
+CONECT   13    4
+CONECT    8    2    3    9
+CONECT    2    1    4    8   11
+CONECT    4    2    5   12   13
+CONECT    5    4    6    7
+CONECT   10    1
+CONECT   11    2
+CONECT    1   15    2   10   14
+CONECT    3    8
+CONECT    6    5
+CONECT    7    5
+CONECT    9    8
+END

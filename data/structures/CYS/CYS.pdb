@@ -1,0 +1,29 @@
+ATOM      1  N   CYS A   1      -0.664  -1.578  -0.633  1.00  0.00           N
+ATOM      2  CA  CYS A   1      -0.105  -0.229  -0.633  1.00  0.00           C
+ATOM      3  O   CYS A   1       2.034  -1.337  -0.633  1.00  0.00           O
+ATOM      4  CB  CYS A   1      -0.674   0.537   0.577  1.00  0.00           C
+ATOM      5  SG  CYS A   1      -0.163   2.270   0.535  1.00  0.00           S
+ATOM      6  C   CYS A   1       1.435  -0.295  -0.633  1.00  0.00           C
+ATOM      7  OXT CYS A   1       2.178   0.927  -0.633  1.00  0.00           O
+ATOM      8  H3  CYS A   1      -0.036  -2.457  -0.633  1.00  0.00           H
+ATOM      9  HA  CYS A   1      -0.420   0.277  -1.564  1.00  0.00           H
+ATOM     10  HB1 CYS A   1      -0.349   0.082   1.535  1.00  0.00           H
+ATOM     11  HB2 CYS A   1      -1.778   0.509   0.585  1.00  0.00           H
+ATOM     12  HG  CYS A   1       0.749   2.191   1.501  1.00  0.00           H
+ATOM     13  H1  CYS A   1      -1.243  -1.644   0.192  1.00  0.00           H
+ATOM     14  H2  CYS A   1      -1.276  -1.648  -1.434  1.00  0.00           H
+CONECT   13    1
+CONECT   14    1
+CONECT   10    4
+CONECT   11    4
+CONECT    6    2    3    7
+CONECT    2    1    4    6    9
+CONECT    4    2    5   10   11
+CONECT    8    1
+CONECT    9    2
+CONECT   12    5
+CONECT    1    2    8   13   14
+CONECT    3    6
+CONECT    7    6
+CONECT    5    4   12
+END

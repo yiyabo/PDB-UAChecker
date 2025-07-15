@@ -1,0 +1,35 @@
+ATOM      1  CA  THG2    1       1.002   3.914   0.072  1.00  0.00           C
+ATOM      2  C   THG2    1      -0.115   4.660  -0.491  1.00  0.00           C
+ATOM      3  CB  THG2    1       0.806   2.449   0.036  1.00  0.00           C
+ATOM      4  O   THG2    1      -0.830   5.413   0.166  1.00  0.00           O
+ATOM      5  OXT THG2    1      -0.383   4.553  -1.677  1.00  0.00           O
+ATOM      6  N   THG2    1       1.299   4.305   1.456  1.00  0.00           N
+ATOM      7  CD1 THG2    1       0.021  -0.038   0.040  1.00  0.00           C
+ATOM      8  SG1 THG2    1      -0.702   1.554   0.164  1.00  0.00           S
+ATOM      9  CG2 THG2    1       1.822   1.489  -0.068  1.00  0.00           C
+ATOM     10  CD2 THG2    1       1.400   0.149  -0.071  1.00  0.00           C
+ATOM     11  HA  THG2    1       1.883   4.141  -0.528  1.00  0.00           H
+ATOM     12  HD1 THG2    1      -0.501  -0.983   0.049  1.00  0.00           H
+ATOM     13  HG2 THG2    1       2.864   1.763  -0.141  1.00  0.00           H
+ATOM     14  HD2 THG2    1       2.091  -0.676  -0.153  1.00  0.00           H
+ATOM     15  H1  THG2    1       2.078   3.762   1.800  1.00  0.00           H
+ATOM     16  H2  THG2    1       1.535   5.287   1.485  1.00  0.00           H
+ATOM     17  H3  THG2    1       0.489   4.136   2.035  1.00  0.00           H
+CONECT    2    1    4    5
+CONECT    1    2    3    6   11
+CONECT    9    3   10   13
+CONECT    7   10    8   12
+CONECT   10    7    9   14
+CONECT    3    1    8    9
+CONECT   15    6
+CONECT   16    6
+CONECT   17    6
+CONECT   11    1
+CONECT   13    9
+CONECT   12    7
+CONECT   14   10
+CONECT    6   17   16   15    1
+CONECT    4    2
+CONECT    5    2
+CONECT    8    3    7
+END

@@ -1,0 +1,39 @@
+ATOM      1  N   OAS A   1      -0.260   2.265   1.557  1.00 10.00           N
+ATOM      2  CA  OAS A   1       0.723   1.173   1.513  1.00 10.00           C
+ATOM      3  CB  OAS A   1       0.222   0.074   0.577  1.00 10.00           C
+ATOM      4  OG  OAS A   1      -1.046  -0.436   1.062  1.00 10.00           O
+ATOM      5  C   OAS A   1       2.040   1.704   1.010  1.00 10.00           C
+ATOM      6  O   OAS A   1       2.063   2.631   0.237  1.00 10.00           O
+ATOM      7  CE  OAS A   1      -2.995  -1.944   0.897  1.00 10.00           C
+ATOM      8  CD  OAS A   1      -1.678  -1.414   0.394  1.00 10.00           C
+ATOM      9  OD  OAS A   1      -1.189  -1.870  -0.613  1.00 10.00           O
+ATOM     10  OXT OAS A   1       3.189   1.143   1.419  1.00 10.00           O
+ATOM     11  H2  OAS A   1      -0.349   2.611   0.613  1.00 10.00           H
+ATOM     12  HA  OAS A   1       0.854   0.765   2.515  1.00 10.00           H
+ATOM     13  HB1 OAS A   1       0.951  -0.736   0.545  1.00 10.00           H
+ATOM     14  HB2 OAS A   1       0.090   0.483  -0.425  1.00 10.00           H
+ATOM     15  HE1 OAS A   1      -3.352  -2.727   0.231  1.00 10.00           H
+ATOM     16  HE2 OAS A   1      -2.864  -2.352   1.899  1.00 10.00           H
+ATOM     17  HE3 OAS A   1      -3.724  -1.134   0.930  1.00 10.00           H
+ATOM     18  H1  OAS A   1       0.008   2.992   2.205  1.00  0.00           H
+ATOM     19  H3  OAS A   1      -1.150   1.886   1.847  1.00  0.00           H
+CONECT    5    6    2   10
+CONECT    2    1    3   12    5
+CONECT    3   14    2    4   13
+CONECT    8    9    4    7
+CONECT    7   15   16    8   17
+CONECT   18    1
+CONECT   11    1
+CONECT   19    1
+CONECT   12    2
+CONECT   13    3
+CONECT   14    3
+CONECT   15    7
+CONECT   16    7
+CONECT   17    7
+CONECT    1   18    2   19   11
+CONECT    6    5
+CONECT    9    8
+CONECT    4    3    8
+CONECT   10    5
+END

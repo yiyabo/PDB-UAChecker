@@ -1,0 +1,35 @@
+ATOM      1  N   CTH A   1      -1.262   0.022   0.898  1.00 10.00           N
+ATOM      2  CA  CTH A   1      -1.057   0.634  -0.421  1.00 10.00           C
+ATOM      3  C   CTH A   1      -2.149   0.185  -1.357  1.00 10.00           C
+ATOM      4  O   CTH A   1      -2.660  -0.899  -1.214  1.00 10.00           O
+ATOM      5  OXT CTH A   1      -2.554   0.990  -2.351  1.00 10.00           O
+ATOM      6  CB  CTH A   1       0.300   0.205  -0.977  1.00 10.00           C
+ATOM      7  CG2 CTH A   1       1.408   0.661  -0.027  1.00 10.00           C
+ATOM      8 CL2  CTH A   1       3.010   0.156  -0.681  1.00 10.00          Cl
+ATOM      9  OG1 CTH A   1       0.336  -1.218  -1.101  1.00 10.00           O
+ATOM     10  H3  CTH A   1      -1.229  -0.976   0.763  1.00 10.00           H
+ATOM     11  H2  CTH A   1      -0.459   0.265   1.458  1.00 10.00           H
+ATOM     12  HA  CTH A   1      -1.085   1.720  -0.326  1.00 10.00           H
+ATOM     13  HB  CTH A   1       0.453   0.658  -1.956  1.00 10.00           H
+ATOM     14 HG21 CTH A   1       1.382   1.747   0.069  1.00 10.00           H
+ATOM     15 HG22 CTH A   1       1.257   0.207   0.952  1.00 10.00           H
+ATOM     16  HG1 CTH A   1       0.198  -1.579  -0.215  1.00 10.00           H
+ATOM     17  H1  CTH A   1      -2.127   0.320   1.325  1.00  0.00           H
+CONECT    3    4    5    2
+CONECT    2    3    6    1   12
+CONECT    6    2    7    9   13
+CONECT    7    6    8   14   15
+CONECT    8    7
+CONECT   10    1
+CONECT   17    1
+CONECT   11    1
+CONECT   12    2
+CONECT   13    6
+CONECT   16    9
+CONECT   14    7
+CONECT   15    7
+CONECT    1    2   10   11   17
+CONECT    4    3
+CONECT    9    6   16
+CONECT    5    3
+END

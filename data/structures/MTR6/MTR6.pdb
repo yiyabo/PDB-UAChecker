@@ -1,0 +1,61 @@
+ATOM      1  N   MTR6A   2       1.630  -2.708  -0.400  1.00  0.00           N
+ATOM      2  CA  MTR6A   2       2.192  -1.361  -0.429  1.00  0.00           C
+ATOM      3  C   MTR6A   2       3.731  -1.422  -0.428  1.00  0.00           C
+ATOM      4  O   MTR6A   2       4.323  -2.465  -0.405  1.00  0.00           O
+ATOM      5  CB  MTR6A   2       1.688  -0.573   0.812  1.00  0.00           C
+ATOM      6  CG  MTR6A   2       0.182  -0.294   0.826  1.00  0.00           C
+ATOM      7  CD1 MTR6A   2      -0.790  -1.060   1.502  1.00  0.00           C
+ATOM      8  CD2 MTR6A   2      -0.515   0.672   0.130  1.00  0.00           C
+ATOM      9  CE2 MTR6A   2      -1.895   0.486   0.393  1.00  0.00           C
+ATOM     10  CE3 MTR6A   2      -0.079   1.700  -0.745  1.00  0.00           C
+ATOM     11  NE1 MTR6A   2      -2.092  -0.588   1.248  1.00  0.00           N
+ATOM     12  CZ2 MTR6A   2      -2.849   1.335  -0.209  1.00  0.00           C
+ATOM     13  CZ3 MTR6A   2      -1.040   2.530  -1.322  1.00  0.00           C
+ATOM     14  CH2 MTR6A   2      -2.405   2.353  -1.057  1.00  0.00           C
+ATOM     15  OXT MTR6A   2       4.475  -0.201  -0.454  1.00  0.00           O
+ATOM     16  CJ2 MTR6A   2      -3.432   3.296  -1.712  1.00  0.00           C
+ATOM     17  HA  MTR6A   2       1.873  -0.855  -1.360  1.00  0.00           H
+ATOM     18  HB1 MTR6A   2       2.208   0.401   0.884  1.00  0.00           H
+ATOM     19  HB2 MTR6A   2       1.972  -1.104   1.742  1.00  0.00           H
+ATOM     20  HD1 MTR6A   2      -0.564  -1.904   2.136  1.00  0.00           H
+ATOM     21  HE1 MTR6A   2      -2.966  -0.948   1.605  1.00  0.00           H
+ATOM     22  HE3 MTR6A   2       0.971   1.837  -0.959  1.00  0.00           H
+ATOM     23  HZ2 MTR6A   2      -3.903   1.200  -0.017  1.00  0.00           H
+ATOM     24  H1  MTR6A   2       1.051  -2.791  -1.223  1.00  0.00           H
+ATOM     25  H2  MTR6A   2       1.018  -2.759   0.402  1.00  0.00           H
+ATOM     26  H3  MTR6A   2       2.209  -3.523  -0.382  1.00  0.00           H
+ATOM     27 HJ21 MTR6A   2      -3.721   2.899  -2.685  1.00  0.00           H
+ATOM     28 HJ22 MTR6A   2      -2.990   4.284  -1.838  1.00  0.00           H
+ATOM     29 HJ23 MTR6A   2      -4.313   3.371  -1.074  1.00  0.00           H
+ATOM     30  HZ3 MTR6A   2      -0.727   3.323  -1.985  1.00  0.00           H
+CONECT    3    2    4   15
+CONECT    2    1    3    5   17
+CONECT    5    2    6   18   19
+CONECT    7    6   11   20
+CONECT    8   10    6    9
+CONECT    9    8   11   12
+CONECT   10    8   13   22
+CONECT    6    5    7    8
+CONECT   14   12   13   16
+CONECT   16   14   27   28   29
+CONECT   12    9   14   23
+CONECT   13   10   14   30
+CONECT   24    1
+CONECT   25    1
+CONECT   26    1
+CONECT   17    2
+CONECT   18    5
+CONECT   19    5
+CONECT   20    7
+CONECT   21   11
+CONECT   22   10
+CONECT   27   16
+CONECT   28   16
+CONECT   29   16
+CONECT   23   12
+CONECT   30   13
+CONECT    1    2   24   25   26
+CONECT   11    7    9   21
+CONECT    4    3
+CONECT   15    3
+END

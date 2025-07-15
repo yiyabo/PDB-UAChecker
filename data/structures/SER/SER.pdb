@@ -1,0 +1,29 @@
+ATOM      1  N   SER A   1       1.052  -1.550  -0.711  1.00  0.00           N
+ATOM      2  CA  SER A   1       1.682  -0.233  -0.711  1.00  0.00           C
+ATOM      3  O   SER A   1       3.754  -1.447  -0.711  1.00  0.00           O
+ATOM      4  CB  SER A   1       1.179   0.619   0.481  1.00  0.00           C
+ATOM      5  OG  SER A   1       1.644   0.136   1.746  1.00  0.00           O
+ATOM      6  C   SER A   1       3.215  -0.374  -0.711  1.00  0.00           C
+ATOM      7  OXT SER A   1       4.021   0.807  -0.711  1.00  0.00           O
+ATOM      8  H3  SER A   1       1.630  -2.462  -0.711  1.00  0.00           H
+ATOM      9  HA  SER A   1       1.402   0.279  -1.650  1.00  0.00           H
+ATOM     10  HB1 SER A   1       0.074   0.679   0.492  1.00  0.00           H
+ATOM     11  HB2 SER A   1       1.520   1.666   0.361  1.00  0.00           H
+ATOM     12  HG  SER A   1       1.280  -0.744   1.869  1.00  0.00           H
+ATOM     13  H1  SER A   1       0.470  -1.585   0.114  1.00  0.00           H
+ATOM     14  H2  SER A   1       0.437  -1.587  -1.511  1.00  0.00           H
+CONECT   13    1
+CONECT   14    1
+CONECT   10    4
+CONECT   11    4
+CONECT    6    2    3    7
+CONECT    2    1    4    6    9
+CONECT    4    2    5   10   11
+CONECT    8    1
+CONECT    9    2
+CONECT   12    5
+CONECT    1    2    8   14   13
+CONECT    3    6
+CONECT    5    4   12
+CONECT    7    6
+END

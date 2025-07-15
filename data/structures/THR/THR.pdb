@@ -1,0 +1,35 @@
+ATOM      1  N   THR A   1       1.151  -2.313  -0.820  1.00  0.00           N
+ATOM      2  CA  THR A   1       1.769  -0.991  -0.820  1.00  0.00           C
+ATOM      3  O   THR A   1       3.844  -2.170  -0.820  1.00  0.00           O
+ATOM      4  CB  THR A   1       1.273  -0.152   0.406  1.00  0.00           C
+ATOM      5  CG2 THR A   1       1.854   1.272   0.541  1.00  0.00           C
+ATOM      6  OG1 THR A   1      -0.134   0.042   0.342  1.00  0.00           O
+ATOM      7  C   THR A   1       3.304  -1.101  -0.820  1.00  0.00           C
+ATOM      8  OXT THR A   1       4.096   0.090  -0.820  1.00  0.00           O
+ATOM      9  H3  THR A   1       1.738  -3.220  -0.820  1.00  0.00           H
+ATOM     10  HA  THR A   1       1.475  -0.469  -1.749  1.00  0.00           H
+ATOM     11  HB  THR A   1       1.511  -0.716   1.334  1.00  0.00           H
+ATOM     12  HG1 THR A   1      -0.378   0.497   1.153  1.00  0.00           H
+ATOM     13 HG21 THR A   1       1.441   1.809   1.415  1.00  0.00           H
+ATOM     14 HG22 THR A   1       2.951   1.270   0.682  1.00  0.00           H
+ATOM     15 HG23 THR A   1       1.642   1.888  -0.353  1.00  0.00           H
+ATOM     16  H1  THR A   1       0.569  -2.353   0.005  1.00  0.00           H
+ATOM     17  H2  THR A   1       0.537  -2.355  -1.621  1.00  0.00           H
+CONECT   16    1
+CONECT   12    6
+CONECT   13    5
+CONECT   17    1
+CONECT   14    5
+CONECT   15    5
+CONECT    7    2    3    8
+CONECT    2    1    4   10    7
+CONECT    4    2    5    6   11
+CONECT    5    4   13   14   15
+CONECT    9    1
+CONECT   10    2
+CONECT   11    4
+CONECT    1   16   17    2    9
+CONECT    3    7
+CONECT    6    4   12
+CONECT    8    7
+END

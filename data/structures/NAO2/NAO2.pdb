@@ -1,0 +1,61 @@
+ATOM      1  N   NAO2A   1      14.025  32.059 -72.016  1.00  0.00           N
+ATOM      2  CA  NAO2A   1      13.609  33.197 -71.187  1.00  0.00           C
+ATOM      3  C   NAO2A   1      12.598  34.080 -71.921  1.00  0.00           C
+ATOM      4  O   NAO2A   1      11.395  34.034 -71.643  1.00  0.00           O
+ATOM      5  CB  NAO2A   1      14.827  34.031 -70.763  1.00  0.00           C
+ATOM      6  CG  NAO2A   1      15.884  33.243 -70.026  1.00  0.00           C
+ATOM      7  CD1 NAO2A   1      16.973  32.704 -70.711  1.00  0.00           C
+ATOM      8  CD2 NAO2A   1      15.788  33.040 -68.647  1.00  0.00           C
+ATOM      9  CE1 NAO2A   1      17.950  31.979 -70.036  1.00  0.00           C
+ATOM     10  CE2 NAO2A   1      16.760  32.317 -67.961  1.00  0.00           C
+ATOM     11  CZ  NAO2A   1      17.842  31.786 -68.655  1.00  0.00           C
+ATOM     12  CJ1 NAO2A   1      18.663  30.842 -66.618  1.00  0.00           C
+ATOM     13  CJ2 NAO2A   1      17.570  31.375 -65.916  1.00  0.00           C
+ATOM     14  CH2 NAO2A   1      16.575  32.090 -66.602  1.00  0.00           C
+ATOM     15  OXT NAO2A   1      12.988  34.846 -72.800  1.00  0.00           O
+ATOM     16  OJ2 NAO2A   1      17.471  31.190 -64.502  1.00  0.00           O
+ATOM     17  CH1 NAO2A   1      18.763  31.025 -68.007  1.00  0.00           C
+ATOM     18  H3  NAO2A   1      14.314  32.234 -72.968  1.00  0.00           H
+ATOM     19  HA  NAO2A   1      13.132  32.808 -70.287  1.00  0.00           H
+ATOM     20  HB1 NAO2A   1      14.482  34.834 -70.112  1.00  0.00           H
+ATOM     21  HB2 NAO2A   1      15.276  34.471 -71.653  1.00  0.00           H
+ATOM     22  HD1 NAO2A   1      17.059  32.851 -71.777  1.00  0.00           H
+ATOM     23  HD2 NAO2A   1      14.948  33.450 -68.106  1.00  0.00           H
+ATOM     24  HE1 NAO2A   1      18.789  31.567 -70.577  1.00  0.00           H
+ATOM     25  HJ1 NAO2A   1      19.427  30.291 -66.090  1.00  0.00           H
+ATOM     26  HH1 NAO2A   1      19.569  30.563 -68.558  1.00  0.00           H
+ATOM     27  HH2 NAO2A   1      15.695  32.452 -66.091  1.00  0.00           H
+ATOM     28  HJ2 NAO2A   1      17.971  31.875 -64.053  1.00  0.00           H
+ATOM     29  H1  NAO2A   1      13.245  31.418 -72.055  1.00  0.00           H
+ATOM     30  H2  NAO2A   1      14.786  31.593 -71.542  1.00  0.00           H
+CONECT    3    4    2   15
+CONECT    2    1    5    3   19
+CONECT    5    2    6   20   21
+CONECT    7    6    9   22
+CONECT    8    6   10   23
+CONECT    9    7   11   24
+CONECT   10    8   11   14
+CONECT    6    5    7    8
+CONECT   17   11   12   26
+CONECT   12   13   17   25
+CONECT   13   12   16   14
+CONECT   14   10   13   27
+CONECT   11    9   10   17
+CONECT   29    1
+CONECT   30    1
+CONECT   18    1
+CONECT   19    2
+CONECT   20    5
+CONECT   21    5
+CONECT   22    7
+CONECT   23    8
+CONECT   24    9
+CONECT   26   17
+CONECT   25   12
+CONECT   27   14
+CONECT   28   16
+CONECT    1    2   18   29   30
+CONECT    4    3
+CONECT   16   13   28
+CONECT   15    3
+END

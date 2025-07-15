@@ -1,0 +1,26 @@
+HEADER    TEST PROTEIN WITH ALLYLGLYCINE                  01-JAN-24   TEST
+TITLE     TEST STRUCTURE WITH ALLYLGLYCINE
+ATOM      1  N   UNK A   1      20.000  30.000  25.000  1.00 20.00           N  
+ATOM      2  CA  UNK A   1      21.400  30.000  25.000  1.00 20.00           C  
+ATOM      3  C   UNK A   1      22.000  30.000  26.400  1.00 20.00           C  
+ATOM      4  O   UNK A   1      21.400  30.000  27.400  1.00 20.00           O  
+ATOM      5  CB  UNK A   1      22.000  31.200  24.300  1.00 20.00           C  
+ATOM      6  CG  UNK A   1      21.500  31.200  22.900  1.00 20.00           C  
+ATOM      7  CD  UNK A   1      22.000  32.000  21.900  1.00 20.00           C  
+ATOM      8  H1  UNK A   1      19.600  30.000  24.100  1.00 20.00           H  
+ATOM      9  H2  UNK A   1      19.600  30.800  25.400  1.00 20.00           H  
+ATOM     10  H3  UNK A   1      19.600  29.200  25.400  1.00 20.00           H  
+ATOM     11  HA  UNK A   1      21.700  29.100  24.500  1.00 20.00           H  
+ATOM     12  HB2 UNK A   1      23.100  31.200  24.300  1.00 20.00           H  
+ATOM     13  HB3 UNK A   1      21.700  32.100  24.800  1.00 20.00           H  
+ATOM     14  HG  UNK A   1      20.500  30.700  22.800  1.00 20.00           H  
+ATOM     15  HD1 UNK A   1      21.600  32.000  20.900  1.00 20.00           H  
+ATOM     16  HD2 UNK A   1      23.000  32.500  22.000  1.00 20.00           H  
+CONECT    1    2    8    9   10
+CONECT    2    1    3    5   11
+CONECT    3    2    4
+CONECT    4    3
+CONECT    5    2    6   12   13
+CONECT    6    5    7   14
+CONECT    7    6   15   16
+END

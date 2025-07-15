@@ -1,0 +1,61 @@
+ATOM      1  N   HRG A   1       3.094   0.735  -0.243  1.00 10.00           N
+ATOM      2  CA  HRG A   1       2.691  -0.284   0.737  1.00 10.00           C
+ATOM      3  CB  HRG A   1       1.354  -0.895   0.314  1.00 10.00           C
+ATOM      4  CD  HRG A   1      -1.075  -0.438  -0.050  1.00 10.00           C
+ATOM      5  CG  HRG A   1       0.263   0.175   0.372  1.00 10.00           C
+ATOM      6  CE  HRG A   1      -2.166   0.633   0.007  1.00 10.00           C
+ATOM      7  NZ  HRG A   1      -3.447   0.047  -0.396  1.00 10.00           N
+ATOM      8  CH  HRG A   1      -4.581   0.824  -0.423  1.00 10.00           C
+ATOM      9  NJ1 HRG A   1      -5.720   0.303  -0.783  1.00 10.00           N
+ATOM     10  NJ2 HRG A   1      -4.513   2.151  -0.070  1.00 10.00           N
+ATOM     11  C   HRG A   1       3.741  -1.363   0.798  1.00 10.00           C
+ATOM     12  O   HRG A   1       4.519  -1.503  -0.115  1.00 10.00           O
+ATOM     13  OXT HRG A   1       3.810  -2.170   1.868  1.00 10.00           O
+ATOM     14  HN1 HRG A   1       4.022   1.035   0.017  1.00 10.00           H
+ATOM     15  HN2 HRG A   1       3.178   0.265  -1.132  1.00 10.00           H
+ATOM     16  HA  HRG A   1       2.586   0.178   1.718  1.00 10.00           H
+ATOM     17  HB1 HRG A   1       1.435  -1.279  -0.703  1.00 10.00           H
+ATOM     18  HB2 HRG A   1       1.098  -1.712   0.990  1.00 10.00           H
+ATOM     19  HD1 HRG A   1      -0.994  -0.820  -1.068  1.00 10.00           H
+ATOM     20  HD2 HRG A   1      -1.330  -1.253   0.626  1.00 10.00           H
+ATOM     21  HG1 HRG A   1       0.182   0.558   1.389  1.00 10.00           H
+ATOM     22  HG2 HRG A   1       0.518   0.991  -0.304  1.00 10.00           H
+ATOM     23  HE1 HRG A   1      -2.247   1.016   1.025  1.00 10.00           H
+ATOM     24  HE2 HRG A   1      -1.911   1.449  -0.669  1.00 10.00           H
+ATOM     25  HZ  HRG A   1      -3.494  -0.889  -0.646  1.00 10.00           H
+ATOM     26 HJ12 HRG A   1      -6.520   0.851  -0.800  1.00 10.00           H
+ATOM     27 HJ21 HRG A   1      -5.313   2.699  -0.088  1.00 10.00           H
+ATOM     28 HJ22 HRG A   1      -3.665   2.539   0.197  1.00 10.00           H
+ATOM     29 HN3  HRG A   1       2.442   1.505  -0.280  1.00  0.00           H
+ATOM     30 HJ11 HRG A   1      -5.770  -0.672  -1.043  1.00  0.00           H
+CONECT   11    2   12   13
+CONECT    2    1    3   11   16
+CONECT    3    2    5   18   17
+CONECT    6    4    7   23   24
+CONECT    4    5    6   19   20
+CONECT    5    3    4   21   22
+CONECT    8   10    7    9
+CONECT   29    1
+CONECT   16    2
+CONECT   17    3
+CONECT   18    3
+CONECT   23    6
+CONECT   24    6
+CONECT   21    5
+CONECT   22    5
+CONECT   19    4
+CONECT   20    4
+CONECT   30    9
+CONECT   26    9
+CONECT   14    1
+CONECT   15    1
+CONECT   27   10
+CONECT   28   10
+CONECT   25    7
+CONECT    1   29    2   14   15
+CONECT    7    6    8   25
+CONECT    9   30    8   26
+CONECT   10    8   27   28
+CONECT   12   11
+CONECT   13   11
+END

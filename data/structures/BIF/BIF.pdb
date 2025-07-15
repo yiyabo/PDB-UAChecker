@@ -1,0 +1,67 @@
+ATOM      1  N   BIF A   1      -2.689  -6.267  -1.862  1.00  0.00           N
+ATOM      2  CA  BIF A   1      -3.438  -5.053  -1.541  1.00  0.00           C
+ATOM      3  C   BIF A   1      -2.948  -4.096  -2.515  1.00  0.00           C
+ATOM      4  O   BIF A   1      -3.178  -4.249  -3.706  1.00  0.00           O
+ATOM      5  CB  BIF A   1      -3.223  -4.650  -0.049  1.00  0.00           C
+ATOM      6  CG  BIF A   1      -3.711  -5.681   0.912  1.00  0.00           C
+ATOM      7  CE1 BIF A   1      -3.316  -7.672   2.286  1.00  0.00           C
+ATOM      8  CD1 BIF A   1      -2.848  -6.681   1.402  1.00  0.00           C
+ATOM      9  CD2 BIF A   1      -5.047  -5.692   1.357  1.00  0.00           C
+ATOM     10  CE2 BIF A   1      -5.506  -6.688   2.241  1.00  0.00           C
+ATOM     11  CZ  BIF A   1      -4.669  -7.734   2.730  1.00  0.00           C
+ATOM     12  C12 BIF A   1      -5.159  -8.790   3.618  1.00  0.00           C
+ATOM     13  C10 BIF A   1      -6.928 -10.394   4.327  1.00  0.00           C
+ATOM     14  C11 BIF A   1      -6.448  -9.386   3.469  1.00  0.00           C
+ATOM     15  C13 BIF A   1      -4.382  -9.312   4.697  1.00  0.00           C
+ATOM     16  C8  BIF A   1      -4.854 -10.316   5.564  1.00  0.00           C
+ATOM     17  C9  BIF A   1      -6.133 -10.857   5.381  1.00  0.00           C
+ATOM     18  OXT BIF A   1      -2.214  -3.177  -2.203  1.00  0.00           O
+ATOM     19  HA  BIF A   1      -4.499  -5.230  -1.715  1.00  0.00           H
+ATOM     20  HB1 BIF A   1      -2.157  -4.497   0.119  1.00  0.00           H
+ATOM     21  HB2 BIF A   1      -3.748  -3.714   0.142  1.00  0.00           H
+ATOM     22  HE1 BIF A   1      -2.620  -8.417   2.643  1.00  0.00           H
+ATOM     23  HD1 BIF A   1      -1.812  -6.688   1.095  1.00  0.00           H
+ATOM     24  HD2 BIF A   1      -5.729  -4.927   1.016  1.00  0.00           H
+ATOM     25  HE2 BIF A   1      -6.537  -6.658   2.562  1.00  0.00           H
+ATOM     26  H10 BIF A   1      -7.912 -10.811   4.171  1.00  0.00           H
+ATOM     27  H11 BIF A   1      -7.083  -9.049   2.663  1.00  0.00           H
+ATOM     28  H13 BIF A   1      -3.388  -8.919   4.855  1.00  0.00           H
+ATOM     29  H8  BIF A   1      -4.229 -10.669   6.371  1.00  0.00           H
+ATOM     30  H9  BIF A   1      -6.502 -11.624   6.047  1.00  0.00           H
+ATOM     31  H1  BIF A   1      -2.960  -7.007  -1.231  1.00  0.00           H
+ATOM     32  H2  BIF A   1      -2.889  -6.545  -2.812  1.00  0.00           H
+ATOM     33  H3  BIF A   1      -1.700  -6.088  -1.765  1.00  0.00           H
+CONECT    3    2    4   18
+CONECT   13   14   17   26
+CONECT   14   12   13   27
+CONECT   12   11   14   15
+CONECT   15   12   16   28
+CONECT   16   15   17   29
+CONECT   17   13   16   30
+CONECT    2    3    1    5   19
+CONECT    5    2    6   20   21
+CONECT    8    6    7   23
+CONECT    9    6   10   24
+CONECT    7    8   11   22
+CONECT   10    9   11   25
+CONECT    6    5    8    9
+CONECT   11    7   10   12
+CONECT   31    1
+CONECT   26   13
+CONECT   27   14
+CONECT   28   15
+CONECT   32    1
+CONECT   33    1
+CONECT   29   16
+CONECT   30   17
+CONECT   19    2
+CONECT   20    5
+CONECT   21    5
+CONECT   23    8
+CONECT   24    9
+CONECT   22    7
+CONECT   25   10
+CONECT    1    2   31   32   33
+CONECT    4    3
+CONECT   18    3
+END

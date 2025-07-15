@@ -1,0 +1,33 @@
+ATOM      1  N   OBF A   1      -0.598  -1.566  -0.094  1.00 10.00           N
+ATOM      2  CA  OBF A   1      -0.688  -0.138   0.239  1.00 10.00           C
+ATOM      3  CB  OBF A   1       0.671   0.527   0.009  1.00 10.00           C
+ATOM      4  CG  OBF A   1       1.694  -0.054   0.988  1.00 10.00           C
+ATOM      5  FG1 OBF A   1       1.892  -1.409   0.706  1.00 10.00           F
+ATOM      6  FG2 OBF A   1       2.906   0.633   0.856  1.00 10.00           F
+ATOM      7  C   OBF A   1      -1.723   0.518  -0.639  1.00 10.00           C
+ATOM      8  O   OBF A   1      -2.060  -0.008  -1.672  1.00 10.00           O
+ATOM      9  HN3 OBF A   1      -1.464  -2.040   0.110  1.00 10.00           H
+ATOM     10  HA  OBF A   1      -0.975  -0.026   1.284  1.00 10.00           H
+ATOM     11  HB1 OBF A   1       0.999   0.339  -1.014  1.00 10.00           H
+ATOM     12  HB2 OBF A   1       0.582   1.601   0.171  1.00 10.00           H
+ATOM     13  HG  OBF A   1       1.324   0.055   2.007  1.00 10.00           H
+ATOM     14  HN1 OBF A   1      -0.332  -1.696  -1.059  1.00 10.00           H
+ATOM     15  OXT OBF A   1      -2.269   1.687  -0.271  1.00 10.00           O
+ATOM     16  HN2 OBF A   1       0.123  -1.974   0.484  1.00  0.00           H
+CONECT    7    2    8   15
+CONECT    2    1    3   10    7
+CONECT    3    2    4   11   12
+CONECT    4    3    5    6   13
+CONECT    5    4
+CONECT    6    4
+CONECT   16    1
+CONECT   11    3
+CONECT   12    3
+CONECT   10    2
+CONECT   13    4
+CONECT    9    1
+CONECT   14    1
+CONECT    1    2    9   14   16
+CONECT    8    7
+CONECT   15    7
+END

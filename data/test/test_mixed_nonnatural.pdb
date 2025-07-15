@@ -1,0 +1,24 @@
+HEADER    TEST PROTEIN WITH MULTIPLE NON-NATURAL AA       01-JAN-24   TEST
+TITLE     TEST STRUCTURE WITH MULTIPLE NON-NATURAL AMINO ACIDS
+REMARK    Contains structures similar to database entries
+ATOM      1  N   UNK A   1      20.000  30.000  25.000  1.00 20.00           N  
+ATOM      2  CA  UNK A   1      21.400  30.000  25.000  1.00 20.00           C  
+ATOM      3  C   UNK A   1      22.000  30.000  26.400  1.00 20.00           C  
+ATOM      4  O   UNK A   1      21.400  30.000  27.400  1.00 20.00           O  
+ATOM      5  CB  UNK A   1      22.000  31.200  24.300  1.00 20.00           C  
+ATOM      6  CG  UNK A   1      21.500  31.200  22.900  1.00 20.00           C  
+ATOM      7  CD  UNK A   1      22.000  32.000  21.900  1.00 20.00           C  
+ATOM      8  N   UNK A   2      23.000  29.500  26.500  1.00 20.00           N  
+ATOM      9  CA  UNK A   2      23.700  29.500  27.800  1.00 20.00           C  
+ATOM     10  C   UNK A   2      25.200  29.500  27.500  1.00 20.00           C  
+ATOM     11  O   UNK A   2      25.700  29.500  26.400  1.00 20.00           O  
+ATOM     12  CB  UNK A   2      23.300  28.300  28.600  1.00 20.00           C  
+ATOM     13  CG  UNK A   2      23.800  28.300  30.000  1.00 20.00           C  
+ATOM     14  CD1 UNK A   2      23.000  28.800  31.000  1.00 20.00           C  
+ATOM     15  CD2 UNK A   2      25.000  27.800  30.300  1.00 20.00           C  
+ATOM     16  CE1 UNK A   2      23.400  28.800  32.300  1.00 20.00           C  
+ATOM     17  CE2 UNK A   2      25.400  27.800  31.600  1.00 20.00           C  
+ATOM     18  CZ  UNK A   2      24.600  28.300  32.600  1.00 20.00           C  
+ATOM     19  OH  UNK A   2      25.000  28.300  33.900  1.00 20.00           O  
+ATOM     20  CM  UNK A   2      24.300  28.800  35.000  1.00 20.00           C  
+END

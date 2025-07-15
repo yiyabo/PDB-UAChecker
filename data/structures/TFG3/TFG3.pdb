@@ -1,0 +1,47 @@
+ATOM      1  N   TFG3A   1       2.353   4.125   1.359  1.00  0.00           N
+ATOM      2  CA  TFG3A   1       2.091   3.712  -0.020  1.00  0.00           C
+ATOM      3  C   TFG3A   1       1.456   4.836  -0.697  1.00  0.00           C
+ATOM      4  O   TFG3A   1       0.500   5.430  -0.213  1.00  0.00           O
+ATOM      5  CB  TFG3A   1       1.343   2.412  -0.013  1.00  0.00           C
+ATOM      6  CG1 TFG3A   1       2.063   1.189  -0.010  1.00  0.00           C
+ATOM      7  CG2 TFG3A   1      -0.072   2.340   0.026  1.00  0.00           C
+ATOM      8  CD1 TFG3A   1       1.397  -0.051  -0.003  1.00  0.00           C
+ATOM      9  CD2 TFG3A   1      -0.740   1.102   0.012  1.00  0.00           C
+ATOM     10  CE  TFG3A   1      -0.006  -0.095  -0.001  1.00  0.00           C
+ATOM     11  OXT TFG3A   1       1.904   5.274  -1.743  1.00  0.00           O
+ATOM     12  CH1 TFG3A   1       2.208  -1.360   0.003  1.00  0.00           C
+ATOM     13  FH1 TFG3A   1       3.382  -1.158   0.638  1.00  0.00           F
+ATOM     14  FH2 TFG3A   1       2.446  -1.748  -1.268  1.00  0.00           F
+ATOM     15  FH3 TFG3A   1       1.510  -2.321   0.644  1.00  0.00           F
+ATOM     16  HA  TFG3A   1       2.997   3.522  -0.595  1.00  0.00           H
+ATOM     17  HG2 TFG3A   1      -0.648   3.253   0.068  1.00  0.00           H
+ATOM     18  HD2 TFG3A   1      -1.820   1.073   0.011  1.00  0.00           H
+ATOM     19  HE  TFG3A   1      -0.519  -1.045  -0.010  1.00  0.00           H
+ATOM     20  H1  TFG3A   1       2.463   3.306   1.940  1.00  0.00           H
+ATOM     21  H2  TFG3A   1       3.198   4.676   1.391  1.00  0.00           H
+ATOM     22  H3  TFG3A   1       1.578   4.676   1.699  1.00  0.00           H
+ATOM     23  HG1 TFG3A   1       3.143   1.210  -0.013  1.00  0.00           H
+CONECT    3    2    4   11
+CONECT   12    8   13   14   15
+CONECT    2    1    3    5   16
+CONECT    5    2    6    7
+CONECT    8   10    6   12
+CONECT    9   10    7   18
+CONECT   10    8    9   19
+CONECT    6    5    8   23
+CONECT    7    5    9   17
+CONECT   13   12
+CONECT   14   12
+CONECT   15   12
+CONECT   20    1
+CONECT   21    1
+CONECT   22    1
+CONECT   16    2
+CONECT   18    9
+CONECT   19   10
+CONECT   23    6
+CONECT   17    7
+CONECT    1    2   20   21   22
+CONECT    4    3
+CONECT   11    3
+END
