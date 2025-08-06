@@ -1,9 +1,8 @@
-# Python缓存文件
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# 分发/打包
+*.so
 .Python
 build/
 develop-eggs/
@@ -21,14 +20,10 @@ wheels/
 .installed.cfg
 *.egg
 
-# 环境变量
-.env
-.venv
-env/
+# Virtual Environment
 venv/
+env/
 ENV/
-env.bak/
-venv.bak/
 
 # IDE
 .vscode/
@@ -36,8 +31,25 @@ venv.bak/
 *.swp
 *.swo
 
-# 项目特定
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.pdb
+*.db
+test_*.txt
+test_*.json
+*_report.txt
+*_results.json
 cache/
-*.cache
+temp/
+
+# Logs
 *.log
-test_results/
+logs/
+
+# Data files (except examples)
+data/*.csv
+data/*.json
+!data/example_*
