@@ -9,6 +9,7 @@ from pathlib import Path
 
 from ..core.parser import PDBParser
 from ..core.database import DatabaseManager
+from ..core.database.enhanced_manager import EnhancedDatabaseManager
 from ..core.verification import VerificationEngine
 from ..core.models import (
     ResidueInfo, AminoAcidInfo, MatchResult, AnalysisResult,
@@ -35,7 +36,7 @@ class PDBAnalyzer:
         
         # 初始化组件
         self.parser = PDBParser()
-        self.database = DatabaseManager(config)
+        self.database = EnhancedDatabaseManager(config)  # 使用增强数据库管理器
         self.verification_engine = VerificationEngine(config)
         
         print("🚀 PDB分析器初始化完成")

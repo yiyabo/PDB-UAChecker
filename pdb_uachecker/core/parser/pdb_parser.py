@@ -167,8 +167,8 @@ class PDBParser:
             
             # 验证分子式
             if not residue.molecular_formula:
-                print(f"⚠️ 残基 {residue.residue_key} 分子式计算失败")
-                # 尝试手动计算
+                print(f"⚠️ 残基 {residue.residue_key} 分子式计算失败，尝试修复")
+                # 尝试手动计算并修复
                 from ...utils.chemistry import ChemistryUtils
                 atom_dicts = [
                     {'element': atom.element}
@@ -177,14 +177,18 @@ class PDBParser:
                 if atom_dicts:
                     composition = ChemistryUtils.calculate_atom_composition(atom_dicts)
                     formula = ChemistryUtils.calculate_molecular_formula(composition)
-                    print(f"   手动计算结果: 组成={composition}, 分子式={formula}")
+                    # 修复分子式和原子组成
+                    residue.molecular_formula = formula
+                    residue.atom_composition = composition
+                    print(f"   ✅ 修复成功: 组成={composition}, 分子式={formula}")
+                else:
+                    print(f"   ❌ 修复失败: 没有有效原子")
             
-            # 统计信息
+            # 统计信息（调试用）
             element_counts = {}
             for atom in residue.atoms:
                 if atom.element:
                     element_counts[atom.element] = element_counts.get(atom.element, 0) + 1
-            print(f"   元素统计: {element_counts}")
     
     def parse_residue_from_atoms(self, atoms: List[Dict]) -> ResidueInfo:
         """
