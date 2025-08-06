@@ -257,7 +257,38 @@ class ChemistryUtils:
         
         atom_name = atom_name.strip()
         
-        # 提取元素符号（通常是前1-2个字符）
+        # PDB原子名称映射表（基于化学知识）
+        pdb_atom_mapping = {
+            # 碳原子
+            'CA': 'C', 'CB': 'C', 'CG': 'C', 'CG1': 'C', 'CG2': 'C',
+            'CD': 'C', 'CD1': 'C', 'CD2': 'C', 'CE': 'C', 'CE1': 'C', 
+            'CE2': 'C', 'CE3': 'C', 'CZ': 'C', 'CZ2': 'C', 'CZ3': 'C',
+            'CH2': 'C', 'C': 'C',
+            # 氮原子
+            'N': 'N', 'ND1': 'N', 'ND2': 'N', 'NE': 'N', 'NE1': 'N', 
+            'NE2': 'N', 'NH1': 'N', 'NH2': 'N', 'NZ': 'N',
+            # 氧原子
+            'O': 'O', 'OG': 'O', 'OG1': 'O', 'OH': 'O', 'OD1': 'O', 
+            'OD2': 'O', 'OE1': 'O', 'OE2': 'O', 'OXT': 'O',
+            # 硫原子
+            'S': 'S', 'SG': 'S', 'SD': 'S',
+            # 磷原子
+            'P': 'P',
+            # 氢原子
+            'H': 'H', 'HA': 'H', 'HB': 'H', 'HG': 'H', 'HD': 'H', 
+            'HE': 'H', 'HZ': 'H', 'HH': 'H',
+        }
+        
+        # 首先尝试精确匹配
+        if atom_name in pdb_atom_mapping:
+            return pdb_atom_mapping[atom_name]
+        
+        # 处理带数字的原子名（如HB1, HB2, HB3）
+        base_name = ''.join(c for c in atom_name if not c.isdigit())
+        if base_name in pdb_atom_mapping:
+            return pdb_atom_mapping[base_name]
+        
+        # 通用规则：提取元素符号
         if len(atom_name) >= 2 and atom_name[1].islower():
             # 双字符元素，如Cl, Br
             element = atom_name[:2]

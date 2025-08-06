@@ -165,7 +165,7 @@ class PDBAnalyzer:
         if candidate_amino_acids:
             verification_results = self.verification_engine.find_best_matches(
                 residue, candidate_amino_acids, 
-                top_k=5, min_confidence=0.0, 
+                top_k=1, min_confidence=0.1,  # 只取最佳匹配，提高最小置信度
                 enabled_methods=enabled_methods
             )
             

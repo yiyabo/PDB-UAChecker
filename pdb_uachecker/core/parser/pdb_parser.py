@@ -149,28 +149,7 @@ class PDBParser:
         
         atom_name = atom_name.strip()
         
-        # 特殊情况处理
-        special_cases = {
-            'CA': 'C',   # α碳
-            'CB': 'C',   # β碳
-            'CG': 'C',   # γ碳
-            'CD': 'C',   # δ碳
-            'CE': 'C',   # ε碳
-            'CZ': 'C',   # ζ碳
-            'OG': 'O',   # γ氧
-            'OD': 'O',   # δ氧
-            'OE': 'O',   # ε氧
-            'ND': 'N',   # δ氮
-            'NE': 'N',   # ε氮
-            'NZ': 'N',   # ζ氮
-            'SG': 'S',   # γ硫
-            'SD': 'S',   # δ硫
-        }
-        
-        if atom_name in special_cases:
-            return special_cases[atom_name]
-        
-        # 通用规则：提取前1-2个字符
+        # 使用ChemistryUtils的标准化方法
         return self.chemistry_utils.normalize_atom_name(atom_name)
     
     def _post_process_residues(self, residues: List[ResidueInfo]):
@@ -181,9 +160,6 @@ class PDBParser:
             residues: 残基信息列表
         """
         for residue in residues:
-            # ResidueInfo的__post_init__会自动计算分子式和原子组成
-            # 这里可以添加额外的验证或处理逻辑
-            
             # 验证原子数量
             if len(residue.atoms) == 0:
                 print(f"⚠️ 残基 {residue.residue_key} 没有原子")
@@ -192,11 +168,23 @@ class PDBParser:
             # 验证分子式
             if not residue.molecular_formula:
                 print(f"⚠️ 残基 {residue.residue_key} 分子式计算失败")
+                # 尝试手动计算
+                from ...utils.chemistry import ChemistryUtils
+                atom_dicts = [
+                    {'element': atom.element}
+                    for atom in residue.atoms if atom.element
+                ]
+                if atom_dicts:
+                    composition = ChemistryUtils.calculate_atom_composition(atom_dicts)
+                    formula = ChemistryUtils.calculate_molecular_formula(composition)
+                    print(f"   手动计算结果: 组成={composition}, 分子式={formula}")
             
             # 统计信息
             element_counts = {}
             for atom in residue.atoms:
-                element_counts[atom.element] = element_counts.get(atom.element, 0) + 1
+                if atom.element:
+                    element_counts[atom.element] = element_counts.get(atom.element, 0) + 1
+            print(f"   元素统计: {element_counts}")
     
     def parse_residue_from_atoms(self, atoms: List[Dict]) -> ResidueInfo:
         """

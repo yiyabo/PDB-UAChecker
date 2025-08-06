@@ -153,7 +153,7 @@ class VerificationEngine:
         """
         计算综合置信度
         
-        采用四重验证策略：所有验证都必须通过才认为匹配成功
+        采用分层验证策略：核心验证优先，辅助验证加分
         
         Args:
             scores: 验证分数列表
@@ -164,33 +164,51 @@ class VerificationEngine:
         if not scores:
             return 0.0
         
-        # 检查是否所有验证都通过
-        all_passed = all(score.passed for score in scores)
+        # 分层验证策略
+        core_methods = {VerificationMethod.MOLECULAR_FORMULA, VerificationMethod.ATOM_COMPOSITION}
+        auxiliary_methods = {VerificationMethod.FINGERPRINT_SIMILARITY, VerificationMethod.STRUCTURE_3D}
         
-        if not all_passed:
-            return 0.0  # 任何一项未通过则返回0
+        core_scores = [s for s in scores if s.method in core_methods]
+        auxiliary_scores = [s for s in scores if s.method in auxiliary_methods]
         
-        # 所有验证都通过，计算加权平均
-        weights = {
-            VerificationMethod.MOLECULAR_FORMULA: 0.3,
-            VerificationMethod.ATOM_COMPOSITION: 0.3,
-            VerificationMethod.FINGERPRINT_SIMILARITY: 0.25,
-            VerificationMethod.STRUCTURE_3D: 0.15
-        }
+        # 核心验证评估
+        core_confidence = 0.0
+        if core_scores:
+            core_passed = [s for s in core_scores if s.passed]
+            if len(core_passed) >= 1:  # 至少一个核心验证通过
+                # 计算核心验证的加权平均
+                core_weights = {
+                    VerificationMethod.MOLECULAR_FORMULA: 0.6,
+                    VerificationMethod.ATOM_COMPOSITION: 0.4
+                }
+                
+                total_weight = 0.0
+                weighted_sum = 0.0
+                
+                for score in core_scores:
+                    weight = core_weights.get(score.method, 0.5)
+                    weighted_sum += score.score * weight
+                    total_weight += weight
+                
+                core_confidence = weighted_sum / total_weight if total_weight > 0 else 0.0
         
-        total_weight = 0.0
-        weighted_sum = 0.0
+        # 辅助验证加分
+        auxiliary_bonus = 0.0
+        if auxiliary_scores:
+            auxiliary_passed = [s for s in auxiliary_scores if s.passed]
+            if auxiliary_passed:
+                # 每个通过的辅助验证提供额外加分
+                bonus_per_method = 0.1
+                auxiliary_bonus = min(len(auxiliary_passed) * bonus_per_method, 0.2)
         
-        for score in scores:
-            weight = weights.get(score.method, 0.25)  # 默认权重
-            weighted_sum += score.score * weight
-            total_weight += weight
+        # 最终置信度
+        final_confidence = min(core_confidence + auxiliary_bonus, 1.0)
         
-        if total_weight > 0:
-            confidence = weighted_sum / total_weight
-            return min(confidence, 1.0)
-        else:
+        # 如果没有任何验证通过，返回0
+        if not any(score.passed for score in scores):
             return 0.0
+        
+        return final_confidence
     
     def batch_verify(self, residue: ResidueInfo, amino_acids: List[AminoAcidInfo],
                     enabled_methods: Optional[List[VerificationMethod]] = None) -> List[VerificationResult]:

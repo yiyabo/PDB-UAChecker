@@ -37,12 +37,13 @@ class ResidueInfo:
     residue_number: int
     chain_id: str
     atoms: List[AtomInfo]
-    molecular_formula: Optional[str] = None
-    atom_composition: Optional[Dict[str, int]] = None
+    molecular_formula: Optional[str] = field(default=None)
+    atom_composition: Optional[Dict[str, int]] = field(default=None)
     
     def __post_init__(self):
         """自动计算分子式和原子组成"""
-        if not self.molecular_formula or not self.atom_composition:
+        # 只有当字段为None时才计算
+        if self.molecular_formula is None or self.atom_composition is None:
             from ..utils.chemistry import ChemistryUtils
             
             # 转换原子信息为字典格式
@@ -52,11 +53,21 @@ class ResidueInfo:
                     'atom_name': atom.atom_name,
                     'x': atom.x, 'y': atom.y, 'z': atom.z
                 }
-                for atom in self.atoms
+                for atom in self.atoms if atom.element  # 只包含有效元素的原子
             ]
             
-            self.atom_composition = ChemistryUtils.calculate_atom_composition(atom_dicts)
-            self.molecular_formula = ChemistryUtils.calculate_molecular_formula(self.atom_composition)
+            if atom_dicts:  # 确保有有效原子
+                try:
+                    self.atom_composition = ChemistryUtils.calculate_atom_composition(atom_dicts)
+                    self.molecular_formula = ChemistryUtils.calculate_molecular_formula(self.atom_composition)
+                    
+                except Exception as e:
+                    print(f"⚠️ 分子式计算异常: {e}")
+                    self.atom_composition = {}
+                    self.molecular_formula = ""
+            else:
+                self.atom_composition = {}
+                self.molecular_formula = ""
     
     @property
     def residue_key(self) -> str:
