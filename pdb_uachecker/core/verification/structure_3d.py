@@ -37,12 +37,12 @@ class Structure3DVerifier(BaseVerifier):
         """
         # 获取残基坐标
         residue_coords = self._extract_residue_coordinates(residue)
-        if not residue_coords:
+        if residue_coords is None or len(residue_coords) == 0:
             return 0.0
         
         # 获取标准结构坐标（这里需要从数据库或其他来源获取）
         standard_coords = self._get_standard_structure_coordinates(amino_acid)
-        if not standard_coords:
+        if standard_coords is None or len(standard_coords) == 0:
             return 0.0
         
         # 计算RMSD

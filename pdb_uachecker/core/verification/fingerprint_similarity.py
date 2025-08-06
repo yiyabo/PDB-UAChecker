@@ -76,6 +76,11 @@ class FingerprintSimilarityVerifier(BaseVerifier):
         """
         基于Morgan指纹计算相似性
         
+        策略：
+        1. 优先使用数据库中的预计算指纹
+        2. 如果没有预计算指纹，尝试从SMILES计算
+        3. 从残基生成SMILES（暂未实现，返回None）
+        
         Args:
             residue: 残基信息
             amino_acid: 氨基酸信息
@@ -83,11 +88,22 @@ class FingerprintSimilarityVerifier(BaseVerifier):
         Returns:
             指纹相似性分数，失败返回None
         """
+        # 策略1: 使用数据库中的预计算指纹
+        if amino_acid.fingerprints and 'ecfp2' in amino_acid.fingerprints:
+            # 尝试通过残基名匹配获取指纹
+            residue_fingerprint = self._get_residue_fingerprint_from_database(residue)
+            if residue_fingerprint:
+                candidate_fingerprint = amino_acid.fingerprints['ecfp2']
+                return self.fingerprint_utils.calculate_tanimoto_similarity(
+                    residue_fingerprint, candidate_fingerprint
+                )
+        
+        # 策略2: 从SMILES计算指纹
         candidate_smiles = amino_acid.smiles
         if not candidate_smiles:
             return None
         
-        # 从残基生成SMILES（如果可能）
+        # 从残基生成SMILES（暂未实现）
         residue_smiles = self._generate_residue_smiles(residue)
         if not residue_smiles:
             return None
@@ -101,6 +117,31 @@ class FingerprintSimilarityVerifier(BaseVerifier):
         
         # 计算Tanimoto相似性
         return self.fingerprint_utils.calculate_tanimoto_similarity(residue_fp, candidate_fp)
+    
+    def _get_residue_fingerprint_from_database(self, residue: ResidueInfo) -> Optional[str]:
+        """
+        从数据库获取残基的指纹
+        
+        Args:
+            residue: 残基信息
+        
+        Returns:
+            指纹字符串，失败返回None
+        """
+        try:
+            # 导入数据库管理器
+            from ..database import DatabaseManager
+            from ...utils.config import default_config
+            
+            db_manager = DatabaseManager(default_config)
+            amino_acid = db_manager.get_amino_acid_by_id(residue.residue_name)
+            
+            if amino_acid and amino_acid.fingerprints and 'ecfp2' in amino_acid.fingerprints:
+                return amino_acid.fingerprints['ecfp2']
+            
+            return None
+        except Exception:
+            return None
     
     def _generate_residue_smiles(self, residue: ResidueInfo) -> Optional[str]:
         """

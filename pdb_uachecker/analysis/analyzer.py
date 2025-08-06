@@ -401,13 +401,23 @@ class PDBAnalyzer:
             validation['errors'].append(f"数据库错误: {e}")
         
         # 验证验证引擎
-        engine_validation = self.verification_engine.validate_configuration()
-        validation['components']['verification_engine'] = engine_validation
-        
-        if not engine_validation['valid']:
-            validation['errors'].extend(engine_validation['errors'])
-        
-        validation['warnings'].extend(engine_validation['warnings'])
+        try:
+            engine_validation = self.verification_engine.validate_configuration()
+            validation['components']['verification_engine'] = {
+                'status': 'healthy' if engine_validation['valid'] else 'error',
+                **engine_validation  # 包含所有验证引擎的详细信息
+            }
+            
+            if not engine_validation['valid']:
+                validation['errors'].extend(engine_validation['errors'])
+            
+            validation['warnings'].extend(engine_validation['warnings'])
+        except Exception as e:
+            validation['components']['verification_engine'] = {
+                'status': 'error',
+                'error': str(e)
+            }
+            validation['errors'].append(f"验证引擎错误: {e}")
         
         # 确定整体状态
         if validation['errors']:
