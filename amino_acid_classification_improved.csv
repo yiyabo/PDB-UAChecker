@@ -1,0 +1,231 @@
+Code,SMILES,Classifications,Backbone_Type,Backbone_Info
+004,[NH3][C@@H](c1ccccc1)C(=O)O,aromatic;cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+0A1,COc1ccc(cc1)C[C@@H](C(=O)O)[NH3],cyclic,alpha,默认分类
+0AF,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1cccc2O,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+0BN,[NH3][C@H](C(=O)O)Cc1ccc(cc1)[C](=[NH2])=[NH2],cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+200,[NH3][C@H]([C](=O)=O)Cc1ccc(cc1)Cl,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+26P,OC(=O)[C@H](CCC[C](=[C](=O)=O)=O)[NH3],d_amino,alpha,默认分类
+2AG,[NH3][C@H](C(=O)O)CC=C,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+2AS,OC(=O)[C@H]([C@@H]([C](=O)=O)C)[NH3],d_amino,alpha,默认分类
+2FM,FC(SCC[C@@H](C(=O)O)[NH3])F,unclassified,alpha,默认分类
+2HF,[NH3][C@H](C(=O)O)C[C@@H]1CN[C@@H](N1)F,cyclic;d_amino;n_methyl,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+2HF1,[NH3][C@H](C(=O)O)Cc1cnc([nH]1)F,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+2HF2,[NH3][C@H](C(=O)O)Cc1c[nH]c(n1)F,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+2NP,OC(=O)[C@H](CCC[C](=[C](=O)=O)=C)[NH3],d_amino,alpha,默认分类
+32T,O=[C](=O)[C@H](Cc1c[nH]c2c1scc2)[NH3],cyclic;d_amino,alpha,默认分类
+3CF,N#Cc1cccc(c1)C[C@@H](C(=O)O)[NH3],cyclic,alpha,默认分类
+3FG,OC(=O)[C@H](c1cc(O)cc(c1)O)[NH3],cyclic;d_amino,alpha,默认分类
+3GL,OC(=O)[C@H](C[C@@H]([C](=O)=O)O)[NH3],d_amino,alpha,默认分类
+3MY,OC(=O)[C@H](Cc1ccc(c(c1)Cl)O)[NH3],cyclic;d_amino,alpha,默认分类
+4BF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)Br,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+4CF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C#N,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+4CY,N#CSCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+4FW,OC(=O)[C@H](Cc1c[nH]c2c1c(F)ccc2)[NH3],cyclic;d_amino,alpha,默认分类
+4HMP,OCc1ccc(cc1)C[C@@H](C(=O)O)[NH3],cyclic,alpha,默认分类
+4HT,O=[C](=O)[C@H](Cc1c[nH]c2c1c(O)ccc2)[NH3],cyclic;d_amino,alpha,默认分类
+4IN,OC(=O)[C@H](Cc1c[nH]c2c1c(N)ccc2)[NH3],cyclic;d_amino,alpha,默认分类
+4PH,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+6CL,[NH3][C@H](C(=O)O)CCC[C@H]([C](=O)=O)[NH3],cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+6CW,O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)Cl)[NH3],cyclic;d_amino,alpha,默认分类
+AA4,OCCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+ABA,CC[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+ACZ,[NH3][C@H](C(=O)O)CC[C@@H]1C=C[C@@H](C=C1)[NH3],cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ADAM,[NH3][C@H]([C](=O)=O)C[C@]12C[C@H]3C[C@@H](C2)C[C@@H](C1)C3,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+AGM,C[C@H]([NH]=[C](=[NH2])=[NH2])CC[C@@H](C(=O)O)[NH3],cyclic;d_amino,alpha,默认分类
+AHB,OC(=O)[C@H]([C@@H](C(=O)N)O)[NH3],d_amino,alpha,默认分类
+AHP,CCCCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+ALA,[NH3][C@@H](C)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ALC,[NH3][C@H](C(=O)O)CC1CCCCC1,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ALN,O=[C](=O)[C@H](Cc1cccc2c1cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+ALO,[NH3][C@H](C(=O)O)[C@H](C)O,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ANTH,OC(=O)[C@H](Cc1c2ccccc2cc2c1cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+APD,OC(=O)[C@H](Cc1cccc(c1)C)[NH3],cyclic;d_amino,alpha,默认分类
+APM,,,,
+ARG,[NH3][C@@H](CCCNC(=[NH2])N)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ARO,O[C@H](C[C@@H](C(=O)O)[NH3])C[NH]=[C](=[NH2])=[NH2],cyclic;d_amino,alpha,默认分类
+AS2,O=CC[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+ASN,[NH3][C@@H](CC(=O)N)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ASP,[NH3][C@@H](CC(=O)O)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+AZDA,[NH3][C@H]([C](=O)=O)CN=[N]=N,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+BB8,O[C@H]([C@@H](C(=O)O)[NH3])c1ccccc1,aromatic;cyclic;d_amino,alpha,默认分类
+BCS,[NH3][C@H](C(=O)O)CSCc1ccccc1,aromatic;cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+BHD,O=[C](=O)[C@H]([C@@H]([C](=O)=O)[NH3])O,d_amino,alpha,默认分类
+BIF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)c1ccccc1,aromatic;cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+BIU,C[C@H]([C@@H](C(=O)O)[NH3])CCBr,d_amino,alpha,默认分类
+BTH3,O=[C](=O)[C@H](Cc1csc2c1cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+BTR,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)Br)[NH3],cyclic;d_amino,alpha,默认分类
+BUG,[NH3][C@@H](C(C)(C)C)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+C2N,ClC[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+CAN,[NH3][C@H](C(=O)O)CCON,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+CCS,O=[C](=O)CSC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+CHG,[NH3][C@H](C(=O)O)C1CCCCC1,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+CHP,OC(=O)[C@H](c1ccc(c(c1)Cl)O)[NH3],cyclic;d_amino,alpha,默认分类
+CIR,OC(=O)[C@H](CCC[NH]=[C](=O)=[NH2])[NH3],d_amino,alpha,默认分类
+CNP2,N#Cc1ccccc1C[C@@H](C(=O)O)[NH3],aromatic;cyclic,alpha,默认分类
+CP24,OC(=O)[C@H](Cc1ccc(cc1Cl)Cl)[NH3],cyclic;d_amino,alpha,默认分类
+CP34,OC(=O)[C@H](Cc1ccc(c(c1)Cl)Cl)[NH3],cyclic;d_amino,alpha,默认分类
+CPA3,[NH3][C@H]([C](=O)=O)CC1CCCC1,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+CPG2,O=[C](=O)[C@H](c1ccccc1Cl)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+CPG3,OC(=O)[C@H](c1cccc(c1)Cl)[NH3],cyclic;d_amino,alpha,默认分类
+CPG4,[NH3][C@@H](c1ccc(cc1)Cl)C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+CPH2,OC(=O)[C@H](Cc1ccccc1Cl)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+CSA,CC(=O)CSC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+CSE,[NH3][C@H]([C](=O)=O)C[SeH],d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+CTE,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1cccc2Cl,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+CTH,ClC[C@H]([C@@H](C(=O)O)[NH3])O,d_amino,alpha,默认分类
+CYS,[NH3][C@@H](CS)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+D4P,OC(=O)[C@H](c1ccc(cc1)O)[NH3],cyclic;d_amino,alpha,默认分类
+DAB,[NH3]CC[C@@H]([C](=O)=O)[NH3],cyclic;gamma_amino,gamma,DAB型γ氨基酸
+DAH,OC(=O)[C@H](Cc1ccc(c(c1)O)O)[NH3],cyclic;d_amino,alpha,默认分类
+DBY,OC(=O)[C@H](Cc1cc(Br)c(c(c1)Br)O)[NH3],cyclic;d_amino,alpha,默认分类
+DDZ,OC([C@@H](C(=O)O)[NH3])O,unclassified,alpha,默认分类
+DILE,CCC([C@@H](C(=O)O)[NH3])CC,unclassified,alpha,默认分类
+DIPH,[NH3][C@@H]([C@H](c1ccccc1)c1ccccc1)C(=O)O,aromatic;cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+DMK,O=[C](=O)[C@H](C([C](=O)=O)(C)C)[NH3],d_amino,alpha,默认分类
+DMP3,CCc1cccc(c1)C[C@@H](C(=O)O)[NH3],cyclic,alpha,默认分类
+DPP,[NH3]C[C@@H]([C](=O)=O)[NH3],cyclic;beta_amino,beta,匹配模式: \[NH3\]C(?!C).*\[C\].*\(=O\)=O
+ESC,CCSCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+F2F,OC(=O)[C@H](Cc1ccc(c(c1)F)F)[NH3],cyclic;d_amino,alpha,默认分类
+FCL,OC(=O)[C@H](Cc1cccc(c1)Cl)[NH3],cyclic;d_amino,alpha,默认分类
+FGA4,OC(=O)[C@H](C[C@@H](C(=O)O)F)[NH3],d_amino,alpha,默认分类
+FGL,[NH3]C([C](=O)=O)[C](=O)=O,beta_amino,beta,匹配模式: \[NH3\]C(?!C).*\[C\].*\(=O\)=O
+FLA,[NH3][C@@H](C(F)(F)F)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+FPG2,OC(=O)[C@H](c1ccccc1F)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+FPG3,OC(=O)[C@H](c1cccc(c1)F)[NH3],cyclic;d_amino,alpha,默认分类
+FPG4,[NH3][C@@H](c1ccc(cc1)F)C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+FPH2,OC(=O)[C@H](Cc1ccccc1F)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+FPH3,OC(=O)[C@H](Cc1cccc(c1)F)[NH3],cyclic;d_amino,alpha,默认分类
+FT6,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)F)[NH3],cyclic;d_amino,alpha,默认分类
+FTR,[NH3][C@H](C(=O)O)Cc1c[nH]c2c1cc(F)cc2,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+FUA2,OC(=O)[C@H](Cc1ccco1)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+FVAL,[NH3][C@@H](C(F)(C)C)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+GBUT,O=[C](=O)[C@H](CC[NH]=[C](=[NH2])=[NH2])[NH3],cyclic;d_amino,alpha,默认分类
+GDPR,[NH3][C@H]([C](=O)=O)C[NH]=[C](=[NH2])=[NH2],cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+GGB,[NH3][C@H]([C](=O)=O)CCON=C(N)N,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+GHG,NC(=O)[C@H](C[C@@H]([C](=O)=O)[NH3])O,d_amino;n_methyl,alpha,默认分类
+GLN,[NH3][C@@H](CCC(=O)N)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+GLU,[NH3][C@@H](CCC(=O)O)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+GLY,NCC(=O)O,unclassified,alpha,匹配模式: NCC\(=O\)O
+GME,COC(=O)CC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+HCS,[NH3][C@H](C(=O)O)CCS,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+HGA,ONC(=O)CC[C@@H](C(=O)O)[NH3],n_methyl,alpha,默认分类
+HHK,[NH3]CCCCCC[C@@H](C(=O)O)[NH3],cyclic,alpha,赖氨酸衍生物（α氨基酸带侧链氨基）
+HIL4,C[C@H]([C@@H]([C@@H](C(=O)O)[NH3])C)O,d_amino,alpha,默认分类
+HIS,[NH3][C@@H](Cc1c[nH]cn1)C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+HL2,CC([C@H]([C@@H](C(=O)O)[NH3])O)C,d_amino,alpha,默认分类
+HLEU,[NH3][C@H]([C](=O)=O)CCC(C)C,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+HLU,CC([C@@H]([C@@H]([C](=O)=O)[NH3])O)C,unclassified,alpha,默认分类
+HOX,[NH3][C@H](C(=O)O)Cc1ccc(cc1)N,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+HPE,[NH3][C@H](C(=O)O)CCc1ccccc1,aromatic;cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+HQA,OC(=O)[C@H](Cc1cnc2c(c1)cccc2O)[NH3],cyclic;d_amino,alpha,默认分类
+HRG,[NH2]=[C](=[NH]CCCC[C@@H](C(=O)O)[NH3])=[NH2],cyclic;n_methyl,alpha,默认分类
+HRP,OC(=O)[C@H](Cc1c[nH]c2c1cc(O)cc2)[NH3],cyclic;d_amino,alpha,默认分类
+HSER,OCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+HTR,OC(=O)[C@H]([C@H](c1c[nH]c2c1cccc2)O)[NH3],cyclic;d_amino,alpha,默认分类
+HVA,[NH3][C@@H](C(O)(C)C)[C](=O)=O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+I2M,CCC([C@@H](C(=O)O)[NH3])(C)C,unclassified,alpha,默认分类
+IGL,[NH3][C@H]([C](=O)=O)[C@@H]1Cc2c(C1)cccc2,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+IIL,CC[C@H]([C@@H](C(=O)O)[NH3])C,d_amino,alpha,默认分类
+ILE,[NH3][C@@H]([C@H](CC)C)C(=O)O,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+ILX,OC[C@@H]([C@@H]([C@@H]([C](=O)=O)[NH3])C)O,unclassified,alpha,默认分类
+IYR,OC(=O)[C@H](Cc1ccc(c(c1)I)O)[NH3],cyclic;d_amino,alpha,默认分类
+KYN,OC(=O)[C@H](CC(=O)c1ccccc1N)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+LDO,OCCCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+LE1,[NH3][C@@H](C(S)(C)C)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+LED,O=C[C@@H](C[C@@H](C(=O)O)[NH3])C,unclassified,alpha,默认分类
+LEF,FC[C@H](C[C@@H](C(=O)O)[NH3])C,d_amino,alpha,默认分类
+LEU,[NH3][C@@H](CC(C)C)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+LME,O=[C](=O)C[C@H]([C@@H](C(=O)O)[NH3])C,d_amino,alpha,默认分类
+LMQ,NC(=O)C[C@@H]([C@@H](C(=O)O)[NH3])C,n_methyl,alpha,默认分类
+LVG,C=C[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+LVN,O=C[C@H]([C@@H]([C](=O)=O)[NH3])C,d_amino,alpha,默认分类
+LYS,[NH3][C@@H](CCCC[NH3])C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+M2S,C[S@@](=O)CC([C@@H](C(=O)O)[NH3])(C)C,unclassified,alpha,默认分类
+ME0,OCSCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+MEG,O=[C](=O)C[C@@H]([C@@H](C(=O)O)[NH3])C,unclassified,alpha,默认分类
+MEN,CNC(=O)C[C@@H](C(=O)O)[NH3],n_methyl,alpha,默认分类
+MEQ,CNC(=O)CC[C@@H](C(=O)O)[NH3],n_methyl,alpha,默认分类
+MET,[NH3][C@@H](CCSC)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+MHO,C[S@@](=O)CC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+MOT5,COc1ccc2c(c1)c(c[nH]2)C[C@@H](C(=O)O)[NH3],cyclic,alpha,默认分类
+MP34,O=[C](=O)[C@H](Cc1ccc(c(c1)C)C)[NH3],cyclic;d_amino,alpha,默认分类
+MPH2,OC(=O)[C@H](Cc1ccccc1C)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+MTR5,Cc1cc2c(C[C@@H](C(=O)O)[NH3])c[nH]c2cc1,cyclic,alpha,默认分类
+MTR6,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)C)[NH3],cyclic;d_amino,alpha,默认分类
+MTY,OC(=O)[C@H](Cc1cccc(c1)O)[NH3],cyclic;d_amino,alpha,默认分类
+NAL,OC(=O)[C@H](Cc1ccc2c(c1)cccc2)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+NAO1,OC(=O)[C@H](Cc1cccc2c1cc(O)cc2)[NH3],cyclic;d_amino,alpha,默认分类
+NAO2,OC(=O)[C@H](Cc1ccc2c(c1)cc(cc2)O)[NH3],cyclic;d_amino,alpha,默认分类
+NIY,O=[C](=O)[C@H](Cc1ccc(c(c1)N(=O)=O)O)[NH3],cyclic;d_amino,alpha,默认分类
+NLE,CCCC[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+NVA,CCC[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+OAS,CC(=O)OC[C@@H](C(=O)O)[NH3],unclassified,alpha,匹配模式: C\(=O\)O.*\[C@@?H\].*\[NH3\]
+OBF,[NH3][C@H](C(=O)O)CC(F)F,d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+OCY,OCCSC[C@@H]([C](=O)=O)[NH3],unclassified,alpha,默认分类
+OLT,CO[C@@H]([C@@H](C(=O)O)[NH3])C,unclassified,alpha,默认分类
+OMT,OC(=O)[C@H](CCS(=O)(=O)C)[NH3],d_amino,alpha,默认分类
+OMX,OC(=O)[C@H]([C@@H](c1ccc(cc1)O)O)[NH3],cyclic;d_amino,alpha,默认分类
+OMY,OC(=O)[C@H]([C@@H](c1ccc(c(c1)Cl)O)O)[NH3],cyclic;d_amino,alpha,默认分类
+ONL,CC(=O)CC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+ORN,[NH3]CCC[C@@H]([C](=O)=O)[NH3],cyclic,alpha,鸟氨酸型（α氨基酸带侧链氨基）
+OTYR,OC(=O)[C@H](Cc1ccccc1O)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+PBF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(=O)c1ccccc1,aromatic;cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+PF5,[NH3][C@H](C(=O)O)Cc1c(F)c(F)c(c(c1F)F)F,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+PFF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)F,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+PHE,[NH3][C@@H](Cc1ccccc1)C(=O)O,aromatic;cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+PHI,[NH3][C@H](C(=O)O)Cc1ccc(cc1)I,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+PPN,O=[C](=O)[C@H](Cc1ccc(cc1)N(=O)=O)[NH3],cyclic;d_amino,alpha,默认分类
+PRO,[NH2]1[C@H](C(=O)O)CCC1,cyclic;d_amino,alpha,默认分类
+PTR,OC(=O)[C@H](Cc1ccc(cc1)OP(=O)(O)O)[NH3],cyclic;d_amino,alpha,默认分类
+PTR2,OC(=O)[C@H](Cc1ccc(cc1)OP(=O)(O)O)[NH3],cyclic;d_amino,alpha,默认分类
+PYR2,O=[C](=O)[C@H](Cc1ccccn1)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+PYR3,OC(=O)[C@H](Cc1cccnc1)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+PYR4,[NH3][C@H](C(=O)O)Cc1ccncc1,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+PYZ1,OC(=O)[C@H](Cn1cccn1)[NH3],cyclic;d_amino,alpha,默认分类
+QU32,OC(=O)[C@H](Cc1ccc2c(n1)cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+QU33,OC(=O)[C@H](Cc1cnc2c(c1)cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+QU34,OC(=O)[C@H](Cc1ccnc2c1cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+QU35,OC(=O)[C@H](Cc1ccc2c(c1)nccc2)[NH3],cyclic;d_amino,alpha,默认分类
+QU36,OC(=O)[C@H](Cc1ccc2c(c1)cncc2)[NH3],cyclic;d_amino,alpha,默认分类
+QX32,OC(=O)[C@H](Cc1cnc2c(n1)cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+SEP,OC(=O)[C@H](COP(=O)(O)O)[NH3],d_amino,alpha,默认分类
+SEP2,OC(=O)[C@H](COP(=O)(O)O)[NH3],d_amino,alpha,默认分类
+SER,[NH3][C@@H](CO)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+SLZ,[NH3][C@H](C(=O)O)CSCC[NH3],cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+SME,C[S@@](=O)CC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+STYA,OC(=O)[C@H](CC=Cc1ccccc1)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+SYM,OC(=O)[C@H](C[C@H]([C](=O)=O)C)[NH3],d_amino,alpha,默认分类
+TBP4,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(C)(C)C,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TEZA,OC(=O)[C@H](Cn1nncn1)[NH3],cyclic;d_amino,alpha,默认分类
+TFG2,OC(=O)[C@H](c1ccccc1C(F)(F)F)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+TFG3,OC(=O)[C@H](c1cccc(c1)C(F)(F)F)[NH3],cyclic;d_amino,alpha,默认分类
+TFG4,[NH3][C@@H](c1ccc(cc1)C(F)(F)F)C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TFLE,OC(=O)[C@H](C[C@@H](C(F)(F)F)C)[NH3],d_amino,alpha,默认分类
+TFP2,OC(=O)[C@H](Cc1ccccc1C(F)(F)F)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+TFP3,OC(=O)[C@H](Cc1cccc(c1)C(F)(F)F)[NH3],cyclic;d_amino,alpha,默认分类
+TFP4,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(F)(F)F,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TH6,OC[C@H]([C@@H]([C](=O)=O)[NH3])O,d_amino,alpha,默认分类
+THA3,OC(=O)[C@H](Cc1cscc1)[NH3],cyclic;d_amino,alpha,默认分类
+THG2,OC(=O)[C@H](c1cccs1)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+THG3,OC(=O)[C@H](c1cscc1)[NH3],cyclic;d_amino,alpha,默认分类
+THIC,OC(=O)[C@H](CCC[NH]=[C](=S)=[NH2])[NH3],d_amino,alpha,默认分类
+THR,[NH3][C@@H]([C@@H](C)O)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TIH,OC(=O)[C@H](Cc1cccs1)[NH3],aromatic;cyclic;d_amino,alpha,默认分类
+TPO,C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,d_amino,alpha,默认分类
+TPO2,C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,d_amino,alpha,默认分类
+TRO,OC(=O)[C@H](Cc1c(O)[nH]c2c1cccc2)[NH3],cyclic;d_amino,alpha,默认分类
+TRP,[NH3][C@@H](Cc1c[nH]c2c1cccc2)C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TRX,O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)O)[NH3],cyclic;d_amino,alpha,默认分类
+TRZ4,[NH3][C@H](C(=O)O)Cn1cncn1,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TTQ,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1ccc(c2O)N,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*\[C\]\(=O\)=O
+TY2,OC(=O)[C@H](Cc1ccc(c(c1)N)O)[NH3],cyclic;d_amino,alpha,默认分类
+TYI,OC(=O)[C@H](Cc1cc(I)c(c(c1)I)O)[NH3],cyclic;d_amino,alpha,默认分类
+TYQ,OC(=O)[C@H](Cc1cc(N)c(cc1O)O)[NH3],cyclic;d_amino,alpha,默认分类
+TYR,[NH3][C@@H](Cc1ccc(cc1)O)C(=O)O,cyclic,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+TZA4,[NH3][C@H](C(=O)O)Cc1cscn1,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+UN1,OC(=O)CCC[C@@H](C(=O)O)[NH3],unclassified,alpha,默认分类
+VAH,CC[C@H]([C@@H]([C](=O)=O)[NH3])O,d_amino,alpha,默认分类
+VAL,[NH3][C@@H](C(C)C)C(=O)O,unclassified,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+WFP,[NH3][C@H](C(=O)O)Cc1cc(F)cc(c1)F,cyclic;d_amino,alpha,匹配模式: \[NH3\]\[C@@?H\].*C\(=O\)O
+YCM,NC(=O)CSC[C@@H](C(=O)O)[NH3],n_methyl,alpha,默认分类
+YOF,OC(=O)[C@H](Cc1ccc(c(c1)F)O)[NH3],cyclic;d_amino,alpha,默认分类

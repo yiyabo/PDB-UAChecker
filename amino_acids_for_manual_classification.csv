@@ -1,0 +1,230 @@
+amino_acid_code,smiles,current_classification,is_beta_current,is_gamma_current,is_d_amino_current,is_cyclic_current,is_aromatic_current,is_n_methyl_current,manual_classification,is_beta_manual,is_gamma_manual,is_d_amino_manual,is_cyclic_manual,is_aromatic_manual,is_n_methyl_manual,analysis_notes,has_pdb,has_mol2
+004,[NH3][C@@H](c1ccccc1)C(=O)O,Cyclic; Aromatic,No,No,No,Yes,Yes,No,Aromatic,No,No,No,No,Yes,No,L-苯丙氨酸衍生物，含苯环，应分类为芳香族而非环状,Yes,Yes
+0A1,COc1ccc(cc1)C[C@@H](C(=O)O)[NH3],Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-酪氨酸甲醚，含甲氧基苯环，应分类为芳香族,Yes,Yes
+0AF,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1cccc2O,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-色氨酸衍生物，C@H表示D型，含吲哚环系统为芳香族,Yes,Yes
+0BN,[NH3][C@H](C(=O)O)Cc1ccc(cc1)[C](=[NH2])=[NH2],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯丙氨酸衍生物，C@H表示D型，含苯环为芳香族,Yes,Yes
+200,[NH3][C@H]([C](=O)=O)Cc1ccc(cc1)Cl,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-氯苯丙氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+26P,OC(=O)[C@H](CCC[C](=[C](=O)=O)=O)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-谷氨酸衍生物，C@H表示D型，无环或芳香结构,Yes,Yes
+2AG,[NH3][C@H](C(=O)O)CC=C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-烯丙基甘氨酸，C@H表示D型，含烯烃但无环结构,Yes,Yes
+2AS,OC(=O)[C@H]([C@@H]([C](=O)=O)C)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-天冬氨酸衍生物，C@H表示D型，无环或芳香结构,Yes,Yes
+2FM,FC(SCC[C@@H](C(=O)O)[NH3])F,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-氟硫氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+2HF,[NH3][C@H](C(=O)O)C[C@@H]1CN[C@@H](N1)F,D-amino; Cyclic; N-methyl,No,No,Yes,Yes,No,Yes,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-脯氨酸衍生物，C@H表示D型，含五元环结构，环中氮不算N-甲基,Yes,Yes
+2HF1,[NH3][C@H](C(=O)O)Cc1cnc([nH]1)F,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-组氨酸衍生物，C@H表示D型，含咪唑环为杂环芳香族,Yes,Yes
+2HF2,[NH3][C@H](C(=O)O)Cc1c[nH]c(n1)F,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-组氨酸衍生物，C@H表示D型，含咪唑环为杂环芳香族,Yes,Yes
+2NP,OC(=O)[C@H](CCC[C](=[C](=O)=O)=C)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-谷氨酸衍生物，C@H表示D型，无环或芳香结构,Yes,Yes
+32T,O=[C](=O)[C@H](Cc1c[nH]c2c1scc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-色氨酸衍生物，C@H表示D型，含苯并噻吩环系统为芳香族,Yes,Yes
+3CF,N#Cc1cccc(c1)C[C@@H](C(=O)O)[NH3],Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-苯丙氨酸衍生物，C@@H表示L型，含苯环为芳香族,Yes,Yes
+3FG,OC(=O)[C@H](c1cc(O)cc(c1)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯丙氨酸衍生物，C@H表示D型，含苯环为芳香族,Yes,Yes
+3GL,OC(=O)[C@H](C[C@@H]([C](=O)=O)O)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-天冬氨酸衍生物，C@H表示D型，无环或芳香结构,Yes,Yes
+3MY,OC(=O)[C@H](Cc1ccc(c(c1)Cl)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-酪氨酸衍生物，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+4BF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)Br,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-溴苯丙氨酸，C@H表示D型，含溴代苯环为芳香族,Yes,Yes
+4CF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C#N,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-氰基苯丙氨酸，C@H表示D型，含氰基苯环为芳香族,Yes,Yes
+4CY,N#CSCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-半胱氨酸衍生物，C@@H表示L型，为标准α氨基酸,Yes,Yes
+4FW,OC(=O)[C@H](Cc1c[nH]c2c1c(F)ccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-色氨酸衍生物，C@H表示D型，含氟代吲哚环系统为芳香族,Yes,Yes
+4HMP,OCc1ccc(cc1)C[C@@H](C(=O)O)[NH3],Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-酪氨酸衍生物，C@@H表示L型，含羟甲基苯环为芳香族,Yes,Yes
+4HT,O=[C](=O)[C@H](Cc1c[nH]c2c1c(O)ccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-色氨酸衍生物，C@H表示D型，含羟基吲哚环系统为芳香族,Yes,Yes
+4IN,OC(=O)[C@H](Cc1c[nH]c2c1c(N)ccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-色氨酸衍生物，C@H表示D型，含氨基吲哚环系统为芳香族,Yes,Yes
+4PH,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯丙氨酸衍生物，C@H表示D型，含甲基苯环为芳香族,Yes,Yes
+6CL,[NH3][C@H](C(=O)O)CCC[C@H]([C](=O)=O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-赖氨酸衍生物，C@H表示D型，含双氨基结构为环状,Yes,Yes
+6CW,O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)Cl)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-色氨酸衍生物，C@H表示D型，含氯代吲哚环系统为芳香族,Yes,Yes
+AA4,OCCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-高丝氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+ABA,CC[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-α-氨基丁酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+ACZ,[NH3][C@H](C(=O)O)CC[C@@H]1C=C[C@@H](C=C1)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-赖氨酸衍生物，C@H表示D型，含环己烯环结构和双氨基,Yes,Yes
+ADAM,[NH3][C@H]([C](=O)=O)C[C@]12C[C@H]3C[C@@H](C2)C[C@@H](C1)C3,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-金刚烷丙氨酸，C@H表示D型，含复杂的金刚烷环状结构,Yes,Yes
+AGM,C[C@H]([NH]=[C](=[NH2])=[NH2])CC[C@@H](C(=O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-精氨酸衍生物，C@H表示D型，含胍基和双氨基结构,Yes,Yes
+AHB,OC(=O)[C@H]([C@@H](C(=O)N)O)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-β-羟基天冬酰胺，C@H表示D型，无环或芳香结构,Yes,Yes
+AHP,CCCCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-正亮氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+ALA,[NH3][C@@H](C)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-丙氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+ALC,[NH3][C@H](C(=O)O)CC1CCCCC1,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-环己基丙氨酸，C@H表示D型，含环己基环状结构,Yes,Yes
+ALN,O=[C](=O)[C@H](Cc1cccc2c1cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-萘丙氨酸，C@H表示D型，含萘环为芳香族,Yes,Yes
+ALO,[NH3][C@H](C(=O)O)[C@H](C)O,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-苏氨酸，C@H表示D型，无环或芳香结构,Yes,Yes
+ANTH,OC(=O)[C@H](Cc1c2ccccc2cc2c1cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-蒽丙氨酸，C@H表示D型，含蒽环为芳香族,Yes,Yes
+APD,OC(=O)[C@H](Cc1cccc(c1)C)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-甲基苯丙氨酸，C@H表示D型，含甲基苯环为芳香族,Yes,Yes
+ARG,[NH3][C@@H](CCCNC(=[NH2])N)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-精氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+ARO,O[C@H](C[C@@H](C(=O)O)[NH3])C[NH]=[C](=[NH2])=[NH2],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-精氨酸衍生物，含羟基和胍基，双氨基结构,Yes,Yes
+AS2,O=CC[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-天冬氨酸醛，C@@H表示L型，为标准α氨基酸衍生物,Yes,Yes
+ASN,[NH3][C@@H](CC(=O)N)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-天冬酰胺，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+ASP,[NH3][C@@H](CC(=O)O)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-天冬氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+AZDA,[NH3][C@H]([C](=O)=O)CN=[N]=N,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-叠氮丙氨酸，C@H表示D型，含叠氮基团,Yes,Yes
+BB8,O[C@H]([C@@H](C(=O)O)[NH3])c1ccccc1,D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯基丝氨酸，含羟基和苯环，为芳香族,Yes,Yes
+BCS,[NH3][C@H](C(=O)O)CSCc1ccccc1,D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯硫基半胱氨酸，C@H表示D型，含苯环为芳香族,Yes,Yes
+BHD,O=[C](=O)[C@H]([C@@H]([C](=O)=O)[NH3])O,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-β-羟基天冬氨酸，C@H表示D型，无环或芳香结构,Yes,Yes
+BIF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)c1ccccc1,D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-联苯丙氨酸，C@H表示D型，含联苯结构为芳香族,Yes,Yes
+BIU,C[C@H]([C@@H](C(=O)O)[NH3])CCBr,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-溴异亮氨酸，含溴原子，无环或芳香结构,Yes,Yes
+BTH3,O=[C](=O)[C@H](Cc1csc2c1cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯并噻吩丙氨酸，C@H表示D型，含苯并噻吩环为芳香族,Yes,Yes
+BTR,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)Br)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-溴色氨酸，C@H表示D型，含溴代吲哚环为芳香族,Yes,Yes
+BUG,[NH3][C@@H](C(C)(C)C)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-叔丁基甘氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+C2N,ClC[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-氯丙氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+CAN,[NH3][C@H](C(=O)O)CCON,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-肌氨酸衍生物，C@H表示D型，含羟胺基团,Yes,Yes
+CCS,O=[C](=O)CSC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-半胱氨酸衍生物，C@@H表示L型，含二硫键结构,Yes,Yes
+CHG,[NH3][C@H](C(=O)O)C1CCCCC1,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-环己基甘氨酸，C@H表示D型，含环己基环状结构,Yes,Yes
+CHP,OC(=O)[C@H](c1ccc(c(c1)Cl)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-氯酪氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+CIR,OC(=O)[C@H](CCC[NH]=[C](=O)=[NH2])[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-瓜氨酸，C@H表示D型，含脲基但无环或芳香结构,Yes,Yes
+CNP2,N#Cc1ccccc1C[C@@H](C(=O)O)[NH3],Cyclic; Aromatic,No,No,No,Yes,Yes,No,Aromatic,No,No,No,No,Yes,No,L-氰基苯丙氨酸，C@@H表示L型，含氰基苯环为芳香族,Yes,Yes
+CP24,OC(=O)[C@H](Cc1ccc(cc1Cl)Cl)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,"D-2,4-二氯苯丙氨酸，C@H表示D型，含二氯苯环为芳香族",Yes,Yes
+CP34,OC(=O)[C@H](Cc1ccc(c(c1)Cl)Cl)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,"D-3,4-二氯苯丙氨酸，C@H表示D型，含二氯苯环为芳香族",Yes,Yes
+CPA3,[NH3][C@H]([C](=O)=O)CC1CCCC1,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-环戊基丙氨酸，C@H表示D型，含五元环戊基为环状结构,Yes,Yes
+CPG2,O=[C](=O)[C@H](c1ccccc1Cl)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-氯苯甘氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+CPG3,OC(=O)[C@H](c1cccc(c1)Cl)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-氯苯甘氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+CPG4,[NH3][C@@H](c1ccc(cc1)Cl)C(=O)O,Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-4-氯苯甘氨酸，C@@H表示L型，含氯代苯环为芳香族,Yes,Yes
+CPH2,OC(=O)[C@H](Cc1ccccc1Cl)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-氯苯丙氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+CSA,CC(=O)CSC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-S-乙酰半胱氨酸，C@@H表示L型，为标准α氨基酸衍生物,Yes,Yes
+CSE,[NH3][C@H]([C](=O)=O)C[SeH],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-硒代半胱氨酸，C@H表示D型，含硒原子但无环或芳香结构,Yes,Yes
+CTE,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1cccc2Cl,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-氯色氨酸，C@H表示D型，含氯代吲哚环系统为芳香族,Yes,Yes
+CTH,ClC[C@H]([C@@H](C(=O)O)[NH3])O,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-氯苏氨酸，C@H表示D型，含氯原子和羟基但无环或芳香结构,Yes,Yes
+CYS,[NH3][C@@H](CS)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-半胱氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+D4P,OC(=O)[C@H](c1ccc(cc1)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-4-羟基苯甘氨酸，C@H表示D型，含羟基苯环为芳香族,Yes,Yes
+DAB,[NH3]CC[C@@H]([C](=O)=O)[NH3],Gamma; Cyclic,No,Yes,No,Yes,No,No,Gamma,No,Yes,No,No,No,No,重要发现：γ-氨基丁酸，氨基在γ位置，NH3-CH2-CH2-CH(COOH)-NH3结构,Yes,Yes
+DAH,OC(=O)[C@H](Cc1ccc(c(c1)O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,"D-3,4-二羟基苯丙氨酸，C@H表示D型，含二羟基苯环为芳香族",Yes,Yes
+DBY,OC(=O)[C@H](Cc1cc(Br)c(c(c1)Br)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,"D-3,5-二溴酪氨酸，C@H表示D型，含二溴苯环为芳香族",Yes,Yes
+DDZ,OC([C@@H](C(=O)O)[NH3])O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-二羟基丝氨酸，C@@H表示L型，含双羟基但无环或芳香结构,Yes,Yes
+DILE,CCC([C@@H](C(=O)O)[NH3])CC,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-异亮氨酸衍生物，C@@H表示L型，为标准α氨基酸,Yes,Yes
+DIPH,[NH3][C@@H]([C@H](c1ccccc1)c1ccccc1)C(=O)O,D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-二苯基甘氨酸，含两个苯环，为芳香族化合物,Yes,Yes
+DMK,O=[C](=O)[C@H](C([C](=O)=O)(C)C)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-二甲基天冬氨酸，C@H表示D型，含双甲基但无环或芳香结构,Yes,Yes
+DMP3,CCc1cccc(c1)C[C@@H](C(=O)O)[NH3],Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-3-乙基苯丙氨酸，C@@H表示L型，含乙基苯环为芳香族,Yes,Yes
+DPP,[NH3]C[C@@H]([C](=O)=O)[NH3],Beta; Cyclic,Yes,No,No,Yes,No,No,Beta,Yes,No,No,No,No,No,重要发现：β-氨基丙氨酸，氨基在β位置，NH3-CH2-CH(COOH)-NH3结构,Yes,Yes
+ESC,CCSCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-乙硫基半胱氨酸，C@@H表示L型，含硫醚键但无环或芳香结构,Yes,Yes
+F2F,OC(=O)[C@H](Cc1ccc(c(c1)F)F)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,"D-2,3-二氟苯丙氨酸，C@H表示D型，含二氟苯环为芳香族",Yes,Yes
+FCL,OC(=O)[C@H](Cc1cccc(c1)Cl)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-氯苯丙氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+FGA4,OC(=O)[C@H](C[C@@H](C(=O)O)F)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-氟天冬氨酸，C@H表示D型，含氟原子但无环或芳香结构,Yes,Yes
+FGL,[NH3]C([C](=O)=O)[C](=O)=O,Beta,Yes,No,No,No,No,No,Beta,Yes,No,No,No,No,No,重要发现：β-氨基酸，含双羧基结构，氨基在β位置,Yes,Yes
+FLA,[NH3][C@@H](C(F)(F)F)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-三氟丙氨酸，C@@H表示L型，含三氟甲基但无环或芳香结构,Yes,Yes
+FPG2,OC(=O)[C@H](c1ccccc1F)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-氟苯甘氨酸，C@H表示D型，含氟代苯环为芳香族,Yes,Yes
+FPG3,OC(=O)[C@H](c1cccc(c1)F)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-氟苯甘氨酸，C@H表示D型，含氟代苯环为芳香族,Yes,Yes
+FPG4,[NH3][C@@H](c1ccc(cc1)F)C(=O)O,Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-4-氟苯甘氨酸，C@@H表示L型，含氟代苯环为芳香族,Yes,Yes
+FPH2,OC(=O)[C@H](Cc1ccccc1F)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-氟苯丙氨酸，C@H表示D型，含氟代苯环为芳香族,Yes,Yes
+FPH3,OC(=O)[C@H](Cc1cccc(c1)F)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-氟苯丙氨酸，C@H表示D型，含氟代苯环为芳香族,Yes,Yes
+FT6,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)F)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-6-氟色氨酸，C@H表示D型，含氟代吲哚环系统为芳香族,Yes,Yes
+FTR,[NH3][C@H](C(=O)O)Cc1c[nH]c2c1cc(F)cc2,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-5-氟色氨酸，C@H表示D型，含氟代吲哚环系统为芳香族,Yes,Yes
+FUA2,OC(=O)[C@H](Cc1ccco1)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-呋喃丙氨酸，C@H表示D型，含呋喃环为杂环芳香族,Yes,Yes
+FVAL,[NH3][C@@H](C(F)(C)C)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-氟缬氨酸，C@@H表示L型，含氟原子但无环或芳香结构,Yes,Yes
+GBUT,O=[C](=O)[C@H](CC[NH]=[C](=[NH2])=[NH2])[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino,No,No,Yes,No,No,No,D-胍基丁氨酸，C@H表示D型，含胍基但无环或芳香结构,Yes,Yes
+GDPR,[NH3][C@H]([C](=O)=O)C[NH]=[C](=[NH2])=[NH2],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino,No,No,Yes,No,No,No,D-胍基丙氨酸，C@H表示D型，含胍基但无环或芳香结构,Yes,Yes
+GGB,[NH3][C@H]([C](=O)=O)CCON=C(N)N,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-胍基甘氨酸衍生物，C@H表示D型，含胍基和羟胺基团,Yes,Yes
+GHG,NC(=O)[C@H](C[C@@H]([C](=O)=O)[NH3])O,D-amino; N-methyl,No,No,Yes,No,No,Yes,D-amino,No,No,Yes,No,No,No,D-谷氨酰胺衍生物，C@H表示D型，含酰胺基但无环或芳香结构,Yes,Yes
+GLN,[NH3][C@@H](CCC(=O)N)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-谷氨酰胺，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+GLU,[NH3][C@@H](CCC(=O)O)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-谷氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+GLY,NCC(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,甘氨酸，无手性中心，标准蛋白质氨基酸,Yes,Yes
+GME,COC(=O)CC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-谷氨酸甲酯，C@@H表示L型，为标准α氨基酸衍生物,Yes,Yes
+HCS,[NH3][C@H](C(=O)O)CCS,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-高半胱氨酸，C@H表示D型，含硫醇基但无环或芳香结构,Yes,Yes
+HGA,ONC(=O)CC[C@@H](C(=O)O)[NH3],N-methyl,No,No,No,No,No,Yes,Alpha,No,No,No,No,No,No,L-高谷氨酸羟肟酸，C@@H表示L型，含羟肟酸基团但无环或芳香结构,Yes,Yes
+HHK,[NH3]CCCCCC[C@@H](C(=O)O)[NH3],Cyclic,No,No,No,Yes,No,No,Alpha,No,No,No,No,No,No,L-高赖氨酸，C@@H表示L型，含双氨基但为线性结构，非环状,Yes,Yes
+HIL4,C[C@H]([C@@H]([C@@H](C(=O)O)[NH3])C)O,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-异亮氨酸衍生物，含多个手性中心，无环或芳香结构,Yes,Yes
+HIS,[NH3][C@@H](Cc1c[nH]cn1)C(=O)O,Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-组氨酸，C@@H表示L型，含咪唑环为杂环芳香族，标准蛋白质氨基酸,Yes,Yes
+HL2,CC([C@H]([C@@H](C(=O)O)[NH3])O)C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-异亮氨酸衍生物，含羟基和多个甲基，无环或芳香结构,Yes,Yes
+HLEU,[NH3][C@H]([C](=O)=O)CCC(C)C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-亮氨酸，C@H表示D型，含异丁基但无环或芳香结构,Yes,Yes
+HLU,CC([C@@H]([C@@H]([C](=O)=O)[NH3])O)C,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-异亮氨酸衍生物，含羟基，无环或芳香结构,Yes,Yes
+HOX,[NH3][C@H](C(=O)O)Cc1ccc(cc1)N,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-羟基苯丙氨酸，C@H表示D型，含氨基苯环为芳香族,Yes,Yes
+HPE,[NH3][C@H](C(=O)O)CCc1ccccc1,D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯基乙基甘氨酸，C@H表示D型，含苯环为芳香族,Yes,Yes
+HQA,OC(=O)[C@H](Cc1cnc2c(c1)cccc2O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-喹啉丙氨酸，C@H表示D型，含喹啉环系统为杂环芳香族,Yes,Yes
+HRG,[NH2]=[C](=[NH]CCCC[C@@H](C(=O)O)[NH3])=[NH2],Cyclic; N-methyl,No,No,No,Yes,No,Yes,Alpha,No,No,No,No,No,No,L-精氨酸衍生物，C@@H表示L型，含胍基但为线性结构，非环状,Yes,Yes
+HRP,OC(=O)[C@H](Cc1c[nH]c2c1cc(O)cc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-羟基色氨酸，C@H表示D型，含羟基吲哚环系统为芳香族,Yes,Yes
+HSER,OCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-高丝氨酸，C@@H表示L型，含羟基但无环或芳香结构,Yes,Yes
+HTR,OC(=O)[C@H]([C@H](c1c[nH]c2c1cccc2)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-羟基色氨酸衍生物，C@H表示D型，含羟基吲哚环系统为芳香族,Yes,Yes
+HVA,[NH3][C@@H](C(O)(C)C)[C](=O)=O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-羟基缬氨酸，C@@H表示L型，含羟基但无环或芳香结构,Yes,Yes
+I2M,CCC([C@@H](C(=O)O)[NH3])(C)C,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-异亮氨酸衍生物，C@@H表示L型，含多个甲基但无环或芳香结构,Yes,Yes
+IGL,[NH3][C@H]([C](=O)=O)[C@@H]1Cc2c(C1)cccc2,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-茚满甘氨酸，C@H表示D型，含茚满环系统为芳香族,Yes,Yes
+IIL,CC[C@H]([C@@H](C(=O)O)[NH3])C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-异亮氨酸，C@H表示D型，无环或芳香结构,Yes,Yes
+ILE,[NH3][C@@H]([C@H](CC)C)C(=O)O,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-异亮氨酸，C@@H和C@H组合表示D型，无环或芳香结构,Yes,Yes
+ILX,OC[C@@H]([C@@H]([C@@H]([C](=O)=O)[NH3])C)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-异亮氨酸衍生物，含多个羟基，无环或芳香结构,Yes,Yes
+IYR,OC(=O)[C@H](Cc1ccc(c(c1)I)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-碘酪氨酸，C@H表示D型，含碘代苯环为芳香族,Yes,Yes
+KYN,OC(=O)[C@H](CC(=O)c1ccccc1N)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-犬尿氨酸，C@H表示D型，含氨基苯环为芳香族,No,Yes
+LDO,OCCCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-羟基正亮氨酸，C@@H表示L型，含羟基但无环或芳香结构,Yes,Yes
+LE1,[NH3][C@@H](C(S)(C)C)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-硫代缬氨酸，C@@H表示L型，含硫原子但无环或芳香结构,Yes,Yes
+LED,O=C[C@@H](C[C@@H](C(=O)O)[NH3])C,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-亮氨酸醛，C@@H表示L型，含醛基但无环或芳香结构,Yes,Yes
+LEF,FC[C@H](C[C@@H](C(=O)O)[NH3])C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-氟亮氨酸，C@H表示D型，含氟原子但无环或芳香结构,Yes,Yes
+LEU,[NH3][C@@H](CC(C)C)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-亮氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+LME,O=[C](=O)C[C@H]([C@@H](C(=O)O)[NH3])C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-亮氨酸衍生物，C@H表示D型，含羧基但无环或芳香结构,Yes,Yes
+LMQ,NC(=O)C[C@@H]([C@@H](C(=O)O)[NH3])C,N-methyl,No,No,No,No,No,Yes,Alpha,No,No,No,No,No,No,L-亮氨酸酰胺，C@@H表示L型，含酰胺基但无环或芳香结构,Yes,Yes
+LVG,C=C[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-乙烯基甘氨酸，C@@H表示L型，含乙烯基但无环或芳香结构,Yes,Yes
+LVN,O=C[C@H]([C@@H]([C](=O)=O)[NH3])C,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-亮氨酸醛，C@H表示D型，含醛基但无环或芳香结构,Yes,Yes
+LYS,[NH3][C@@H](CCCC[NH3])C(=O)O,Cyclic,No,No,No,Yes,No,No,Alpha,No,No,No,No,No,No,L-赖氨酸，C@@H表示L型，标准蛋白质氨基酸，含双氨基但为线性结构,Yes,Yes
+M2S,C[S@@](=O)CC([C@@H](C(=O)O)[NH3])(C)C,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-蛋氨酸亚砜，C@@H表示L型，含亚砜基但无环或芳香结构,Yes,Yes
+ME0,OCSCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-蛋氨酸衍生物，C@@H表示L型，含硫醚键但无环或芳香结构,Yes,Yes
+MEG,O=[C](=O)C[C@@H]([C@@H](C(=O)O)[NH3])C,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-亮氨酸衍生物，C@@H表示L型，含羧基但无环或芳香结构,Yes,Yes
+MEN,CNC(=O)C[C@@H](C(=O)O)[NH3],N-methyl,No,No,No,No,No,Yes,Alpha; N-methyl,No,No,No,No,No,Yes,L-N-甲基天冬酰胺，C@@H表示L型，含N-甲基酰胺基团,Yes,Yes
+MEQ,CNC(=O)CC[C@@H](C(=O)O)[NH3],N-methyl,No,No,No,No,No,Yes,Alpha; N-methyl,No,No,No,No,No,Yes,L-N-甲基谷氨酰胺，C@@H表示L型，含N-甲基酰胺基团,Yes,Yes
+MET,[NH3][C@@H](CCSC)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-蛋氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+MHO,C[S@@](=O)CC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-蛋氨酸亚砜，C@@H表示L型，含亚砜基但无环或芳香结构,Yes,Yes
+MOT5,COc1ccc2c(c1)c(c[nH]2)C[C@@H](C(=O)O)[NH3],Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-5-甲氧基色氨酸，C@@H表示L型，含甲氧基吲哚环系统为芳香族,Yes,Yes
+MP34,O=[C](=O)[C@H](Cc1ccc(c(c1)C)C)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,"D-3,4-二甲基苯丙氨酸，C@H表示D型，含二甲基苯环为芳香族",Yes,Yes
+MPH2,OC(=O)[C@H](Cc1ccccc1C)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-甲基苯丙氨酸，C@H表示D型，含甲基苯环为芳香族,Yes,Yes
+MTR5,Cc1cc2c(C[C@@H](C(=O)O)[NH3])c[nH]c2cc1,Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-5-甲基色氨酸，C@@H表示L型，含甲基吲哚环系统为芳香族,Yes,Yes
+MTR6,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)C)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-6-甲基色氨酸，C@H表示D型，含甲基吲哚环系统为芳香族,Yes,Yes
+MTY,OC(=O)[C@H](Cc1cccc(c1)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-甲基酪氨酸，C@H表示D型，含甲基苯环为芳香族,Yes,Yes
+NAL,OC(=O)[C@H](Cc1ccc2c(c1)cccc2)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-萘丙氨酸，C@H表示D型，含萘环为芳香族,Yes,Yes
+NAO1,OC(=O)[C@H](Cc1cccc2c1cc(O)cc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-1-萘酚丙氨酸，C@H表示D型，含羟基萘环为芳香族,Yes,Yes
+NAO2,OC(=O)[C@H](Cc1ccc2c(c1)cc(cc2)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-萘酚丙氨酸，C@H表示D型，含羟基萘环为芳香族,Yes,Yes
+NIY,O=[C](=O)[C@H](Cc1ccc(c(c1)N(=O)=O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-硝基酪氨酸，C@H表示D型，含硝基苯环为芳香族,Yes,Yes
+NLE,CCCC[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-正亮氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+NVA,CCC[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-正缬氨酸，C@@H表示L型，为标准α氨基酸,Yes,Yes
+OAS,CC(=O)OC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-O-乙酰丝氨酸，C@@H表示L型，含乙酰基但无环或芳香结构,Yes,Yes
+OBF,[NH3][C@H](C(=O)O)CC(F)F,D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-二氟丙氨酸，C@H表示D型，含二氟基但无环或芳香结构,Yes,Yes
+OCY,OCCSC[C@@H]([C](=O)=O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-半胱氨酸衍生物，C@@H表示L型，含羟基和硫醚键但无环或芳香结构,Yes,Yes
+OLT,CO[C@@H]([C@@H](C(=O)O)[NH3])C,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-苏氨酸衍生物，C@@H表示L型，含甲氧基但无环或芳香结构,Yes,Yes
+OMT,OC(=O)[C@H](CCS(=O)(=O)C)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-蛋氨酸砜，C@H表示D型，含砜基但无环或芳香结构,Yes,Yes
+OMX,OC(=O)[C@H]([C@@H](c1ccc(cc1)O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯基丝氨酸衍生物，C@H表示D型，含羟基苯环为芳香族,Yes,Yes
+OMY,OC(=O)[C@H]([C@@H](c1ccc(c(c1)Cl)O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-氯苯基丝氨酸，C@H表示D型，含氯代苯环为芳香族,Yes,Yes
+ONL,CC(=O)CC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-己二酸单酰胺，C@@H表示L型，含酮基但无环或芳香结构,Yes,Yes
+ORN,[NH3]CCC[C@@H]([C](=O)=O)[NH3],Cyclic,No,No,No,Yes,No,No,Alpha,No,No,No,No,No,No,L-鸟氨酸，C@@H表示L型，含双氨基但为线性结构，非环状,Yes,Yes
+OTYR,OC(=O)[C@H](Cc1ccccc1O)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-邻酪氨酸，C@H表示D型，含羟基苯环为芳香族,Yes,Yes
+PBF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(=O)c1ccccc1,D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-苯甲酰苯丙氨酸，C@H表示D型，含双苯环结构为芳香族,Yes,Yes
+PF5,[NH3][C@H](C(=O)O)Cc1c(F)c(F)c(c(c1F)F)F,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-五氟苯丙氨酸，C@H表示D型，含五氟苯环为芳香族,Yes,Yes
+PFF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)F,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-4-氟苯丙氨酸，C@H表示D型，含氟代苯环为芳香族,Yes,Yes
+PHE,[NH3][C@@H](Cc1ccccc1)C(=O)O,Cyclic; Aromatic,No,No,No,Yes,Yes,No,Aromatic,No,No,No,No,Yes,No,L-苯丙氨酸，C@@H表示L型，标准蛋白质氨基酸，含苯环为芳香族,Yes,Yes
+PHI,[NH3][C@H](C(=O)O)Cc1ccc(cc1)I,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-4-碘苯丙氨酸，C@H表示D型，含碘代苯环为芳香族,Yes,Yes
+PPN,O=[C](=O)[C@H](Cc1ccc(cc1)N(=O)=O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-4-硝基苯丙氨酸，C@H表示D型，含硝基苯环为芳香族,Yes,Yes
+PRO,[NH2]1[C@H](C(=O)O)CCC1,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-脯氨酸，C@H表示D型，含五元环吡咯烷结构为环状,Yes,Yes
+PTR,OC(=O)[C@H](Cc1ccc(cc1)OP(=O)(O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-磷酸酪氨酸，C@H表示D型，含磷酸基苯环为芳香族,Yes,Yes
+PTR2,OC(=O)[C@H](Cc1ccc(cc1)OP(=O)(O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-磷酸酪氨酸，C@H表示D型，含磷酸基苯环为芳香族,Yes,Yes
+PYR2,O=[C](=O)[C@H](Cc1ccccn1)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-2-吡啶丙氨酸，C@H表示D型，含吡啶环为杂环芳香族,Yes,Yes
+PYR3,OC(=O)[C@H](Cc1cccnc1)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-吡啶丙氨酸，C@H表示D型，含吡啶环为杂环芳香族,Yes,Yes
+PYR4,[NH3][C@H](C(=O)O)Cc1ccncc1,D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-4-吡啶丙氨酸，C@H表示D型，含吡啶环为杂环芳香族,Yes,Yes
+PYZ1,OC(=O)[C@H](Cn1cccn1)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cn1cccn1)[NH3],Yes,Yes
+QU32,OC(=O)[C@H](Cc1ccc2c(n1)cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1ccc2c(n1)cccc2)[NH3],Yes,Yes
+QU33,OC(=O)[C@H](Cc1cnc2c(c1)cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1cnc2c(c1)cccc2)[NH3],Yes,Yes
+QU34,OC(=O)[C@H](Cc1ccnc2c1cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1ccnc2c1cccc2)[NH3],Yes,Yes
+QU35,OC(=O)[C@H](Cc1ccc2c(c1)nccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1ccc2c(c1)nccc2)[NH3],Yes,Yes
+QU36,OC(=O)[C@H](Cc1ccc2c(c1)cncc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1ccc2c(c1)cncc2)[NH3],Yes,Yes
+QX32,OC(=O)[C@H](Cc1cnc2c(n1)cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1cnc2c(n1)cccc2)[NH3],Yes,Yes
+SEP,OC(=O)[C@H](COP(=O)(O)O)[NH3],D-amino,No,No,Yes,No,No,No,D-amino,No,No,Yes,No,No,No,D-磷酸丝氨酸，C@H表示D型，含磷酸基但无环或芳香结构,Yes,Yes
+SEP2,OC(=O)[C@H](COP(=O)(O)O)[NH3],D-amino,No,No,Yes,No,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: OC(=O)[C@H](COP(=O)(O)O)[NH3],Yes,Yes
+SER,[NH3][C@@H](CO)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-丝氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+SLZ,[NH3][C@H](C(=O)O)CSCC[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: [NH3][C@H](C(=O)O)CSCC[NH3],Yes,Yes
+SME,C[S@@](=O)CC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,基于SMILES自动分析: C[S@@](=O)CC[C@@H](C(=O)O)[NH3],Yes,Yes
+STYA,OC(=O)[C@H](CC=Cc1ccccc1)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](CC=Cc1ccccc1)[NH3],Yes,Yes
+SYM,OC(=O)[C@H](C[C@H]([C](=O)=O)C)[NH3],D-amino,No,No,Yes,No,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: OC(=O)[C@H](C[C@H]([C](=O)=O)C)[NH3],Yes,Yes
+TBP4,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(C)(C)C,D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: [NH3][C@H](C(=O)O)Cc1ccc(cc1)C(C)(C)C,Yes,Yes
+TEZA,OC(=O)[C@H](Cn1nncn1)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cn1nncn1)[NH3],Yes,Yes
+TFG2,OC(=O)[C@H](c1ccccc1C(F)(F)F)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](c1ccccc1C(F)(F)F)[NH3],Yes,Yes
+TFG3,OC(=O)[C@H](c1cccc(c1)C(F)(F)F)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](c1cccc(c1)C(F)(F)F)[NH3],Yes,Yes
+TFG4,[NH3][C@@H](c1ccc(cc1)C(F)(F)F)C(=O)O,Cyclic,No,No,No,Yes,No,No,Alpha; Aromatic,No,No,No,No,Yes,No,基于SMILES自动分析: [NH3][C@@H](c1ccc(cc1)C(F)(F)F)C(=O)O,Yes,Yes
+TFLE,OC(=O)[C@H](C[C@@H](C(F)(F)F)C)[NH3],D-amino,No,No,Yes,No,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: OC(=O)[C@H](C[C@@H](C(F)(F)F)C)[NH3],Yes,Yes
+TFP2,OC(=O)[C@H](Cc1ccccc1C(F)(F)F)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1ccccc1C(F)(F)F)[NH3],Yes,Yes
+TFP3,OC(=O)[C@H](Cc1cccc(c1)C(F)(F)F)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1cccc(c1)C(F)(F)F)[NH3],Yes,Yes
+TFP4,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(F)(F)F,D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: [NH3][C@H](C(=O)O)Cc1ccc(cc1)C(F)(F)F,Yes,Yes
+TH6,OC[C@H]([C@@H]([C](=O)=O)[NH3])O,D-amino,No,No,Yes,No,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-6-羟基色氨酸，C@H表示D型，含羟基吲哚环系统为芳香族,Yes,Yes
+THA3,OC(=O)[C@H](Cc1cscc1)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1cscc1)[NH3],Yes,Yes
+THG2,OC(=O)[C@H](c1cccs1)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](c1cccs1)[NH3],Yes,Yes
+THG3,OC(=O)[C@H](c1cscc1)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](c1cscc1)[NH3],Yes,Yes
+THIC,OC(=O)[C@H](CCC[NH]=[C](=S)=[NH2])[NH3],D-amino,No,No,Yes,No,No,No,Alpha; D-amino; Cyclic,No,No,Yes,Yes,No,No,基于SMILES自动分析: OC(=O)[C@H](CCC[NH]=[C](=S)=[NH2])[NH3],Yes,Yes
+THR,[NH3][C@@H]([C@@H](C)O)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-苏氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+TIH,OC(=O)[C@H](Cc1cccs1)[NH3],D-amino; Cyclic; Aromatic,No,No,Yes,Yes,Yes,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-β-噻唑基丙氨酸，C@H表示D型，含噻唑环为杂环芳香族,Yes,Yes
+TPO,C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,D-amino,No,No,Yes,No,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,Yes,Yes
+TPO2,C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,D-amino,No,No,Yes,No,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,Yes,Yes
+TRO,OC(=O)[C@H](Cc1c(O)[nH]c2c1cccc2)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1c(O)[nH]c2c1cccc2)[NH3],Yes,Yes
+TRP,[NH3][C@@H](Cc1c[nH]c2c1cccc2)C(=O)O,Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-色氨酸，C@@H表示L型，标准蛋白质氨基酸，含吲哚环系统为芳香族,Yes,Yes
+TRX,O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-6-氟色氨酸，C@H表示D型，含氟代吲哚环系统为芳香族,Yes,Yes
+TRZ4,[NH3][C@H](C(=O)O)Cn1cncn1,D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: [NH3][C@H](C(=O)O)Cn1cncn1,Yes,Yes
+TTQ,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1ccc(c2O)N,D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: [NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1ccc(c2O)N,Yes,Yes
+TY2,OC(=O)[C@H](Cc1ccc(c(c1)N)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1ccc(c(c1)N)O)[NH3],Yes,Yes
+TYI,OC(=O)[C@H](Cc1cc(I)c(c(c1)I)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-碘酪氨酸，C@H表示D型，含碘代苯环为芳香族,Yes,Yes
+TYQ,OC(=O)[C@H](Cc1cc(N)c(cc1O)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: OC(=O)[C@H](Cc1cc(N)c(cc1O)O)[NH3],Yes,Yes
+TYR,[NH3][C@@H](Cc1ccc(cc1)O)C(=O)O,Cyclic,No,No,No,Yes,No,No,Aromatic,No,No,No,No,Yes,No,L-酪氨酸，C@@H表示L型，标准蛋白质氨基酸，含羟基苯环为芳香族,Yes,Yes
+TZA4,[NH3][C@H](C(=O)O)Cc1cscn1,D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: [NH3][C@H](C(=O)O)Cc1cscn1,Yes,Yes
+UN1,OC(=O)CCC[C@@H](C(=O)O)[NH3],Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,基于SMILES自动分析: OC(=O)CCC[C@@H](C(=O)O)[NH3],Yes,Yes
+VAH,CC[C@H]([C@@H]([C](=O)=O)[NH3])O,D-amino,No,No,Yes,No,No,No,Alpha; D-amino,No,No,Yes,No,No,No,基于SMILES自动分析: CC[C@H]([C@@H]([C](=O)=O)[NH3])O,Yes,Yes
+VAL,[NH3][C@@H](C(C)C)C(=O)O,Alpha,No,No,No,No,No,No,Alpha,No,No,No,No,No,No,L-缬氨酸，C@@H表示L型，标准蛋白质氨基酸,Yes,Yes
+WFP,[NH3][C@H](C(=O)O)Cc1cc(F)cc(c1)F,D-amino; Cyclic,No,No,Yes,Yes,No,No,Alpha; D-amino; Aromatic,No,No,Yes,No,Yes,No,基于SMILES自动分析: [NH3][C@H](C(=O)O)Cc1cc(F)cc(c1)F,Yes,Yes
+YCM,NC(=O)CSC[C@@H](C(=O)O)[NH3],N-methyl,No,No,No,No,No,Yes,D-amino,No,No,Yes,No,No,No,D-S-甲基半胱氨酸，C@H表示D型，含硫甲基但无环或芳香结构,Yes,Yes
+YOF,OC(=O)[C@H](Cc1ccc(c(c1)F)O)[NH3],D-amino; Cyclic,No,No,Yes,Yes,No,No,D-amino; Aromatic,No,No,Yes,No,Yes,No,D-3-氟酪氨酸，C@H表示D型，含氟代苯环为芳香族,Yes,Yes

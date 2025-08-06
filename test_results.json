@@ -1,0 +1,47 @@
+{
+  "pdb_file": "test_protein.pdb",
+  "total_residues": 3,
+  "identified_residues": 3,
+  "identification_rate": 100.0,
+  "analysis_time": 0.0030159950256347656,
+  "capabilities": {
+    "exact_matching": true,
+    "molecular_formula_verification": true,
+    "atom_composition_verification": true,
+    "fingerprint_similarity": false,
+    "3d_structure_matching": true,
+    "parallel_processing": true
+  },
+  "matches": [
+    {
+      "residue_key": "A:ALA1",
+      "amino_acid_id": "ALA",
+      "amino_acid_name": "丙氨酸",
+      "confidence_score": 1.0,
+      "match_method": "residue_name_exact",
+      "verification_summary": {
+        "molecular_formula": true
+      }
+    },
+    {
+      "residue_key": "A:GLY2",
+      "amino_acid_id": "GLY",
+      "amino_acid_name": "甘氨酸",
+      "confidence_score": 1.0,
+      "match_method": "residue_name_exact",
+      "verification_summary": {
+        "molecular_formula": true
+      }
+    },
+    {
+      "residue_key": "A:VAL3",
+      "amino_acid_id": "VAL",
+      "amino_acid_name": "缬氨酸",
+      "confidence_score": 1.0,
+      "match_method": "residue_name_exact",
+      "verification_summary": {
+        "molecular_formula": true
+      }
+    }
+  ]
+}

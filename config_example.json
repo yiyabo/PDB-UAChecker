@@ -1,0 +1,18 @@
+{
+  "thresholds": {
+    "molecular_formula": 1.0,
+    "atom_composition": 0.9,
+    "fingerprint_similarity": 0.7,
+    "structure_3d": 0.5
+  },
+  "database": {
+    "path": "pdb_uachecker/data/amino_acids.db",
+    "auto_create": true
+  },
+  "performance": {
+    "enable_parallel": true,
+    "max_workers": 4,
+    "cache_size": 1000,
+    "timeout_seconds": 30
+  }
+}
