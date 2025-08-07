@@ -16,6 +16,7 @@ from ..core.models import (
     VerificationMethod, ParsingError, DatabaseError, VerificationError
 )
 from ..utils.config import Config
+from .intelligent_classifier import IntelligentAminoAcidClassifier
 
 
 class PDBAnalyzer:
@@ -38,6 +39,7 @@ class PDBAnalyzer:
         self.parser = PDBParser()
         self.database = EnhancedDatabaseManager(config)  # 使用增强数据库管理器
         self.verification_engine = VerificationEngine(config)
+        self.intelligent_classifier = IntelligentAminoAcidClassifier()  # 智能分类器
         
         print("🚀 PDB分析器初始化完成")
         self._print_capabilities()
@@ -94,8 +96,19 @@ class PDBAnalyzer:
                     print(f"   ✅ 最佳匹配: {best_match.amino_acid_name}")
                     print(f"   📊 置信度: {best_match.confidence_score:.3f}")
                     print(f"   🔧 通过验证: {best_match.verification_result.passed_verifications}/{best_match.verification_result.total_verifications}")
+                    
+                    # 添加智能分类信息
+                    classification = self.intelligent_classifier.classify_from_residue(residue)
+                    if classification['standard_category'] != 'requires_expert_review':
+                        print(f"   🏷️  智能分类: {classification['standard_category']} (置信度: {classification['confidence']:.2f})")
+                        print(f"   🔧 分类层级: {classification['classification_tier']}")
                 else:
                     print(f"   ❌ 未找到匹配")
+                    
+                    # 即使未匹配，也尝试智能分类
+                    classification = self.intelligent_classifier.classify_from_residue(residue)
+                    if classification['standard_category'] != 'requires_expert_review':
+                        print(f"   🏷️  智能推断: {classification['standard_category']} (置信度: {classification['confidence']:.2f})")
             
             analysis_time = time.time() - start_time
             
@@ -369,6 +382,19 @@ class PDBAnalyzer:
         """获取验证统计信息"""
         verification_results = [match.verification_result for match in results]
         return self.verification_engine.get_verification_statistics(verification_results)
+    
+    def get_classification_stats(self) -> Dict[str, Any]:
+        """获取标准化分类统计信息"""
+        return self.database.get_classification_statistics()
+    
+    def classify_all_amino_acids(self) -> Dict[str, Any]:
+        """对数据库中所有氨基酸进行智能分类"""
+        amino_acids = self.database.get_all_amino_acids()
+        return self.intelligent_classifier.batch_classify(amino_acids)
+    
+    def get_amino_acids_by_category(self, category: str) -> List[AminoAcidInfo]:
+        """根据标准分类获取氨基酸列表"""
+        return self.database.get_amino_acids_by_category(category)
     
     def update_config(self, **config_updates):
         """更新配置"""

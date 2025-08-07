@@ -43,6 +43,104 @@ class EnhancedDatabaseManager(DatabaseManager):
         self.chemistry_utils = ChemistryUtils()
         self.fingerprint_utils = MolecularFingerprint()
         self.quality_reports = {}
+    
+    def update_amino_acid_classification(self, amino_acid_id: str, standard_category: str, confidence: float) -> bool:
+        """
+        更新氨基酸的标准分类
+        
+        Args:
+            amino_acid_id: 氨基酸ID
+            standard_category: 标准分类
+            confidence: 分类置信度
+            
+        Returns:
+            是否更新成功
+        """
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    UPDATE amino_acids 
+                    SET standard_category = ?, classification_confidence = ?, updated_at = CURRENT_TIMESTAMP
+                    WHERE id = ?
+                """, (standard_category, confidence, amino_acid_id))
+                
+                conn.commit()
+                return cursor.rowcount > 0
+        except Exception as e:
+            raise DatabaseError(f"更新氨基酸分类失败: {e}")
+    
+    def get_amino_acids_by_category(self, category: str) -> List[AminoAcidInfo]:
+        """
+        根据标准分类获取氨基酸列表
+        
+        Args:
+            category: 分类名称
+            
+        Returns:
+            氨基酸信息列表
+        """
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                cursor.execute("""
+                    SELECT * FROM amino_acids WHERE standard_category = ? ORDER BY classification_confidence DESC
+                """, (category,))
+                
+                rows = cursor.fetchall()
+                return [self._row_to_amino_acid_info(row) for row in rows]
+        except Exception as e:
+            raise DatabaseError(f"查询分类氨基酸失败: {e}")
+    
+    def get_classification_statistics(self) -> Dict[str, any]:
+        """获取分类统计信息"""
+        try:
+            with self.get_connection() as conn:
+                cursor = conn.cursor()
+                
+                # 总体统计
+                cursor.execute("SELECT COUNT(*) FROM amino_acids")
+                total_count = cursor.fetchone()[0]
+                
+                # 分类分布
+                cursor.execute("""
+                    SELECT standard_category, COUNT(*) as count, AVG(classification_confidence) as avg_confidence
+                    FROM amino_acids 
+                    WHERE standard_category IS NOT NULL
+                    GROUP BY standard_category 
+                    ORDER BY count DESC
+                """)
+                
+                category_stats = {}
+                classified_count = 0
+                
+                for row in cursor.fetchall():
+                    category, count, avg_confidence = row
+                    category_stats[category] = {
+                        'count': count,
+                        'average_confidence': round(avg_confidence or 0, 3),
+                        'percentage': round((count / total_count) * 100, 1)
+                    }
+                    classified_count += count
+                
+                # 未分类统计
+                unclassified_count = total_count - classified_count
+                if unclassified_count > 0:
+                    category_stats['unclassified'] = {
+                        'count': unclassified_count,
+                        'average_confidence': 0.0,
+                        'percentage': round((unclassified_count / total_count) * 100, 1)
+                    }
+                
+                return {
+                    'total_amino_acids': total_count,
+                    'classified_amino_acids': classified_count,
+                    'classification_rate': round((classified_count / total_count) * 100, 1),
+                    'category_distribution': category_stats
+                }
+                
+        except Exception as e:
+            raise DatabaseError(f"获取分类统计失败: {e}")
         
     def load_amino_acid_database(self) -> Dict[str, AminoAcidInfo]:
         """
