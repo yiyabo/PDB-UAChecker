@@ -8,7 +8,8 @@ from .unified_classifier import UnifiedClassifier, ClassificationTier
 
 # 🧪 知识库和分析器组件
 from .knowledge import ChemicalDatabase, StandardAminoAcids
-from .analyzers import MolecularAnalyzer, BackboneAnalyzer, StereochemistryAnalyzer
+from .analyzers import BackboneAnalyzer, StereochemistryAnalyzer
+from .molecular_structure_analyzer import MolecularStructureAnalyzer
 
 # 📊 保留主要分析器
 from .analyzer import PDBAnalyzer
@@ -26,7 +27,7 @@ __all__ = [
     # 组件
     'ChemicalDatabase', 
     'StandardAminoAcids',
-    'MolecularAnalyzer',
+    'MolecularStructureAnalyzer',
     'BackboneAnalyzer', 
     'StereochemistryAnalyzer',
     

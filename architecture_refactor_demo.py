@@ -7,7 +7,7 @@ from pdb_uachecker.analysis import (
     UnifiedClassifier,
     ChemicalDatabase, 
     StandardAminoAcids,
-    MolecularAnalyzer,
+    MolecularStructureAnalyzer,
     BackboneAnalyzer,
     StereochemistryAnalyzer
 )
@@ -78,17 +78,28 @@ def demo_individual_analyzers():
     print("\n🧪 分析器组件演示")
     print("=" * 50)
     
-    # 分子分析器
-    molecular_analyzer = MolecularAnalyzer()
-    smiles = "N[C@@H](Cc1ccccc1)C(=O)O"  # 苯丙氨酸
-    
-    print(f"\n分子分析 - SMILES: {smiles}")
-    analysis = molecular_analyzer.get_analysis_summary(smiles)
-    if analysis['valid']:
-        features = analysis['basic_features']
-        print(f"  芳香性: {features['is_aromatic']}")
-        print(f"  环数: {features['ring_count']}")
-        print(f"  手性中心: {features['chiral_centers_count']}")
+    try:
+        # 分子分析器
+        from pdb_uachecker.analysis.molecular_structure_analyzer import MolecularStructureAnalyzer
+        molecular_analyzer = MolecularStructureAnalyzer()
+        smiles = "N[C@@H](Cc1ccccc1)C(=O)O"  # 苯丙氨酸
+        
+        print(f"\n分子分析 - SMILES: {smiles}")
+        analysis = molecular_analyzer.analyze(smiles)
+        if analysis.is_valid:
+            # 使用分析器的单独方法获取特征
+            is_aromatic, _ = molecular_analyzer.is_aromatic(smiles)
+            has_ring, ring_count, _ = molecular_analyzer.has_rings(smiles)
+            stereo_info = molecular_analyzer.detect_stereochemistry(smiles)
+            
+            print(f"  芳香性: {is_aromatic}")
+            print(f"  环数: {ring_count}")
+            print(f"  手性中心: {stereo_info.get('chiral_centers_count', 0)}")
+        else:
+            print("  ❌ SMILES无效")
+    except Exception as e:
+        print(f"❌ 分子分析演示出错: {e}")
+        print("请检查RDKit依赖是否正确安装。")
     
     # 骨架分析器
     backbone_analyzer = BackboneAnalyzer()
@@ -160,15 +171,15 @@ def performance_comparison():
     print("\n📁 新的架构结构:")
     print("""
     analysis/
-    ├── unified_classifier.py      # 🎯 统一分类入口
-    ├── knowledge/                  # 📚 知识库
+    ├── unified_classifier.py          # 🎯 统一分类入口
+    ├── molecular_structure_analyzer.py # 🔬 分子结构分析
+    ├── knowledge/                      # 📚 知识库
     │   ├── chemical_database.py
     │   └── amino_acid_registry.py
-    ├── analyzers/                  # 🧪 专门分析器
-    │   ├── molecular_analyzer.py
+    ├── analyzers/                      # 🧪 专门分析器
     │   ├── backbone_analyzer.py
     │   └── stereochemistry_analyzer.py
-    └── legacy/                     # 📜 历史代码
+    └── legacy/                         # 📜 历史代码
         ├── classifier.py
         ├── expert_classifier.py
         └── intelligent_classifier.py

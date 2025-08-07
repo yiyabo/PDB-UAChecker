@@ -10,7 +10,7 @@ from enum import Enum
 from ..core.models import AminoAcidInfo, ClassificationResult, ChemicalKnowledge
 from .knowledge.chemical_database import ChemicalDatabase
 from .knowledge.amino_acid_registry import StandardAminoAcids
-from .analyzers.molecular_analyzer import MolecularAnalyzer
+from .molecular_structure_analyzer import MolecularStructureAnalyzer
 from .analyzers.backbone_analyzer import BackboneAnalyzer
 from .analyzers.stereochemistry_analyzer import StereochemistryAnalyzer
 
@@ -47,7 +47,7 @@ class UnifiedClassifier:
         # 核心组件
         self.chemical_database = ChemicalDatabase()
         self.standard_registry = StandardAminoAcids()
-        self.molecular_analyzer = MolecularAnalyzer()
+        self.molecular_analyzer = MolecularStructureAnalyzer()
         self.backbone_analyzer = BackboneAnalyzer()
         self.stereochemistry_analyzer = StereochemistryAnalyzer()
         
