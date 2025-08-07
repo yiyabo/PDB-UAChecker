@@ -9,7 +9,7 @@ from typing import Dict, Any, List, Tuple, Optional
 from collections import defaultdict
 import json
 
-from ..core.models import AminoAcidInfo, ResidueInfo
+from ...core.models import AminoAcidInfo, ResidueInfo
 
 
 class IntelligentAminoAcidClassifier:

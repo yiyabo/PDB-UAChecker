@@ -4,8 +4,15 @@
 """
 
 from dataclasses import dataclass, field
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 from enum import Enum
+
+# 在模块顶层导入，避免运行时导入的性能开销
+try:
+    from ..utils.chemistry import ChemistryUtils
+except ImportError:
+    # 兼容性处理，如果导入失败则延迟导入
+    ChemistryUtils = None
 
 
 class VerificationMethod(Enum):
@@ -46,11 +53,23 @@ class ResidueInfo:
     
     def _calculate_molecular_properties(self):
         """计算分子属性"""
-        from ..utils.chemistry import ChemistryUtils
+        # 使用模块级别的ChemistryUtils，避免运行时导入
+        if ChemistryUtils is None:
+            # 如果模块导入时失败，这里再次尝试导入
+            try:
+                from ..utils.chemistry import ChemistryUtils as CU
+                chemistry_utils = CU
+            except ImportError as e:
+                print(f"⚠️ ChemistryUtils导入失败: {e}")
+                self.molecular_formula = ""
+                self.atom_composition = {}
+                return
+        else:
+            chemistry_utils = ChemistryUtils
         
         try:
             # 确保atoms列表存在且不为空
-            if not hasattr(self, 'atoms') or not self.atoms:
+            if not self.atoms:  # 简化检查，不使用hasattr
                 self.molecular_formula = ""
                 self.atom_composition = {}
                 return
@@ -68,8 +87,8 @@ class ResidueInfo:
                     })
             
             if atom_dicts:
-                self.atom_composition = ChemistryUtils.calculate_atom_composition(atom_dicts)
-                self.molecular_formula = ChemistryUtils.calculate_molecular_formula(self.atom_composition)
+                self.atom_composition = chemistry_utils.calculate_atom_composition(atom_dicts)
+                self.molecular_formula = chemistry_utils.calculate_molecular_formula(self.atom_composition)
             else:
                 self.molecular_formula = ""
                 self.atom_composition = {}
@@ -87,7 +106,9 @@ class ResidueInfo:
     @property
     def heavy_atom_composition(self) -> Dict[str, int]:
         """重原子组成（不含氢）"""
-        from ..utils.chemistry import ChemistryUtils
+        if ChemistryUtils is None:
+            # 如果ChemistryUtils不可用，手动过滤氢原子
+            return {k: v for k, v in (self.atom_composition or {}).items() if k != 'H'}
         return ChemistryUtils.extract_heavy_atoms(self.atom_composition or {})
     
     @property
@@ -111,7 +132,9 @@ class AminoAcidInfo:
     @property
     def heavy_atom_composition(self) -> Dict[str, int]:
         """重原子组成（不含氢）"""
-        from ..utils.chemistry import ChemistryUtils
+        if ChemistryUtils is None:
+            # 如果ChemistryUtils不可用，手动过滤氢原子
+            return {k: v for k, v in self.atom_composition.items() if k != 'H'}
         return ChemistryUtils.extract_heavy_atoms(self.atom_composition)
 
 
@@ -209,6 +232,55 @@ class Structure3DInfo:
     def atom_count(self) -> int:
         """原子数量"""
         return len(self.coordinates)
+
+
+@dataclass
+class ClassificationResult:
+    """高精度分类结果"""
+    amino_acid_id: str
+    amino_acid_name: str
+    categories: List[str]
+    confidence: float
+    classification_method: str
+    evidence: List[str]
+    details: Dict[str, Any] = field(default_factory=dict)
+    
+    @property
+    def is_high_confidence(self) -> bool:
+        """是否为高置信度分类"""
+        return self.confidence >= 0.9
+    
+    @property
+    def requires_review(self) -> bool:
+        """是否需要人工审查"""
+        return self.confidence < 0.8 or 'requires_manual_review' in self.categories
+
+
+@dataclass
+class ChemicalKnowledge:
+    """化学知识库条目"""
+    amino_acid_id: str
+    canonical_smiles: str
+    stereochemistry: Optional[str] = None  # 'D', 'L', 或 None
+    backbone_type: Optional[str] = None    # 'alpha', 'beta', 'gamma'
+    functional_groups: List[str] = field(default_factory=list)
+    structural_features: List[str] = field(default_factory=list)
+    alternative_names: List[str] = field(default_factory=list)
+    confidence: float = 1.0
+    source: str = "curated_database"
+
+
+@dataclass
+class MolecularAnalysis:
+    """分子结构分析结果"""
+    smiles: str
+    is_valid: bool
+    aromatic_atoms: List[int] = field(default_factory=list)
+    ring_systems: List[List[int]] = field(default_factory=list)
+    chiral_centers: List[Tuple[int, str]] = field(default_factory=list)
+    functional_groups: Dict[str, List[int]] = field(default_factory=dict)
+    backbone_analysis: Optional[Dict[str, Any]] = None
+    molecular_descriptors: Dict[str, float] = field(default_factory=dict)
 
 
 # 异常类定义

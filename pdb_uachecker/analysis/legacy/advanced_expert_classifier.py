@@ -4,9 +4,9 @@
 """
 
 from typing import Dict, Any, List, Optional
-from ..core.models import AminoAcidInfo, ResidueInfo
-from ..utils.smiles_parser import AminoAcidStructureAnalyzer
-from ..utils.cip_rules import AminoAcidChiralityAnalyzer
+from ...core.models import AminoAcidInfo, ResidueInfo
+from ...utils.smiles_parser import AminoAcidStructureAnalyzer
+from ...utils.cip_rules import AminoAcidChiralityAnalyzer
 
 
 class AdvancedExpertAminoAcidClassifier:

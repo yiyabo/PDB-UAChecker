@@ -169,7 +169,6 @@ class PDBParser:
             if not residue.molecular_formula:
                 print(f"⚠️ 残基 {residue.residue_key} 分子式计算失败，尝试修复")
                 # 尝试手动计算并修复
-                from ...utils.chemistry import ChemistryUtils
                 atom_dicts = [
                     {'element': atom.element}
                     for atom in residue.atoms if atom.element

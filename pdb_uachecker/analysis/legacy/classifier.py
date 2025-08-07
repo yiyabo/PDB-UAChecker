@@ -7,7 +7,7 @@ import re
 from typing import List, Dict, Any, Optional, Tuple
 from collections import defaultdict
 
-from ..core.models import AminoAcidInfo
+from ...core.models import AminoAcidInfo
 
 
 class AminoAcidClassifier:

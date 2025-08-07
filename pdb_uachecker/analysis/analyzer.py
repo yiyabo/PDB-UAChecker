@@ -16,7 +16,7 @@ from ..core.models import (
     VerificationMethod, ParsingError, DatabaseError, VerificationError
 )
 from ..utils.config import Config
-from .intelligent_classifier import IntelligentAminoAcidClassifier
+from .legacy.intelligent_classifier import IntelligentAminoAcidClassifier
 
 
 class PDBAnalyzer:
