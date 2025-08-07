@@ -11,6 +11,7 @@ from enum import Enum
 # 导入核心组件
 from .classification_validator import ClassificationValidator, ValidationLevel
 from .analyzers.cip_rule_analyzer import CIPRuleAnalyzer
+from .analyzers.robust_chirality_analyzer import RobustChiralityAnalyzer
 from .analyzers.enhanced_backbone_analyzer import EnhancedBackboneAnalyzer
 from .analyzers.n_methylation_analyzer import NMethylationAnalyzer
 
@@ -72,6 +73,7 @@ class EnhancedUnifiedClassifier:
         
         # 核心分析器
         self.cip_analyzer = CIPRuleAnalyzer()
+        self.robust_chirality_analyzer = RobustChiralityAnalyzer()  # 高级手性分析器
         self.backbone_analyzer = EnhancedBackboneAnalyzer()
         self.n_methylation_analyzer = NMethylationAnalyzer()
         

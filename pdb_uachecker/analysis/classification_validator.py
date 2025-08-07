@@ -10,6 +10,7 @@ from enum import Enum
 
 # 导入新的分析器
 from .analyzers.cip_rule_analyzer import CIPRuleAnalyzer
+from .analyzers.robust_chirality_analyzer import RobustChiralityAnalyzer
 from .analyzers.enhanced_backbone_analyzer import EnhancedBackboneAnalyzer
 from .analyzers.n_methylation_analyzer import NMethylationAnalyzer
 
@@ -55,6 +56,7 @@ class ClassificationValidator:
         # 初始化所有分析器
         self.analyzers = {
             'cip_rule': CIPRuleAnalyzer(),
+            'robust_chirality': RobustChiralityAnalyzer(),  # 高级手性分析器
             'backbone': EnhancedBackboneAnalyzer(),
             'n_methylation': NMethylationAnalyzer(),
             'stereochemistry': StereochemistryAnalyzer(),
@@ -151,13 +153,8 @@ class ClassificationValidator:
         """运行所有分析器"""
         results = {}
         
-        try:
-            # CIP规则分析
-            results['cip_rule'] = self.analyzers['cip_rule'].analyze_stereochemistry(
-                smiles, amino_acid_name or ""
-            )
-        except Exception as e:
-            results['cip_rule'] = {'error': str(e), 'stereochemistry': 'unknown_chirality'}
+        # 智能手性分析：先尝试基础CIP，如果不可靠则使用强化分析器
+        results['cip_rule'] = self._analyze_chirality_intelligent(smiles, amino_acid_name or "", amino_acid_code or "")
         
         try:
             # 骨架分析
@@ -465,3 +462,127 @@ class ClassificationValidator:
             final_categories=[],
             validation_details={'failure_reason': reason}
         )
+    
+    def _analyze_chirality_intelligent(self, smiles: str, amino_acid_name: str, amino_acid_code: str) -> Dict[str, Any]:
+        """
+        智能手性分析：层级选择机制
+        
+        1. 首先使用基础CIP分析器（快速、稳定）
+        2. 如果结果不可靠（置信度低或出错），则升级到强化分析器
+        3. 强化分析器提供多方法验证和一致性检测
+        """
+        try:
+            # Step 1: 尝试基础CIP规则分析
+            basic_result = self.analyzers['cip_rule'].analyze_stereochemistry(smiles, amino_acid_name)
+            
+            # Step 2: 评估基础分析结果的可靠性
+            needs_robust_analysis = self._should_use_robust_chirality_analysis(basic_result, smiles)
+            
+            if not needs_robust_analysis:
+                # 基础分析结果可靠，直接使用
+                basic_result['analysis_method'] = 'basic_cip'
+                return basic_result
+            
+            # Step 3: 升级到强化分析器
+            try:
+                robust_result = self.analyzers['robust_chirality'].analyze_chirality_robust(
+                    smiles, amino_acid_name, amino_acid_code
+                )
+                
+                # 添加升级原因到证据中
+                if 'evidence' not in robust_result:
+                    robust_result['evidence'] = []
+                robust_result['evidence'].append("因基础CIP分析不可靠，升级到强化分析器")
+                
+                return robust_result
+                
+            except Exception as robust_error:
+                # 强化分析失败，回退到基础分析并标记
+                basic_result['fallback_reason'] = f"强化分析失败: {str(robust_error)}"
+                basic_result['analysis_method'] = 'basic_cip_fallback'
+                return basic_result
+                
+        except Exception as basic_error:
+            # 基础分析完全失败，尝试强化分析器
+            try:
+                robust_result = self.analyzers['robust_chirality'].analyze_chirality_robust(
+                    smiles, amino_acid_name, amino_acid_code
+                )
+                robust_result['analysis_method'] = 'robust_emergency'
+                if 'evidence' not in robust_result:
+                    robust_result['evidence'] = []
+                robust_result['evidence'].append(f"基础CIP分析失败({str(basic_error)})，直接使用强化分析器")
+                return robust_result
+                
+            except Exception as robust_error:
+                # 两个分析器都失败
+                return {
+                    'error': f"所有手性分析方法失败 - 基础: {str(basic_error)}, 强化: {str(robust_error)}", 
+                    'stereochemistry': 'unknown_chirality',
+                    'confidence': 0.0,
+                    'analysis_method': 'failed'
+                }
+    
+    def _should_use_robust_chirality_analysis(self, basic_result: Dict[str, Any], smiles: str) -> bool:
+        """
+        判断是否需要使用强化手性分析器
+        
+        升级条件：
+        1. 基础分析出错
+        2. 置信度太低 (<0.6)
+        3. 结果不确定 (unknown_chirality)
+        4. 分子复杂度高 (多个手性中心)
+        5. 包含争议性结构特征
+        """
+        # 1. 基础分析出错
+        if basic_result.get('error') or not basic_result.get('stereochemistry'):
+            return True
+        
+        # 2. 置信度太低
+        confidence = basic_result.get('confidence', 0)
+        if confidence < 0.6:
+            return True
+        
+        # 3. 结果不确定
+        if basic_result.get('stereochemistry') == 'unknown_chirality':
+            return True
+        
+        # 4. 分子复杂度评估
+        complexity_score = self._assess_chirality_complexity(smiles)
+        if complexity_score > 5:  # 高复杂度阈值
+            return True
+        
+        # 5. 检测争议性特征（多个@标记、复杂分支等）
+        if '@' in smiles and smiles.count('@') > 1:  # 多个手性中心
+            return True
+        
+        # 其他情况使用基础分析器
+        return False
+    
+    def _assess_chirality_complexity(self, smiles: str) -> int:
+        """
+        评估手性复杂度分数
+        
+        考虑因素：
+        - 手性中心数量 (每个+2分)
+        - 环结构 (每个+1分)  
+        - 分支结构 (每个+1分)
+        - 芳香原子 (每个+0.5分)
+        """
+        score = 0
+        
+        # 手性中心
+        score += smiles.count('@') * 2
+        
+        # 环结构（数字1-9表示环闭合）
+        for digit in '123456789':
+            score += smiles.count(digit)
+        
+        # 分支结构
+        score += smiles.count('(')
+        
+        # 芳香原子（小写字母）
+        aromatic_count = sum(1 for c in smiles if c.islower() and c.isalpha())
+        score += int(aromatic_count * 0.5)
+        
+        return score
