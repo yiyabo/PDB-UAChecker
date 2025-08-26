@@ -1,13 +1,17 @@
 """
 指纹相似性验证器
 基于分子指纹进行氨基酸验证，采用重原子骨架方法
+增强版：支持从PDB坐标生成SMILES和分子指纹
 """
 
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
+import logging
 
 from .base import BaseVerifier
 from ..models import ResidueInfo, AminoAcidInfo, VerificationMethod
 from ...utils.chemistry import ChemistryUtils, MolecularFingerprint
+from .coordinate_to_smiles import CoordinateToSmilesConverter, EnhancedFingerprintGenerator
+from .stereochemistry_detector import StereochemistryDetector
 
 
 class FingerprintSimilarityVerifier(BaseVerifier):
@@ -17,6 +21,11 @@ class FingerprintSimilarityVerifier(BaseVerifier):
         super().__init__(threshold)
         self.chemistry_utils = ChemistryUtils()
         self.fingerprint_utils = MolecularFingerprint()
+        
+        # 新增的增强组件
+        self.coord_converter = CoordinateToSmilesConverter()
+        self.enhanced_fingerprint = EnhancedFingerprintGenerator(self.coord_converter)
+        self.stereo_detector = StereochemistryDetector()
     
     def get_method(self) -> VerificationMethod:
         return VerificationMethod.FINGERPRINT_SIMILARITY
@@ -145,9 +154,9 @@ class FingerprintSimilarityVerifier(BaseVerifier):
     
     def _generate_residue_smiles(self, residue: ResidueInfo) -> Optional[str]:
         """
-        从残基信息生成SMILES（简化实现）
+        从残基信息生成SMILES（增强实现）
         
-        注意：这是一个简化的实现，实际应用中可能需要更复杂的算法
+        使用新的坐标到SMILES转换器，支持立体化学
         
         Args:
             residue: 残基信息
@@ -155,9 +164,22 @@ class FingerprintSimilarityVerifier(BaseVerifier):
         Returns:
             SMILES字符串，失败返回None
         """
-        # 这里可以实现从3D坐标生成SMILES的算法
-        # 目前返回None，表示不支持
-        return None
+        try:
+            # 使用增强的坐标转换器
+            smiles = self.coord_converter.convert_residue_to_smiles(
+                residue, include_stereochemistry=True
+            )
+            
+            if smiles and self.coord_converter.validate_generated_smiles(smiles):
+                logging.info(f"成功从残基 {residue.residue_name} 生成SMILES: {smiles}")
+                return smiles
+            else:
+                logging.warning(f"残基 {residue.residue_name} SMILES生成失败或无效")
+                return None
+                
+        except Exception as e:
+            logging.error(f"残基SMILES生成异常: {e}")
+            return None
     
     def _get_verification_details(self, residue: ResidueInfo, amino_acid: AminoAcidInfo, score: float) -> Dict[str, Any]:
         """获取指纹相似性验证详情"""
@@ -231,6 +253,203 @@ class FingerprintSimilarityVerifier(BaseVerifier):
         result['element_weights_used'] = self.chemistry_utils.ELEMENT_WEIGHTS
         
         return result
+    
+    def calculate_enhanced_fingerprint_similarity(self, residue: ResidueInfo, amino_acid: AminoAcidInfo) -> Dict[str, Any]:
+        """
+        计算增强的指纹相似性（包含立体化学）
+        
+        Args:
+            residue: 残基信息
+            amino_acid: 氨基酸信息
+            
+        Returns:
+            增强的相似性分析结果
+        """
+        result = {
+            'residue_smiles': None,
+            'candidate_smiles': amino_acid.smiles,
+            'morgan_fingerprint_similarity': None,
+            'stereochemistry_match': None,
+            'enhanced_score': 0.0,
+            'method_used': 'enhanced_fingerprint',
+            'confidence': 0.0,
+            'details': {}
+        }
+        
+        try:
+            # 1. 生成残基SMILES
+            residue_smiles = self._generate_residue_smiles(residue)
+            result['residue_smiles'] = residue_smiles
+            
+            if residue_smiles and amino_acid.smiles:
+                # 2. 计算Morgan指纹相似性
+                residue_fp = self.enhanced_fingerprint.generate_fingerprint_from_smiles(residue_smiles)
+                candidate_fp = self.enhanced_fingerprint.generate_fingerprint_from_smiles(amino_acid.smiles)
+                
+                if residue_fp and candidate_fp:
+                    similarity = self.fingerprint_utils.calculate_tanimoto_similarity(residue_fp, candidate_fp)
+                    result['morgan_fingerprint_similarity'] = similarity
+                
+                # 3. 立体化学比较
+                residue_stereo = self.stereo_detector.detect_stereochemistry_from_residue(residue)
+                candidate_stereo = self.stereo_detector.detect_stereochemistry_from_smiles(amino_acid.smiles)
+                
+                stereo_comparison = self.stereo_detector.compare_stereochemistry(residue_stereo, candidate_stereo)
+                result['stereochemistry_match'] = stereo_comparison
+                
+                # 4. 综合评分
+                fingerprint_score = result['morgan_fingerprint_similarity'] or 0.0
+                stereo_score = stereo_comparison.get('similarity_score', 0.5)
+                
+                # 加权综合分数
+                result['enhanced_score'] = (fingerprint_score * 0.7 + stereo_score * 0.3)
+                
+                # 5. 置信度评估
+                result['confidence'] = self._calculate_enhanced_confidence(result)
+                
+                result['details'] = {
+                    'residue_stereochemistry': self.stereo_detector.generate_stereochemistry_report(residue_stereo),
+                    'candidate_stereochemistry': self.stereo_detector.generate_stereochemistry_report(candidate_stereo),
+                    'fingerprint_available': bool(residue_fp and candidate_fp),
+                    'stereochemistry_analyzed': bool(stereo_comparison.get('match_type') != 'unknown')
+                }
+                
+            else:
+                # 降级到组成指纹
+                composition_fp = self.enhanced_fingerprint.generate_composition_fingerprint(residue)
+                result['enhanced_score'] = self._calculate_weighted_composition_similarity(residue, amino_acid)
+                result['method_used'] = 'composition_fallback'
+                result['confidence'] = 0.3
+                result['details']['fallback_reason'] = 'SMILES生成失败'
+                
+        except Exception as e:
+            logging.error(f"增强指纹相似性计算失败: {e}")
+            result['enhanced_score'] = 0.0
+            result['details']['error'] = str(e)
+        
+        return result
+    
+    def _calculate_enhanced_confidence(self, result: Dict[str, Any]) -> float:
+        """
+        计算增强指纹相似性的置信度
+        
+        Args:
+            result: 相似性分析结果
+            
+        Returns:
+            置信度分数
+        """
+        confidence_factors = []
+        
+        # 因子1: SMILES生成成功
+        if result['residue_smiles']:
+            confidence_factors.append(0.8)
+        else:
+            confidence_factors.append(0.2)
+        
+        # 因子2: Morgan指纹计算成功
+        if result['morgan_fingerprint_similarity'] is not None:
+            confidence_factors.append(0.9)
+        else:
+            confidence_factors.append(0.3)
+        
+        # 因子3: 立体化学分析质量
+        stereo_match = result.get('stereochemistry_match', {})
+        if stereo_match.get('match_type') in ['same_configuration', 'opposite_configuration']:
+            confidence_factors.append(0.9)
+        elif stereo_match.get('match_type') in ['both_achiral', 'mixed_configuration']:
+            confidence_factors.append(0.7)
+        else:
+            confidence_factors.append(0.4)
+        
+        # 因子4: 分子复杂度
+        if result['residue_smiles']:
+            smiles_length = len(result['residue_smiles'])
+            if smiles_length > 20:  # 复杂分子
+                confidence_factors.append(0.8)
+            elif smiles_length > 10:  # 中等复杂度
+                confidence_factors.append(0.9)
+            else:  # 简单分子
+                confidence_factors.append(0.7)
+        else:
+            confidence_factors.append(0.5)
+        
+        # 计算综合置信度
+        return sum(confidence_factors) / len(confidence_factors)
+    
+    def verify_isomer_distinction(self, residue: ResidueInfo, isomer_candidates: List[AminoAcidInfo]) -> Dict[str, Any]:
+        """
+        验证异构体区分能力
+        
+        专门用于测试系统对异构体的区分效果
+        
+        Args:
+            residue: 残基信息
+            isomer_candidates: 异构体候选列表
+            
+        Returns:
+            异构体区分分析结果
+        """
+        analysis = {
+            'total_candidates': len(isomer_candidates),
+            'fingerprint_scores': [],
+            'stereochemistry_analysis': [],
+            'best_match': None,
+            'distinction_quality': 'unknown',
+            'confidence': 0.0
+        }
+        
+        try:
+            scores_with_details = []
+            
+            for candidate in isomer_candidates:
+                enhanced_result = self.calculate_enhanced_fingerprint_similarity(residue, candidate)
+                
+                score_info = {
+                    'candidate_id': candidate.id,
+                    'candidate_name': candidate.name,
+                    'enhanced_score': enhanced_result['enhanced_score'],
+                    'fingerprint_similarity': enhanced_result.get('morgan_fingerprint_similarity'),
+                    'stereochemistry_similarity': enhanced_result.get('stereochemistry_match', {}).get('similarity_score'),
+                    'confidence': enhanced_result['confidence'],
+                    'method_used': enhanced_result['method_used']
+                }
+                
+                scores_with_details.append(score_info)
+                analysis['fingerprint_scores'].append(score_info)
+            
+            # 按分数排序
+            scores_with_details.sort(key=lambda x: x['enhanced_score'], reverse=True)
+            
+            if scores_with_details:
+                analysis['best_match'] = scores_with_details[0]
+                
+                # 评估区分质量
+                if len(scores_with_details) > 1:
+                    best_score = scores_with_details[0]['enhanced_score']
+                    second_score = scores_with_details[1]['enhanced_score']
+                    score_gap = best_score - second_score
+                    
+                    if score_gap > 0.3:
+                        analysis['distinction_quality'] = 'excellent'
+                    elif score_gap > 0.15:
+                        analysis['distinction_quality'] = 'good'
+                    elif score_gap > 0.05:
+                        analysis['distinction_quality'] = 'fair'
+                    else:
+                        analysis['distinction_quality'] = 'poor'
+                else:
+                    analysis['distinction_quality'] = 'single_candidate'
+                
+                # 计算整体置信度
+                avg_confidence = sum(score['confidence'] for score in scores_with_details) / len(scores_with_details)
+                analysis['confidence'] = avg_confidence
+            
+        except Exception as e:
+            logging.error(f"异构体区分验证失败: {e}")
+            analysis['error'] = str(e)
+        
+        return analysis
     
     def verify_with_database_fingerprint(self, residue: ResidueInfo, amino_acid: AminoAcidInfo, 
                                        fingerprint_type: str = 'ecfp2') -> Dict[str, Any]:

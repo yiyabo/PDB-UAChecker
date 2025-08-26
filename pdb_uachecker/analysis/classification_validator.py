@@ -134,7 +134,10 @@ class ClassificationValidator:
         )
         
         return ValidationResult(
-            is_consistent=(len(inconsistency_analysis['major_inconsistencies']) == 0),
+            is_consistent=(
+                len(inconsistency_analysis['major_inconsistencies']) == 0 and
+                inconsistency_analysis['consistency_score'] >= 0.6  # 降低一致性要求从1.0到0.6
+            ),
             confidence_score=final_confidence,
             inconsistencies=inconsistency_analysis['all_inconsistencies'],
             recommendations=recommendations,
@@ -276,14 +279,32 @@ class ClassificationValidator:
             'consistency_score': 1.0
         }
         
-        # 检查立体化学一致性
+        # 检查立体化学一致性 - 智能容错
         stereo_classes = classification_summary['stereochemistry']
         if len(stereo_classes) > 1:
             values = [c['value'] for c in stereo_classes]
-            if len(set(values)) > 1:
-                inconsistency = f"立体化学不一致: {values}"
-                inconsistencies['major_inconsistencies'].append(inconsistency)
-                inconsistencies['consistency_score'] -= 0.3
+            unique_values = set(values)
+            
+            # 智能一致性判断：相似结果视为一致
+            if len(unique_values) > 1:
+                # 检查是否是兼容的结果
+                compatible_groups = [
+                    {'D_form', 'D_suspected', 'd_type'},  # D型相关
+                    {'L_form', 'L_suspected', 'l_type'},  # L型相关  
+                    {'achiral', 'achiral_or_unknown', 'no_chirality'}  # 非手性相关
+                ]
+                
+                is_compatible = False
+                for group in compatible_groups:
+                    if unique_values.issubset(group):
+                        is_compatible = True
+                        break
+                
+                if not is_compatible:
+                    # 只有真正冲突的结果才标记为不一致
+                    inconsistency = f"立体化学不一致: {values}"
+                    inconsistencies['minor_inconsistencies'].append(inconsistency)  # 降级为minor
+                    inconsistencies['consistency_score'] -= 0.1  # 减少惩罚
         
         # 检查骨架类型一致性
         backbone_classes = classification_summary['backbone_type']
@@ -336,13 +357,27 @@ class ClassificationValidator:
         resolved_categories = {}
         resolution_methods = []
         
-        # 解决立体化学冲突
+        # 解决立体化学冲突 - 智能合并兼容结果
         stereo_classes = classification_summary['stereochemistry']
         if len(stereo_classes) > 1:
-            # 选择置信度最高的
-            best_stereo = max(stereo_classes, key=lambda x: x['confidence'])
-            resolved_categories['stereochemistry'] = best_stereo['value']
-            resolution_methods.append(f"立体化学冲突解决：选择最高置信度 {best_stereo['value']}")
+            values = [c['value'] for c in stereo_classes]
+            unique_values = set(values)
+            
+            # 智能合并兼容的手性结果
+            if {'D_form', 'D_suspected'}.intersection(unique_values):
+                resolved_categories['stereochemistry'] = 'D_form'
+                resolution_methods.append("立体化学冲突解决：D相关结果合并为D_form")
+            elif {'L_form', 'L_suspected'}.intersection(unique_values):
+                resolved_categories['stereochemistry'] = 'L_form'  
+                resolution_methods.append("立体化学冲突解决：L相关结果合并为L_form")
+            elif {'achiral', 'achiral_or_unknown'}.intersection(unique_values):
+                resolved_categories['stereochemistry'] = 'achiral'
+                resolution_methods.append("立体化学冲突解决：非手性结果合并为achiral")
+            else:
+                # 真正的冲突：选择置信度最高的
+                best_stereo = max(stereo_classes, key=lambda x: x['confidence'])
+                resolved_categories['stereochemistry'] = best_stereo['value']
+                resolution_methods.append(f"立体化学冲突解决：选择最高置信度 {best_stereo['value']}")
         elif len(stereo_classes) == 1:
             resolved_categories['stereochemistry'] = stereo_classes[0]['value']
         
@@ -355,10 +390,16 @@ class ClassificationValidator:
         elif len(backbone_classes) == 1:
             resolved_categories['backbone_type'] = backbone_classes[0]['value']
         
-        # N-甲基化不会有冲突（只有一个分析器）
+        # N-甲基化判断
         n_methyl_classes = classification_summary['n_methylation']
         if n_methyl_classes:
-            resolved_categories['n_methylation'] = 'n_methyl'
+            # 检查是否有任何分析器确认了N-甲基化
+            is_methylated = any(item.get('value') == True or 
+                              item.get('is_n_methylated') == True 
+                              for item in n_methyl_classes)
+            if is_methylated:
+                resolved_categories['is_n_methylated'] = True
+                resolution_methods.append("确认N-甲基化")
         
         # 结构特征
         structural_features = list(set(item['value'] for item in classification_summary['structural_features']))
@@ -397,31 +438,84 @@ class ClassificationValidator:
         return max(0.0, min(1.0, final_confidence))
     
     def _generate_final_categories(self, conflict_resolution: Dict[str, Any]) -> List[str]:
-        """生成最终分类类别"""
+        """
+        生成最终分类类别
+        按照 docs/Classifier.md 标准进行分类命名
+        
+        标准分类体系:
+        1. Alpha氨基酸 (alpha_amino_acid)
+        2. Beta氨基酸 (beta_amino_acid) 
+        3. Gamma氨基酸 (gamma_amino_acid)
+        4. D型氨基酸 (d_type_amino_acid)
+        5. N-甲基氨基酸 (n_methyl_amino_acid)
+        6. 环状氨基酸 (cyclic_amino_acid)
+        7. 芳香族氨基酸 (aromatic_amino_acid)
+        """
         categories = []
         
         resolved = conflict_resolution['resolved_categories']
         
-        # 添加骨架类型
+        # 添加骨架类型 (优先级1)
         if 'backbone_type' in resolved:
-            categories.append(f"{resolved['backbone_type']}_amino_acid")
+            backbone = resolved['backbone_type']
+            if backbone in ['alpha', 'beta', 'gamma']:
+                categories.append(f"{backbone}_amino_acid")
         
-        # 添加立体化学
+        # 添加D/L立体化学类型 (优先级2) - 现在作为主分类
         if 'stereochemistry' in resolved:
             stereo = resolved['stereochemistry']
-            if stereo in ['D_form', 'L_form']:
-                categories.append(stereo.lower())
+            if stereo in ['D_form', 'D_suspected']:
+                categories.append('d_type_amino_acid')
+            # 注意：L型是天然型，通常不作为非天然氨基酸分类标记
+            # 但如果明确需要，可以添加 l_type_amino_acid
         
-        # 添加N-甲基化
-        if 'n_methylation' in resolved:
+        # 添加N-甲基化 (优先级3)
+        if resolved.get('is_n_methylated') or 'n_methylation' in resolved:
             categories.append('n_methyl_amino_acid')
         
-        # 添加结构特征
+        # 添加结构特征 (优先级4-5: 环状、芳香)
         if 'structural_features' in resolved:
-            categories.extend([f"{feature}_amino_acid" for feature in resolved['structural_features']])
+            features = resolved['structural_features']
+            for feature in features:
+                if feature == 'cyclic':
+                    categories.append('cyclic_amino_acid')
+                elif feature == 'aromatic':
+                    categories.append('aromatic_amino_acid')
+                else:
+                    # 其他特征也统一命名
+                    categories.append(f"{feature}_amino_acid")
         
-        # 去重并排序
-        return sorted(list(set(categories)))
+        # 如果没有明确的骨架分类，默认为alpha (大多数氨基酸)
+        if not any('amino_acid' in cat for cat in categories if cat.endswith('amino_acid')):
+            # 如果只有特征分类(D型、N-甲基等)，添加默认骨架
+            backbone_categories = [cat for cat in categories if cat in ['alpha_amino_acid', 'beta_amino_acid', 'gamma_amino_acid']]
+            if not backbone_categories:
+                categories.insert(0, 'alpha_amino_acid')  # 默认为alpha型
+        
+        # 去重并排序，确保骨架类型在前
+        unique_categories = list(set(categories))
+        
+        # 按文档优先级排序: 骨架 → D型 → N-甲基 → 环状 → 芳香
+        priority_order = [
+            'alpha_amino_acid', 'beta_amino_acid', 'gamma_amino_acid',  # 骨架类型
+            'd_type_amino_acid',  # 手性类型
+            'n_methyl_amino_acid',  # N-甲基化
+            'cyclic_amino_acid',  # 环状
+            'aromatic_amino_acid'   # 芳香族
+        ]
+        
+        # 按优先级排序
+        sorted_categories = []
+        for priority_cat in priority_order:
+            if priority_cat in unique_categories:
+                sorted_categories.append(priority_cat)
+        
+        # 添加其他未知类型
+        for cat in unique_categories:
+            if cat not in sorted_categories:
+                sorted_categories.append(cat)
+        
+        return sorted_categories
     
     def _generate_recommendations(self, inconsistency_analysis: Dict[str, Any],
                                 conflict_resolution: Dict[str, Any], 
