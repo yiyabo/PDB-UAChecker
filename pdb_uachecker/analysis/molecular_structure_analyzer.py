@@ -55,7 +55,16 @@ class MolecularStructureAnalyzer:
             from rdkit import Chem
             from rdkit.Chem import rdMolDescriptors, Descriptors
             
+            # 尝试解析原始SMILES
             mol = Chem.MolFromSmiles(smiles)
+            
+            # 如果失败，尝试清理质子化的SMILES（常见于氨基酸）
+            if not mol:
+                cleaned_smiles = self._clean_amino_acid_smiles(smiles)
+                mol = Chem.MolFromSmiles(cleaned_smiles)
+                if mol:
+                    print(f"🔧 SMILES清理成功: {smiles} → {cleaned_smiles}")
+            
             if not mol:
                 return MolecularAnalysis(smiles=smiles, is_valid=False)
             
@@ -334,9 +343,15 @@ class MolecularStructureAnalyzer:
         try:
             from rdkit import Chem
             
-            mol = Chem.MolFromSmiles(smiles)
+            # 先清理SMILES以确保RDKit能正确解析
+            cleaned_smiles = self._clean_amino_acid_smiles(smiles)
+            
+            mol = Chem.MolFromSmiles(cleaned_smiles)
             if not mol:
-                return False, 0, 0.0
+                # 如果清理后仍然失败，尝试原始SMILES
+                mol = Chem.MolFromSmiles(smiles)
+                if not mol:
+                    return self._has_rings_basic(smiles)
             
             ring_info = mol.GetRingInfo()
             num_rings = ring_info.NumRings()
@@ -347,9 +362,63 @@ class MolecularStructureAnalyzer:
             return self._has_rings_basic(smiles)
     
     def _has_rings_basic(self, smiles: str) -> Tuple[bool, int, float]:
-        """基础环检测"""
+        """增强的基础环检测"""
+        import re
+        
+        # 检测数字标记的环闭合
         ring_numbers = re.findall(r'\d+', smiles)
         unique_numbers = set(ring_numbers)
         ring_count = len([n for n in unique_numbers if ring_numbers.count(n) >= 2])
         
-        return ring_count > 0, ring_count, 0.8
+        # 额外检测常见芳香环模式
+        aromatic_patterns = [
+            r'c1ccccc1',     # 苯环
+            r'c1cccc[nH]1',  # 吡咯环
+            r'c1[nH]cn1',    # 咪唑环 
+            r'c1cccs1',      # 噻吩环
+            r'c1ccco1'       # 呋喃环
+        ]
+        
+        aromatic_rings = 0
+        for pattern in aromatic_patterns:
+            if re.search(pattern, smiles, re.IGNORECASE):
+                aromatic_rings += 1
+        
+        total_rings = ring_count + aromatic_rings
+        
+        return total_rings > 0, total_rings, 0.85 if aromatic_rings > 0 else 0.8
+    
+    def _clean_amino_acid_smiles(self, smiles: str) -> str:
+        """
+        增强的氨基酸SMILES清理功能
+        处理质子化状态、环状结构标记等，确保RDKit能正确解析
+        """
+        import re
+        
+        # 常见的氨基酸质子化状态清理
+        cleaned = smiles
+        
+        # 处理环状氮杂环结构（如PRO）- 这是关键修复
+        # [NH2]1 → N1 (保留环标记)
+        cleaned = re.sub(r'\[NH2\](\d+)', r'N\1', cleaned)
+        
+        # 将质子化的氨基 [NH3] 转换为中性氨基 N
+        cleaned = re.sub(r'\[NH3\]', 'N', cleaned)
+        
+        # 处理其他氮相关的离子态
+        cleaned = re.sub(r'\[NH3\+\]', 'N', cleaned)  # NH3+ → N
+        cleaned = re.sub(r'\[NH\+\]', 'N', cleaned)   # NH+ → N
+        cleaned = re.sub(r'\[NH-\]', 'N', cleaned)    # NH- → N
+        
+        # 处理氧相关的离子态
+        cleaned = re.sub(r'\[O-\]', 'O', cleaned)     # O- → O
+        cleaned = re.sub(r'\[OH\+\]', 'O', cleaned)   # OH+ → O
+        
+        # 处理复杂环标记情况
+        # 例如：处理 ]1 → 1 (当前面的原子已被清理)
+        cleaned = re.sub(r'\](\d+)', r'\1', cleaned)
+        
+        # 处理多余的方括号
+        cleaned = re.sub(r'\[([A-Za-z])\](?!\d)', r'\1', cleaned)  # [C] → C (非环情况)
+        
+        return cleaned

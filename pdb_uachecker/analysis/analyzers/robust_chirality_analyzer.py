@@ -8,6 +8,7 @@ from typing import Dict, List, Optional, Tuple, Any
 from enum import Enum
 
 from .cip_rule_analyzer import CIPRuleAnalyzer
+from .amino_acid_stereochemistry_database import amino_acid_stereo_db
 
 
 class ChiralityConsistencyLevel(Enum):
@@ -36,17 +37,24 @@ class RobustChiralityAnalyzer:
         
         # 各方法的基础权重
         self.method_weights = {
-            'cip_rule_strict': 0.4,      # 我们的严格CIP实现
-            'rdkit_standard': 0.3,       # RDKit标准实现
-            'name_parsing': 0.2,         # 基于名称的判断
-            'structural_features': 0.1   # 基于结构特征
+            'database_reference': 0.5,   # 标准氨基酸数据库验证（最高优先级）
+            'cip_rule_strict': 0.3,      # 我们的严格CIP实现
+            'rdkit_standard': 0.15,      # RDKit标准实现
+            'name_parsing': 0.05,        # 基于名称的判断（降低权重）
+            'structural_features': 0.0   # 基于结构特征（几乎不用）
         }
         
         # 分子复杂度调整因子
         self.complexity_adjustments = {
-            'simple': {'cip_rule_strict': 1.0, 'rdkit_standard': 1.0},
-            'moderate': {'cip_rule_strict': 1.2, 'rdkit_standard': 0.9},
-            'complex': {'cip_rule_strict': 1.5, 'rdkit_standard': 0.7}
+            'simple': {
+                'database_reference': 1.0, 'cip_rule_strict': 1.0, 'rdkit_standard': 1.0
+            },
+            'moderate': {
+                'database_reference': 1.0, 'cip_rule_strict': 1.2, 'rdkit_standard': 0.9
+            },
+            'complex': {
+                'database_reference': 1.0, 'cip_rule_strict': 1.5, 'rdkit_standard': 0.7
+            }
         }
     
     def analyze_chirality_robust(self, smiles: str, amino_acid_name: str = "",
@@ -88,6 +96,13 @@ class RobustChiralityAnalyzer:
                              amino_acid_code: str) -> Dict[str, Any]:
         """运行多种手性分析方法"""
         results = {}
+        
+        # 方法0: 标准氨基酸数据库验证（最高优先级）
+        try:
+            db_result = amino_acid_stereo_db.identify_stereochemistry_by_database(smiles, amino_acid_code)
+            results['database_reference'] = db_result
+        except Exception as e:
+            results['database_reference'] = {'success': False, 'error': str(e)}
         
         # 方法1: 严格CIP规则（我们的实现）
         try:
@@ -144,11 +159,12 @@ class RobustChiralityAnalyzer:
             if chiral_centers:
                 atom_idx, chirality = chiral_centers[0]  # 取第一个手性中心
                 
-                # 映射到D/L类型
+                # 映射到D/L类型 - 修正氨基酸的R/S到D/L映射
+                # 对于α-氨基酸: L构型通常对应R构型，D构型通常对应S构型
                 if chirality == 'R':
-                    stereochemistry = 'D_form'
+                    stereochemistry = 'L_form'  # 修正：R构型 = L型氨基酸
                 elif chirality == 'S':
-                    stereochemistry = 'L_form'
+                    stereochemistry = 'D_form'  # 修正：S构型 = D型氨基酸
                 else:
                     stereochemistry = 'unknown_chirality'
                 
