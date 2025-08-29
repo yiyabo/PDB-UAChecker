@@ -3,7 +3,7 @@
     "total_processed": 229,
     "successful_classifications": 229,
     "success_rate": 100.0,
-    "processing_timestamp": "2025-08-28 23:16:51"
+    "processing_timestamp": "2025-08-29 12:06:45"
   },
   "classification_results": [
     {
@@ -13,8 +13,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.005,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.006,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -30,8 +30,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -49,7 +49,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.97,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -66,7 +66,7 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.695,
       "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -86,7 +86,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -105,7 +105,7 @@
         "d_type_amino_acid",
         "cyclic_amino_acid"
       ],
-      "confidence_score": 0.919,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -120,17 +120,17 @@
       "smiles": "O=[C](=O)[C@H](c1ccccc1Cl)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "PYZ1",
@@ -141,11 +141,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -158,8 +158,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -175,8 +175,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -192,8 +192,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -209,8 +209,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -228,7 +228,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.957,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -248,7 +248,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.957,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -265,8 +265,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -284,11 +284,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -303,7 +303,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -320,8 +320,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -337,8 +337,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -356,11 +356,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -373,7 +373,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.605,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -392,11 +392,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -409,8 +409,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -426,8 +426,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -445,7 +445,7 @@
         "d_type_amino_acid"
       ],
       "confidence_score": 1.0,
-      "processing_time_sec": 0.002,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -463,11 +463,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -501,7 +501,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -520,11 +520,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -537,8 +537,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -556,7 +556,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.802,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -576,7 +576,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -595,11 +595,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -614,11 +614,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -633,11 +633,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -653,7 +653,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -670,11 +670,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -689,7 +689,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.97,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -708,11 +708,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -727,11 +727,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -744,8 +744,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.869,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -760,17 +760,18 @@
       "classification_successful": true,
       "final_categories": [
         "alpha_amino_acid",
+        "d_type_amino_acid",
         "cyclic_amino_acid"
       ],
-      "confidence_score": 0.848,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid, cyclic_amino_acid"
+      "all_categories": "alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid"
     },
     {
       "amino_acid_code": "HIS",
@@ -798,8 +799,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -817,11 +818,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -832,17 +833,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1ccc(c(c1)N(=O)=O)O)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "FPG4",
@@ -853,7 +854,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -870,8 +871,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -889,11 +890,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -908,11 +909,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -925,8 +926,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -942,8 +943,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.989,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -961,11 +962,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -978,8 +979,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -997,11 +998,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1014,8 +1015,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1031,8 +1032,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1050,11 +1051,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1067,8 +1068,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1086,11 +1087,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1105,11 +1106,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1122,11 +1123,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -1140,7 +1141,7 @@
         "alpha_amino_acid"
       ],
       "confidence_score": 1.0,
-      "processing_time_sec": 0.002,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1156,8 +1157,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1173,7 +1174,7 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.634,
+      "confidence_score": 0.658,
       "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1192,11 +1193,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1209,8 +1210,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1228,11 +1229,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1248,7 +1249,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.956,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1267,11 +1268,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1284,8 +1285,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1303,7 +1304,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1320,8 +1321,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1337,11 +1338,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.732,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.97,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -1356,11 +1357,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1375,11 +1376,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1395,7 +1396,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1412,8 +1413,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1432,7 +1433,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1451,11 +1452,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1468,11 +1469,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -1485,11 +1486,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -1502,8 +1503,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1521,11 +1522,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1538,8 +1539,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1557,11 +1558,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1574,8 +1575,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1593,11 +1594,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.693,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1610,7 +1611,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1627,8 +1628,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1644,8 +1645,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.987,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1680,11 +1681,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1697,11 +1698,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -1716,11 +1717,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -1750,8 +1751,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1770,8 +1771,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1787,8 +1788,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.992,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1802,34 +1803,34 @@
       "smiles": "O=[C](=O)[C@H](Cc1ccccn1)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "4HT",
       "smiles": "O=[C](=O)[C@H](Cc1c[nH]c2c1c(O)ccc2)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "HVA",
@@ -1838,8 +1839,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1858,8 +1859,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1875,8 +1876,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.869,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1892,8 +1893,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.861,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1909,7 +1910,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -1929,7 +1930,7 @@
         "aromatic_amino_acid"
       ],
       "confidence_score": 1.0,
-      "processing_time_sec": 0.002,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1945,8 +1946,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -1962,8 +1963,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -1981,7 +1982,7 @@
         "d_type_amino_acid",
         "cyclic_amino_acid"
       ],
-      "confidence_score": 0.919,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2000,7 +2001,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.97,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2017,8 +2018,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2037,7 +2038,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.956,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2056,11 +2057,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2073,8 +2074,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.858,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2091,8 +2092,8 @@
         "alpha_amino_acid",
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2108,8 +2109,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2125,8 +2126,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2145,7 +2146,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2163,11 +2164,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.705,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "cyclic_amino_acid",
@@ -2180,8 +2181,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2199,11 +2200,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.693,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2218,11 +2219,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2236,8 +2237,8 @@
         "alpha_amino_acid",
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2255,11 +2256,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2274,11 +2275,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2291,8 +2292,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2311,7 +2312,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2329,8 +2330,8 @@
         "alpha_amino_acid",
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.857,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2346,8 +2347,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2365,11 +2366,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.782,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2380,34 +2381,34 @@
       "smiles": "O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)Cl)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "GBUT",
       "smiles": "O=[C](=O)[C@H](CC[NH]=[C](=[NH2])=[NH2])[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "AGM",
@@ -2416,11 +2417,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -2435,11 +2436,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2454,11 +2455,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2474,7 +2475,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.957,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2491,8 +2492,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2509,11 +2510,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.705,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "cyclic_amino_acid",
@@ -2528,11 +2529,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2545,8 +2546,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2564,11 +2565,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2582,8 +2583,8 @@
         "alpha_amino_acid",
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.861,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2601,11 +2602,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2618,8 +2619,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2637,11 +2638,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2656,11 +2657,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2671,17 +2672,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)O)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "LEF",
@@ -2690,11 +2691,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -2709,11 +2710,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2728,11 +2729,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2747,8 +2748,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.885,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2781,8 +2782,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.869,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2800,11 +2801,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2817,8 +2818,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2836,11 +2837,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.758,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2870,17 +2871,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1csc2c1cccc2)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.671,
       "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "NAO1",
@@ -2891,11 +2892,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2908,7 +2909,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -2927,11 +2928,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2944,8 +2945,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -2963,11 +2964,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -2980,8 +2981,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.695,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -2997,7 +2998,7 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.647,
+      "confidence_score": 0.671,
       "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3015,7 +3016,7 @@
         "alpha_amino_acid"
       ],
       "confidence_score": 1.0,
-      "processing_time_sec": 0.002,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3031,8 +3032,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3050,11 +3051,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3067,8 +3068,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.869,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3084,11 +3085,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.745,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -3103,8 +3104,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3122,11 +3123,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3139,8 +3140,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3156,8 +3157,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.954,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3173,8 +3174,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3191,7 +3192,7 @@
         "alpha_amino_acid",
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.858,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3210,11 +3211,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.693,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3229,11 +3230,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3246,7 +3247,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.627,
       "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3282,8 +3283,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3299,8 +3300,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3316,8 +3317,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3335,11 +3336,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3354,8 +3355,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.97,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3371,8 +3372,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3388,11 +3389,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.785,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -3407,8 +3408,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.845,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3426,11 +3427,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.771,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3443,8 +3444,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3460,8 +3461,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3477,7 +3478,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3496,11 +3497,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3515,11 +3516,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3530,17 +3531,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1ccc(cc1)N(=O)=O)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "MOT5",
@@ -3549,8 +3550,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.857,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3564,17 +3565,17 @@
       "smiles": "[NH3][C@H]([C](=O)=O)C[C@]12C[C@H]3C[C@@H](C2)C[C@@H](C1)C3",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.707,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "NVA",
@@ -3583,8 +3584,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3600,8 +3601,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3619,11 +3620,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3654,8 +3655,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3671,11 +3672,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.785,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -3691,8 +3692,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.956,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3708,11 +3709,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.757,
-      "processing_time_sec": 0.002,
+      "confidence_score": 0.983,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果较为可信，建议采用"
+        "分类结果高度可信，建议直接采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -3723,17 +3724,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1ccc(c(c1)C)C)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "ALA",
@@ -3742,8 +3743,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.954,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3759,8 +3760,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.97,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3779,7 +3780,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3799,7 +3800,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3816,8 +3817,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.865,
-      "processing_time_sec": 0.001,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3834,8 +3835,8 @@
         "alpha_amino_acid",
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3849,17 +3850,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1c[nH]c2c1scc2)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "TFP4",
@@ -3871,8 +3872,8 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3891,7 +3892,7 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.969,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -3910,11 +3911,11 @@
         "cyclic_amino_acid",
         "aromatic_amino_acid"
       ],
-      "confidence_score": 0.6,
+      "confidence_score": 0.771,
       "processing_time_sec": 0.002,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "d_type_amino_acid",
@@ -3927,8 +3928,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.861,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -3944,11 +3945,11 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.707,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
-        "分类结果基本可信，可考虑采用"
+        "分类结果较为可信，建议采用"
       ],
       "status": "SUCCESS",
       "main_category": "alpha_amino_acid",
@@ -3961,8 +3962,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -3976,17 +3977,17 @@
       "smiles": "O=[C](=O)[C@H](Cc1cccc2c1cccc2)[NH3]",
       "classification_successful": true,
       "final_categories": [
-        "alpha_amino_acid"
+        "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
       ],
       "status": "SUCCESS",
-      "main_category": "alpha_amino_acid",
-      "all_categories": "alpha_amino_acid"
+      "main_category": "d_type_amino_acid",
+      "all_categories": "d_type_amino_acid"
     },
     {
       "amino_acid_code": "THR",
@@ -3995,7 +3996,7 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.97,
+      "confidence_score": 1.0,
       "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
@@ -4012,8 +4013,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -4046,8 +4047,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.658,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -4063,8 +4064,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.605,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"
@@ -4081,7 +4082,7 @@
         "alpha_amino_acid"
       ],
       "confidence_score": 1.0,
-      "processing_time_sec": 0.002,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -4097,8 +4098,8 @@
       "final_categories": [
         "alpha_amino_acid"
       ],
-      "confidence_score": 0.87,
-      "processing_time_sec": 0.002,
+      "confidence_score": 1.0,
+      "processing_time_sec": 0.001,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果高度可信，建议直接采用"
@@ -4114,8 +4115,8 @@
       "final_categories": [
         "d_type_amino_acid"
       ],
-      "confidence_score": 0.6,
-      "processing_time_sec": 0.001,
+      "confidence_score": 0.671,
+      "processing_time_sec": 0.0,
       "inconsistencies_count": 0,
       "recommendations": [
         "分类结果基本可信，可考虑采用"

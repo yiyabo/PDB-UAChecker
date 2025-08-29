@@ -1,0 +1,230 @@
+氨基酸代码,SMILES,分类状态,主要类别,所有分类,置信度,处理时间(秒),不一致数,推荐建议
+GME,COC(=O)CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.006,0,分类结果高度可信，建议直接采用
+4CY,N#CSCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+CNP2,N#Cc1ccccc1C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+SYM,OC(=O)[C@H](C[C@H]([C](=O)=O)C)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.695,0.001,0,分类结果基本可信，可考虑采用
+PF5,[NH3][C@H](C(=O)O)Cc1c(F)c(F)c(c(c1F)F)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+CHG,[NH3][C@H](C(=O)O)C1CCCCC1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+CPG2,O=[C](=O)[C@H](c1ccccc1Cl)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+PYZ1,OC(=O)[C@H](Cn1cccn1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+GGB,[NH3][C@H]([C](=O)=O)CCON=C(N)N,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+2FM,FC(SCC[C@@H](C(=O)O)[NH3])F,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+MHO,C[S@@](=O)CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+OMT,OC(=O)[C@H](CCS(=O)(=O)C)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.001,0,分类结果基本可信，可考虑采用
+MTR5,Cc1cc2c(C[C@@H](C(=O)O)[NH3])c[nH]c2cc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+2HF2,[NH3][C@H](C(=O)O)Cc1c[nH]c(n1)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+IGL,[NH3][C@H]([C](=O)=O)[C@@H]1Cc2c(C1)cccc2,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+CPG3,OC(=O)[C@H](c1cccc(c1)Cl)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+CPG4,[NH3][C@@H](c1ccc(cc1)Cl)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+HRG,[NH2]=[C](=[NH]CCCC[C@@H](C(=O)O)[NH3])=[NH2],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+AA4,OCCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+HQA,OC(=O)[C@H](Cc1cnc2c(c1)cccc2O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+AHB,OC(=O)[C@H]([C@@H](C(=O)N)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.002,0,分类结果基本可信，可考虑采用
+TIH,OC(=O)[C@H](Cc1cccs1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+AHP,CCCCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+GHG,NC(=O)[C@H](C[C@@H]([C](=O)=O)[NH3])O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+CAN,[NH3][C@H](C(=O)O)CCON,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+F2F,OC(=O)[C@H](Cc1ccc(c(c1)F)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+HCS,[NH3][C@H](C(=O)O)CCS,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+HOX,[NH3][C@H](C(=O)O)Cc1ccc(cc1)N,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+TEZA,OC(=O)[C@H](Cn1nncn1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+THIC,OC(=O)[C@H](CCC[NH]=[C](=S)=[NH2])[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+DIPH,[NH3][C@@H]([C@H](c1ccccc1)c1ccccc1)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+BCS,[NH3][C@H](C(=O)O)CSCc1ccccc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+ANTH,OC(=O)[C@H](Cc1c2ccccc2cc2c1cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+FPG2,OC(=O)[C@H](c1ccccc1F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+IYR,OC(=O)[C@H](Cc1ccc(c(c1)I)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+BIF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)c1ccccc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+HL2,CC([C@H]([C@@H](C(=O)O)[NH3])O)C,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+4HMP,OCc1ccc(cc1)C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+3MY,OC(=O)[C@H](Cc1ccc(c(c1)Cl)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+QU34,OC(=O)[C@H](Cc1ccnc2c1cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+FVAL,[NH3][C@@H](C(F)(C)C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+PRO,[NH2]1[C@H](C(=O)O)CCC1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+HIS,[NH3][C@@H](Cc1c[nH]cn1)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+3GL,OC(=O)[C@H](C[C@@H]([C](=O)=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+QU33,OC(=O)[C@H](Cc1cnc2c(c1)cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+NIY,O=[C](=O)[C@H](Cc1ccc(c(c1)N(=O)=O)O)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+FPG4,[NH3][C@@H](c1ccc(cc1)F)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+TTQ,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1ccc(c2O)N,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+FPG3,OC(=O)[C@H](c1cccc(c1)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+TRO,OC(=O)[C@H](Cc1c(O)[nH]c2c1cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+CSA,CC(=O)CSC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+CYS,[NH3][C@@H](CS)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+APD,OC(=O)[C@H](Cc1cccc(c1)C)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+LED,O=C[C@@H](C[C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+QU32,OC(=O)[C@H](Cc1ccc2c(n1)cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+HLEU,[NH3][C@H]([C](=O)=O)CCC(C)C,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+AS2,O=CC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+QU35,OC(=O)[C@H](Cc1ccc2c(c1)nccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+ESC,CCSCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+PTR2,OC(=O)[C@H](Cc1ccc(cc1)OP(=O)(O)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+NAO2,OC(=O)[C@H](Cc1ccc2c(c1)cc(cc2)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+BIU,C[C@H]([C@@H](C(=O)O)[NH3])CCBr,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+ASP,[NH3][C@@H](CC(=O)O)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+ORN,[NH3]CCC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+AZDA,[NH3][C@H]([C](=O)=O)CN=[N]=N,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+THG2,OC(=O)[C@H](c1cccs1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+HSER,OCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+3FG,OC(=O)[C@H](c1cc(O)cc(c1)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+TRZ4,[NH3][C@H](C(=O)O)Cn1cncn1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+TY2,OC(=O)[C@H](Cc1ccc(c(c1)N)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+BHD,O=[C](=O)[C@H]([C@@H]([C](=O)=O)[NH3])O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+TFG4,[NH3][C@@H](c1ccc(cc1)C(F)(F)F)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+DMK,O=[C](=O)[C@H](C([C](=O)=O)(C)C)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+ARO,O[C@H](C[C@@H](C(=O)O)[NH3])C[NH]=[C](=[NH2])=[NH2],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.97,0.0,0,分类结果高度可信，建议直接采用
+TFG3,OC(=O)[C@H](c1cccc(c1)C(F)(F)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+CP24,OC(=O)[C@H](Cc1ccc(cc1Cl)Cl)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+4PH,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+LDO,OCCCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+WFP,[NH3][C@H](C(=O)O)Cc1cc(F)cc(c1)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+THG3,OC(=O)[C@H](c1cscc1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+CTH,ClC[C@H]([C@@H](C(=O)O)[NH3])O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+FGA4,OC(=O)[C@H](C[C@@H](C(=O)O)F)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+HGA,ONC(=O)CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+TFG2,OC(=O)[C@H](c1ccccc1C(F)(F)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+SEP,OC(=O)[C@H](COP(=O)(O)O)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.001,0,分类结果基本可信，可考虑采用
+TYQ,OC(=O)[C@H](Cc1cc(N)c(cc1O)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+I2M,CCC([C@@H](C(=O)O)[NH3])(C)C,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+DAH,OC(=O)[C@H](Cc1ccc(c(c1)O)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+HHK,[NH3]CCCCCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.002,0,分类结果高度可信，建议直接采用
+SEP2,OC(=O)[C@H](COP(=O)(O)O)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.001,0,分类结果基本可信，可考虑采用
+ARG,[NH3][C@@H](CCCNC(=[NH2])N)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+GLU,[NH3][C@@H](CCC(=O)O)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.002,0,分类结果高度可信，建议直接采用
+QX32,OC(=O)[C@H](Cc1cnc2c(n1)cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+IIL,CC[C@H]([C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+FUA2,OC(=O)[C@H](Cc1ccco1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+GLN,[NH3][C@@H](CCC(=O)N)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.002,0,分类结果高度可信，建议直接采用
+ACZ,[NH3][C@H](C(=O)O)CC[C@@H]1C=C[C@@H](C=C1)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+HPE,[NH3][C@H](C(=O)O)CCc1ccccc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+MET,[NH3][C@@H](CCSC)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+PYR2,O=[C](=O)[C@H](Cc1ccccn1)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+4HT,O=[C](=O)[C@H](Cc1c[nH]c2c1c(O)ccc2)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+HVA,[NH3][C@@H](C(O)(C)C)[C](=O)=O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+4BF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)Br,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+BUG,[NH3][C@@H](C(C)(C)C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+MEN,CNC(=O)C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+HIL4,C[C@H]([C@@H]([C@@H](C(=O)O)[NH3])C)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+PHE,[NH3][C@@H](Cc1ccccc1)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+VAH,CC[C@H]([C@@H]([C](=O)=O)[NH3])O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+MEG,O=[C](=O)C[C@@H]([C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+ALC,[NH3][C@H](C(=O)O)CC1CCCCC1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+0A1,COc1ccc(cc1)C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+LVG,C=C[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+PYR4,[NH3][C@H](C(=O)O)Cc1ccncc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+PYR3,OC(=O)[C@H](Cc1cccnc1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+ME0,OCSCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+0BN,[NH3][C@H](C(=O)O)Cc1ccc(cc1)[C](=[NH2])=[NH2],SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.0,0,分类结果高度可信，建议直接采用
+0AF,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1cccc2O,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+LVN,O=C[C@H]([C@@H]([C](=O)=O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+4CF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C#N,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+OMY,OC(=O)[C@H]([C@@H](c1ccc(c(c1)Cl)O)O)[NH3],SUCCESS,cyclic_amino_acid,"cyclic_amino_acid, aromatic_amino_acid",0.705,0.002,0,分类结果较为可信，建议采用
+TPO2,C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+D4P,OC(=O)[C@H](c1ccc(cc1)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+4FW,OC(=O)[C@H](Cc1c[nH]c2c1c(F)ccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+6CL,[NH3][C@H](C(=O)O)CCC[C@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.0,0,分类结果高度可信，建议直接采用
+HRP,OC(=O)[C@H](Cc1c[nH]c2c1cc(O)cc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+FT6,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+CPA3,[NH3][C@H]([C](=O)=O)CC1CCCC1,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+PFF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+OBF,[NH3][C@H](C(=O)O)CC(F)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+GDPR,[NH3][C@H]([C](=O)=O)C[NH]=[C](=[NH2])=[NH2],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+HTR,OC(=O)[C@H]([C@H](c1c[nH]c2c1cccc2)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.782,0.002,0,分类结果较为可信，建议采用
+6CW,O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)Cl)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+GBUT,O=[C](=O)[C@H](CC[NH]=[C](=[NH2])=[NH2])[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+AGM,C[C@H]([NH]=[C](=[NH2])=[NH2])CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.0,0,分类结果高度可信，建议直接采用
+BTR,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)Br)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+CPH2,OC(=O)[C@H](Cc1ccccc1Cl)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+FTR,[NH3][C@H](C(=O)O)Cc1c[nH]c2c1cc(F)cc2,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+ABA,CC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+OMX,OC(=O)[C@H]([C@@H](c1ccc(cc1)O)O)[NH3],SUCCESS,cyclic_amino_acid,"cyclic_amino_acid, aromatic_amino_acid",0.705,0.002,0,分类结果较为可信，建议采用
+CHP,OC(=O)[C@H](c1ccc(c(c1)Cl)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+OAS,CC(=O)OC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+MTR6,OC(=O)[C@H](Cc1c[nH]c2c1ccc(c2)C)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+2HF1,[NH3][C@H](C(=O)O)Cc1cnc([nH]1)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.0,0,分类结果高度可信，建议直接采用
+4IN,OC(=O)[C@H](Cc1c[nH]c2c1c(N)ccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+ONL,CC(=O)CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+STYA,OC(=O)[C@H](CC=Cc1ccccc1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+KYN,OC(=O)[C@H](CC(=O)c1ccccc1N)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+TRX,O=[C](=O)[C@H](Cc1c[nH]c2c1ccc(c2)O)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+LEF,FC[C@H](C[C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+OTYR,OC(=O)[C@H](Cc1ccccc1O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+PTR,OC(=O)[C@H](Cc1ccc(cc1)OP(=O)(O)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+DMP3,CCc1cccc(c1)C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+ASN,[NH3][C@@H](CC(=O)N)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.002,0,分类结果高度可信，建议直接采用
+LE1,[NH3][C@@H](C(S)(C)C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+FPH2,OC(=O)[C@H](Cc1ccccc1F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+TFLE,OC(=O)[C@H](C[C@@H](C(F)(F)F)C)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.001,0,分类结果基本可信，可考虑采用
+QU36,OC(=O)[C@H](Cc1ccc2c(c1)cncc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.758,0.002,0,分类结果较为可信，建议采用
+TRP,[NH3][C@@H](Cc1c[nH]c2c1cccc2)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+BTH3,O=[C](=O)[C@H](Cc1csc2c1cccc2)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.001,0,分类结果基本可信，可考虑采用
+NAO1,OC(=O)[C@H](Cc1cccc2c1cc(O)cc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+UN1,OC(=O)CCC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.002,0,分类结果高度可信，建议直接采用
+FCL,OC(=O)[C@H](Cc1cccc(c1)Cl)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+SME,C[S@@](=O)CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+FPH3,OC(=O)[C@H](Cc1cccc(c1)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+HLU,CC([C@@H]([C@@H]([C](=O)=O)[NH3])O)C,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.695,0.0,0,分类结果基本可信，可考虑采用
+CSE,[NH3][C@H]([C](=O)=O)C[SeH],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+LEU,[NH3][C@@H](CC(C)C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+NLE,CCCC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+CP34,OC(=O)[C@H](Cc1ccc(c(c1)Cl)Cl)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+FLA,[NH3][C@@H](C(F)(F)F)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+LME,O=[C](=O)C[C@H]([C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.0,0,分类结果高度可信，建议直接采用
+004,[NH3][C@@H](c1ccccc1)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+THA3,OC(=O)[C@H](Cc1cscc1)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+200,[NH3][C@H]([C](=O)=O)Cc1ccc(cc1)Cl,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+SER,[NH3][C@@H](CO)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+26P,OC(=O)[C@H](CCC[C](=[C](=O)=O)=O)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+SLZ,[NH3][C@H](C(=O)O)CSCC[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+DBY,OC(=O)[C@H](Cc1cc(Br)c(c(c1)Br)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+MTY,OC(=O)[C@H](Cc1cccc(c1)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+FGL,[NH3]C([C](=O)=O)[C](=O)=O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.627,0.0,0,分类结果基本可信，可考虑采用
+TYR,[NH3][C@@H](Cc1ccc(cc1)O)C(=O)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+TPO,C[C@H]([C@@H]([C](=O)=O)[NH3])OP(O)(O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+M2S,C[S@@](=O)CC([C@@H](C(=O)O)[NH3])(C)C,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+DAB,[NH3]CC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+NAL,OC(=O)[C@H](Cc1ccc2c(c1)cccc2)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+3CF,N#Cc1cccc(c1)C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+C2N,ClC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+DDZ,OC([C@@H](C(=O)O)[NH3])O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+BB8,O[C@H]([C@@H](C(=O)O)[NH3])c1ccccc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+YOF,OC(=O)[C@H](Cc1ccc(c(c1)F)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.001,0,分类结果较为可信，建议采用
+YCM,NC(=O)CSC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+CTE,[NH3][C@H]([C](=O)=O)Cc1c[nH]c2c1cccc2Cl,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+LMQ,NC(=O)C[C@@H]([C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.002,0,分类结果高度可信，建议直接采用
+MPH2,OC(=O)[C@H](Cc1ccccc1C)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+TYI,OC(=O)[C@H](Cc1cc(I)c(c(c1)I)O)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+PPN,O=[C](=O)[C@H](Cc1ccc(cc1)N(=O)=O)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+MOT5,COc1ccc2c(c1)c(c[nH]2)C[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+ADAM,[NH3][C@H]([C](=O)=O)C[C@]12C[C@H]3C[C@@H](C2)C[C@@H](C1)C3,SUCCESS,d_type_amino_acid,d_type_amino_acid,0.707,0.0,0,分类结果较为可信，建议采用
+NVA,CCC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+CCS,O=[C](=O)CSC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+TFP2,OC(=O)[C@H](Cc1ccccc1C(F)(F)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+2AG,[NH3][C@H](C(=O)O)CC=C,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+TH6,OC[C@H]([C@@H]([C](=O)=O)[NH3])O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+DILE,CCC([C@@H](C(=O)O)[NH3])CC,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+TZA4,[NH3][C@H](C(=O)O)Cc1cscn1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+ILE,[NH3][C@@H]([C@H](CC)C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.983,0.001,0,分类结果高度可信，建议直接采用
+MP34,O=[C](=O)[C@H](Cc1ccc(c(c1)C)C)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+ALA,[NH3][C@@H](C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+LYS,[NH3][C@@H](CCCC[NH3])C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+TBP4,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(C)(C)C,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+PHI,[NH3][C@H](C(=O)O)Cc1ccc(cc1)I,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+2HF,[NH3][C@H](C(=O)O)C[C@@H]1CN[C@@H](N1)F,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.0,0,分类结果高度可信，建议直接采用
+ALO,[NH3][C@H](C(=O)O)[C@H](C)O,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+32T,O=[C](=O)[C@H](Cc1c[nH]c2c1scc2)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+TFP4,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(F)(F)F,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.001,0,分类结果高度可信，建议直接采用
+PBF,[NH3][C@H](C(=O)O)Cc1ccc(cc1)C(=O)c1ccccc1,SUCCESS,alpha_amino_acid,"alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",1.0,0.002,0,分类结果高度可信，建议直接采用
+TFP3,OC(=O)[C@H](Cc1cccc(c1)C(F)(F)F)[NH3],SUCCESS,d_type_amino_acid,"d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid",0.771,0.002,0,分类结果较为可信，建议采用
+MEQ,CNC(=O)CC[C@@H](C(=O)O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+ILX,OC[C@@H]([C@@H]([C@@H]([C](=O)=O)[NH3])C)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,0.707,0.0,0,分类结果较为可信，建议采用
+DPP,[NH3]C[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+ALN,O=[C](=O)[C@H](Cc1cccc2c1cccc2)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+THR,[NH3][C@@H]([C@@H](C)O)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+OCY,OCCSC[C@@H]([C](=O)=O)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用
+GLY,NCC(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+CIR,OC(=O)[C@H](CCC[NH]=[C](=O)=[NH2])[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.658,0.0,0,分类结果基本可信，可考虑采用
+2AS,OC(=O)[C@H]([C@@H]([C](=O)=O)C)[NH3],SUCCESS,alpha_amino_acid,alpha_amino_acid,0.605,0.0,0,分类结果基本可信，可考虑采用
+VAL,[NH3][C@@H](C(C)C)C(=O)O,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+OLT,CO[C@@H]([C@@H](C(=O)O)[NH3])C,SUCCESS,alpha_amino_acid,alpha_amino_acid,1.0,0.001,0,分类结果高度可信，建议直接采用
+2NP,OC(=O)[C@H](CCC[C](=[C](=O)=O)=C)[NH3],SUCCESS,d_type_amino_acid,d_type_amino_acid,0.671,0.0,0,分类结果基本可信，可考虑采用

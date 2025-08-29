@@ -1,7 +1,0 @@
-amino_acid_id,amino_acid_name,categories,confidence,classification_tier,validation_passed,stereochemistry,backbone_type,is_n_methylated,structural_features,inconsistencies,recommendations
-ALA,Alanine,alpha_amino_acid; l_form,0.632,low_confidence,False,L_form,alpha,False,,"立体化学不一致: ['L_form', 'L_suspected']",分类结果不确定性较高，建议人工复核; 检测到主要不一致性，建议检查原始数据和分析过程; 存在分类冲突，建议查看冲突解决过程和原因
-DAL,D-Alanine,alpha_amino_acid; d_form,0.632,low_confidence,False,D_form,alpha,False,,"立体化学不一致: ['D_form', 'D_suspected']",分类结果不确定性较高，建议人工复核; 检测到主要不一致性，建议检查原始数据和分析过程; 存在分类冲突，建议查看冲突解决过程和原因
-BAL,β-Alanine,beta_amino_acid,0.660,low_confidence,False,achiral,beta,False,,"立体化学不一致: ['achiral', 'achiral_or_unknown']",分类结果不确定性较高，建议人工复核; 检测到主要不一致性，建议检查原始数据和分析过程; 存在分类冲突，建议查看冲突解决过程和原因
-SAR,Sarcosine,alpha_amino_acid; l_form; n_methyl_amino_acid,0.642,low_confidence,False,L_form,alpha,True,,"立体化学不一致: ['L_form', 'L_suspected']",分类结果不确定性较高，建议人工复核; 检测到主要不一致性，建议检查原始数据和分析过程; 存在分类冲突，建议查看冲突解决过程和原因
-PHE,Phenylalanine,alpha_amino_acid; aromatic_amino_acid; cyclic_amino_acid; l_form,0.632,low_confidence,False,L_form,alpha,False,cyclic; aromatic,"立体化学不一致: ['L_form', 'L_suspected']",分类结果不确定性较高，建议人工复核; 检测到主要不一致性，建议检查原始数据和分析过程; 存在分类冲突，建议查看冲突解决过程和原因
-GAB,γ-Aminobutyric acid,gamma_amino_acid,0.660,low_confidence,False,achiral,gamma,False,,"立体化学不一致: ['achiral', 'achiral_or_unknown']",分类结果不确定性较高，建议人工复核; 检测到主要不一致性，建议检查原始数据和分析过程; 存在分类冲突，建议查看冲突解决过程和原因
