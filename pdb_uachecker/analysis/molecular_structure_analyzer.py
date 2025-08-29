@@ -402,7 +402,8 @@ class MolecularStructureAnalyzer:
         # [NH2]1 → N1 (保留环标记)
         cleaned = re.sub(r'\[NH2\](\d+)', r'N\1', cleaned)
         
-        # 将质子化的氨基 [NH3] 转换为中性氨基 N
+        # 将质子化的氨基 [NH3] 转换为中性氨基 N，但保留手性标记
+        # 保护手性碳标记：[C@H] 和 [C@@H] 不被改动
         cleaned = re.sub(r'\[NH3\]', 'N', cleaned)
         
         # 处理其他氮相关的离子态

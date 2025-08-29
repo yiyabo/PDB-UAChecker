@@ -33,13 +33,13 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.7709999999999999,
         "is_consistent": true
       },
       "details": {
         "inconsistencies": [],
         "recommendations": [
-          "分类结果基本可信，可考虑采用"
+          "分类结果较为可信，建议采用"
         ]
       }
     },
@@ -53,13 +53,13 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.7576799999999999,
         "is_consistent": true
       },
       "details": {
         "inconsistencies": [],
         "recommendations": [
-          "分类结果基本可信，可考虑采用"
+          "分类结果较为可信，建议采用"
         ]
       }
     },
@@ -69,9 +69,9 @@
       "smiles": "O=[C](=O)[C@H](c1ccccc1Cl)[NH3]\tCPG2.pdb",
       "classification": {
         "categories": [
-          "alpha_amino_acid"
+          "d_type_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.6709999999999999,
         "is_consistent": true
       },
       "details": {
@@ -91,13 +91,13 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.7709999999999999,
         "is_consistent": true
       },
       "details": {
         "inconsistencies": [],
         "recommendations": [
-          "分类结果基本可信，可考虑采用"
+          "分类结果较为可信，建议采用"
         ]
       }
     },
@@ -109,7 +109,7 @@
         "categories": [
           "alpha_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.6049999999999999,
         "is_consistent": true
       },
       "details": {
@@ -147,13 +147,13 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.7709999999999999,
         "is_consistent": true
       },
       "details": {
         "inconsistencies": [],
         "recommendations": [
-          "分类结果基本可信，可考虑采用"
+          "分类结果较为可信，建议采用"
         ]
       }
     },
@@ -168,7 +168,7 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.9690158371040724,
+        "confidence": 1.0,
         "is_consistent": true
       },
       "details": {
@@ -188,7 +188,7 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.845316742081448,
+        "confidence": 1.0,
         "is_consistent": true
       },
       "details": {
@@ -207,7 +207,7 @@
           "alpha_amino_acid",
           "d_type_amino_acid"
         ],
-        "confidence": 0.8574401913875598,
+        "confidence": 1.0,
         "is_consistent": true
       },
       "details": {
@@ -225,7 +225,7 @@
         "categories": [
           "d_type_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.6709999999999999,
         "is_consistent": true
       },
       "details": {
@@ -243,7 +243,7 @@
         "categories": [
           "d_type_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.6709999999999999,
         "is_consistent": true
       },
       "details": {
@@ -263,13 +263,13 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.6,
+        "confidence": 0.7709999999999999,
         "is_consistent": true
       },
       "details": {
         "inconsistencies": [],
         "recommendations": [
-          "分类结果基本可信，可考虑采用"
+          "分类结果较为可信，建议采用"
         ]
       }
     },
@@ -281,7 +281,7 @@
         "categories": [
           "alpha_amino_acid"
         ],
-        "confidence": 0.8699321266968325,
+        "confidence": 1.0,
         "is_consistent": true
       },
       "details": {
@@ -301,7 +301,7 @@
           "cyclic_amino_acid",
           "aromatic_amino_acid"
         ],
-        "confidence": 0.8849547511312217,
+        "confidence": 1.0,
         "is_consistent": true
       },
       "details": {
@@ -312,5 +312,5 @@
       }
     }
   ],
-  "llm_insights": "🧪 LLM化学结构深度分析报告\n============================================================\n📈 数据概览:\n   • 总样本数: 15\n   • 成功分析: 15\n   • 成功率: 100.0%\n\n🔍 分类类型分布:\n   • d_type_amino_acid: 9次 (60.0%)\n   • cyclic_amino_acid: 8次 (53.3%)\n   • aromatic_amino_acid: 8次 (53.3%)\n   • alpha_amino_acid: 8次 (53.3%)\n\n📊 分类置信度分析:\n   • 平均置信度: 0.722\n   • 最高置信度: 1.000\n   • 最低置信度: 0.600\n   • 整体评级: 高可信度\n\n🎯 分类一致性分析:\n   • 一致性率: 100.0% (15/15)\n   • 一致性评级: 极高一致性\n\n🧬 化学特征深度洞察:\n   • D型立体化学: 9个样本 (60.0%)\n     → 表明显著的非天然立体构型特征\n   • 芳香族结构: 8个样本 (53.3%)\n     → 丰富的π电子共轭系统，影响蛋白质稳定性\n   • 环状结构: 8个样本 (53.3%)\n     → 结构刚性增强，构象受限\n   • Alpha型骨架: 8个样本 (53.3%)\n     → 符合标准蛋白质氨基酸骨架结构\n\n⭐ 样本亮点分析:\n   • 最可信样本: ASP (置信度: 1.000)\n     → 分类: alpha_amino_acid\n   • 最复杂样本: BIF (4个分类)\n     → 分类: alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid"
+  "llm_insights": "🧪 LLM化学结构深度分析报告\n============================================================\n📈 数据概览:\n   • 总样本数: 15\n   • 成功分析: 15\n   • 成功率: 100.0%\n\n🔍 分类类型分布:\n   • d_type_amino_acid: 10次 (66.7%)\n   • cyclic_amino_acid: 8次 (53.3%)\n   • aromatic_amino_acid: 8次 (53.3%)\n   • alpha_amino_acid: 7次 (46.7%)\n\n📊 分类置信度分析:\n   • 平均置信度: 0.831\n   • 最高置信度: 1.000\n   • 最低置信度: 0.605\n   • 整体评级: 极高可信度\n\n🎯 分类一致性分析:\n   • 一致性率: 100.0% (15/15)\n   • 一致性评级: 极高一致性\n\n🧬 化学特征深度洞察:\n   • D型立体化学: 10个样本 (66.7%)\n     → 表明显著的非天然立体构型特征\n   • 芳香族结构: 8个样本 (53.3%)\n     → 丰富的π电子共轭系统，影响蛋白质稳定性\n   • 环状结构: 8个样本 (53.3%)\n     → 结构刚性增强，构象受限\n   • Alpha型骨架: 7个样本 (46.7%)\n     → 符合标准蛋白质氨基酸骨架结构\n\n⭐ 样本亮点分析:\n   • 最可信样本: ASP (置信度: 1.000)\n     → 分类: alpha_amino_acid\n   • 最复杂样本: BIF (4个分类)\n     → 分类: alpha_amino_acid, d_type_amino_acid, cyclic_amino_acid, aromatic_amino_acid"
 }

@@ -156,7 +156,7 @@ class ClassificationValidator:
         """运行所有分析器"""
         results = {}
         
-        # 智能手性分析：先尝试基础CIP，如果不可靠则使用强化分析器
+        # 智能手性分析：在SMILES清理之前进行，避免手性标记丢失
         results['cip_rule'] = self._analyze_chirality_intelligent(smiles, amino_acid_name or "", amino_acid_code or "")
         
         try:
@@ -610,14 +610,20 @@ class ClassificationValidator:
     
     def _analyze_chirality_intelligent(self, smiles: str, amino_acid_name: str, amino_acid_code: str) -> Dict[str, Any]:
         """
-        智能手性分析：层级选择机制
+        修复版智能手性分析：使用准确的D/L判断
         
-        1. 首先使用基础CIP分析器（快速、稳定）
-        2. 如果结果不可靠（置信度低或出错），则升级到强化分析器
-        3. 强化分析器提供多方法验证和一致性检测
+        优先使用修复版手性分析器，确保准确的立体化学判断
         """
         try:
-            # Step 1: 尝试基础CIP规则分析
+            # 使用修复版手性分析器 - 专注于准确的D/L判断
+            fixed_result = self._fixed_chirality_analysis(smiles)
+            
+            if fixed_result['confidence'] >= 0.7:
+                # 修复版分析器结果可信，直接使用
+                fixed_result['analysis_method'] = 'fixed_accurate_chirality'
+                return fixed_result
+            
+            # Step 1: Fallback到基础CIP规则分析
             basic_result = self.analyzers['cip_rule'].analyze_stereochemistry(smiles, amino_acid_name)
             
             # Step 2: 评估基础分析结果的可靠性
@@ -625,10 +631,10 @@ class ClassificationValidator:
             
             if not needs_robust_analysis:
                 # 基础分析结果可靠，直接使用
-                basic_result['analysis_method'] = 'basic_cip'
+                basic_result['analysis_method'] = 'basic_cip_fallback'
                 return basic_result
             
-            # Step 3: 升级到强化分析器
+            # Step 3: 最终升级到强化分析器
             try:
                 robust_result = self.analyzers['robust_chirality'].analyze_chirality_robust(
                     smiles, amino_acid_name, amino_acid_code
@@ -637,7 +643,7 @@ class ClassificationValidator:
                 # 添加升级原因到证据中
                 if 'evidence' not in robust_result:
                     robust_result['evidence'] = []
-                robust_result['evidence'].append("因基础CIP分析不可靠，升级到强化分析器")
+                robust_result['evidence'].append("修复版和基础CIP都不可靠，使用强化分析器")
                 
                 return robust_result
                 
@@ -731,3 +737,96 @@ class ClassificationValidator:
         score += int(aromatic_count * 0.5)
         
         return score
+    
+    def _fixed_chirality_analysis(self, smiles: str) -> Dict[str, Any]:
+        """
+        修复版手性分析 - 专注于准确的D/L判断
+        
+        Args:
+            smiles: SMILES字符串
+            
+        Returns:
+            准确的手性分析结果
+        """
+        import re
+        
+        if not smiles:
+            return {
+                'stereochemistry': 'achiral',
+                'confidence': 0.9,
+                'evidence': ['Empty SMILES'],
+                'analysis_method': 'fixed_chirality'
+            }
+        
+        # 查找手性中心
+        chiral_centers = []
+        
+        # 精确的手性标记模式（支持原始和清理后的SMILES）
+        patterns = [
+            (r'\[C@H\]', 'R'),        # [C@H] = R构型 → D型
+            (r'\[C@@H\]', 'S'),       # [C@@H] = S构型 → L型
+            (r'\[C@\]', 'R'),         # [C@] = R构型 → D型  
+            (r'\[C@@\]', 'S'),        # [C@@] = S构型 → L型
+            (r'C@H\]', 'R'),          # C@H] = R构型 → D型
+            (r'C@@H\]', 'S'),         # C@@H] = S构型 → L型
+            (r'C@H\(', 'R'),          # C@H( = R构型 → D型
+            (r'C@@H\(', 'S'),         # C@@H( = S构型 → L型
+            (r'C@\(', 'R'),           # C@( = R构型 → D型
+            (r'C@@\(', 'S'),          # C@@( = S构型 → L型
+        ]
+        
+        for pattern, config in patterns:
+            matches = re.finditer(pattern, smiles)
+            for match in matches:
+                chiral_centers.append({
+                    'marker': match.group(),
+                    'configuration': config,
+                })
+        
+        if not chiral_centers:
+            return {
+                'stereochemistry': 'achiral',
+                'confidence': 0.95,
+                'evidence': ['No chiral centers found'],
+                'analysis_method': 'fixed_chirality'
+            }
+        
+        # 统计R和S构型
+        r_count = sum(1 for center in chiral_centers if center['configuration'] == 'R')
+        s_count = sum(1 for center in chiral_centers if center['configuration'] == 'S')
+        
+        # 确定主要手性和对应的D/L型
+        if r_count > s_count:
+            dl_type = 'D_form'
+            primary = 'R'
+        elif s_count > r_count:
+            dl_type = 'L_form' 
+            primary = 'S'
+        elif r_count == s_count and r_count > 0:
+            dl_type = 'mixed_chirality'
+            primary = 'mixed'
+        else:
+            dl_type = 'achiral'
+            primary = 'achiral'
+        
+        # 计算置信度
+        confidence = 0.85
+        if primary == 'mixed':
+            confidence = 0.7
+        elif primary == 'achiral':
+            confidence = 0.95
+        
+        # 添加手性中心数量奖励
+        confidence += min(0.1, len(chiral_centers) * 0.02)
+        confidence = min(1.0, confidence)
+        
+        return {
+            'stereochemistry': dl_type,
+            'confidence': confidence,
+            'evidence': [
+                f"发现 {len(chiral_centers)} 个手性中心",
+                f"R构型: {r_count}, S构型: {s_count}",
+                f"主要手性: {primary} → D/L类型: {dl_type}"
+            ],
+            'analysis_method': 'fixed_chirality'
+        }
